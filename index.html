@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresas & Cream - Proyecto Empresarial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #e63946;
+      --primary-dark: #c1121f;
+      --secondary: #ffb703;
+      --bg-cream: #fff0f3;
+      --card-bg: #ffffff;
+      --text-main: #2b2d42;
+      --text-muted: #6c757d;
+      --accent: #ff85a1;
+      --shadow: 0 10px 30px rgba(230, 57, 70, 0.12);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Navigation / Header */
+    header {
+      background: linear-gradient(135deg, #c1121f 0%, #e63946 100%);
+      color: white;
+      padding: 40px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: var(--bg-cream);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      padding: 0 20px;
+      position: sticky;
+      top: 15px;
+      z-index: 100;
+    }
+
+    nav a {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      color: var(--primary-dark);
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(230, 57, 70, 0.2);
+    }
+
+    nav a:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Layout Containers */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--primary-dark);
+      text-align: center;
+      margin: 50px 0 30px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Cards & Grids */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 183, 3, 0.2);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Team Section */
+    .team-badge {
+      display: inline-block;
+      background: #ffe5ec;
+      color: var(--primary-dark);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .team-member {
+      background: #fdf0f0;
+      border-left: 4px solid var(--primary);
+      padding: 15px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 10px;
+    }
+
+    .team-member h4 {
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+    }
+
+    /* Logo Showcase */
+    .logo-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo-img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 12px 35px rgba(230, 57, 70, 0.25);
+      border: 6px solid white;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Tables */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.95rem;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .styled-table thead tr {
+      background-color: var(--primary);
+      color: #ffffff;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .styled-table th,
+    .styled-table td {
+      padding: 14px 18px;
+    }
+
+    .styled-table tbody tr {
+      border-bottom: 1px solid #f2f2f2;
+      background-color: white;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+      background-color: #fff9fa;
+    }
+
+    .styled-table tbody tr:last-of-type {
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .total-row {
+      font-weight: bold;
+      background-color: #ffe5ec !important;
+      color: var(--primary-dark);
+    }
+
+    /* Canvas Carousel / Slide View */
+    .carousel-container {
+      position: relative;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid #ffccd5;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px dashed #ffccd5;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .slide-num {
+      background: var(--primary);
+      color: white;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .slide-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+    }
+
+    .slide-content p {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 15px;
+    }
+
+    .slide-content ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .slide-content ul li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .slide-content ul li::before {
+      content: '🍓';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 0.9rem;
+    }
+
+    .carousel-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    .btn-slide {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn-slide:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-slide:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .dots-indicator {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: #ffd6ff;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dot.active {
+      background: var(--primary);
+      width: 24px;
+      border-radius: 10px;
+    }
+
+    /* Print / Teacher Note */
+    .teacher-note {
+      background: #e8f5e9;
+      border-left: 5px solid #2e7d32;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+
+    .teacher-note h3 {
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand-title">🍓 Sweet Delight - Fresas con Crema</div>
+    <div class="brand-subtitle">Plan de Negocios, Recursos del Emprendimiento y Modelo Canvas</div>
+  </header>
+
+  <nav>
+    <a href="#idea">1. Idea de Negocio</a>
+    <a href="#logo">2. Logotipo</a>
+    <a href="#recursos">3. Recursos</a>
+    <a href="#canvas">4. Modelo Canvas (9 Diapositivas)</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- SECCIÓN 1: IDEA DE NEGOCIO GRUPAL -->
+    <section id="idea">
+      <h2 class="section-title">1. Idea de Negocio Grupal</h2>
+      <div class="card">
+        <span class="team-badge">👥 Emprendimiento Grupal (2 Personas)</span>
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; margin-bottom: 15px;">"Sweet Delight - Fresas Gourmet
+          con Crema"</h3>
+        <p><strong>Descripción General:</strong> "Sweet Delight" es un emprendimiento enfocado en la elaboración y
+          comercialización de postres artesanales premium basados en fresas frescas seleccionadas, acompañadas de crema
+          chantilly especial de la casa, crema de leche deslactosada light y una variedad de toppings personalizados
+          (chocolates gourmet, galletas, frutos secos y leches condensadas de sabores).</p>
+
+        <h4 style="margin-top: 20px; color: var(--primary-dark);">Integrantes del Grupo (Equipo Emprendedor):</h4>
+        <div class="grid-3">
+          <div class="team-member">
+            <h4>Estudiante 1</h4>
+            <p><strong>Cargo:</strong> Gerente General y de Administración</p>
+          </div>
+          <div class="team-member">
+            <h4>Estudiante 2</h4>
+            <p><strong>Cargo:</strong> Jefe de Producción y Calidad</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: DISEÑO DE LOGOTIPO -->
+    <section id="logo">
+      <h2 class="section-title">2. Diseño de Logotipo</h2>
+      <div class="card logo-container">
+        <img src="logo.jpg" alt="Logotipo Sweet Delight - Fresas con Crema" class="logo-img">
+        <h3 style="margin-top: 15px; color: var(--primary-dark);">Logotipo Oficial - Strawberries & Cream</h3>
+        <p style="max-width: 650px; margin: 10px auto; color: var(--text-muted);">
+          Diseño moderno e higiénico que resalta la frescura del fruto y la textura cremosa del postre, utilizando
+          tonalidades rojas (fresura y pasión) y cremas calientes (suavidad y dulzura).
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: RECURSOS DEL EMPRENDIMIENTO -->
+    <section id="recursos">
+      <h2 class="section-title">3. Recursos del Emprendimiento</h2>
+
+      <!-- Materiales y Tecnológicos -->
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="color: var(--primary-dark); margin-bottom: 15px;">📦 Recursos Materiales</h3>
+          <ul style="padding-left: 20px;">
+            <li>Fresas de alta calidad (grado exportación).</li>
+            <li>Crema de leche, crema chantilly, leche condensada.</li>
+            <li>Toppings: Galleta Oreo, chips de chocolate, almendras, mermeladas.</li>
+            <li>Vasos biodegradables de 8oz, 12oz y 16oz.</li>
+            <li>Cucharas ecológicas de bambú o plásticos reciclables.</li>
+            <li>Servilletas y empaques para entrega a domicilio.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color: var(--primary-dark); margin-bottom: 15px;">💻 Recursos Tecnológicos</h3>
+          <ul style="padding-left: 20px;">
+            <li>Sistema POS para control de inventarios y caja.</li>
+            <li>Teléfono inteligente corporativo para pedidos WhatsApp Business.</li>
+            <li>Página web y menú digital interactivo.</li>
+            <li>Batidoras industriales y refrigeradores de conservación rápida.</li>
+            <li>Datafono / Sistema de pagos electrónicos (Nequi, Daviplata, Tarjeta).</li>
+            <li>Cámaras de seguridad para el local comercial.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Económicos (Presupuesto) -->
+      <div class="card">
+        <h3 style="color: var(--primary-dark); margin-bottom: 15px;">💵 Recursos Económicos (Presupuesto de Inversión
+          Inicial)</h3>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Concepto / Rubro</th>
+              <th>Descripción</th>
+              <th>Costo Est. ($ USD / COP)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maquinaria y Equipos</td>
+              <td>Batidora industrial, Refrigerador comercial, Mostrador frío</td>
+              <td>$650.00 / $2.600.000</td>
+            </tr>
+            <tr>
+              <td>Insumos e Ingredientes Iniciales</td>
+              <td>Fresas (50 kg), cremas, leches, toppings diversos</td>
+              <td>$200.00 / $800.00</td>
+            </tr>
+            <tr>
+              <td>Empaques y Publicidad</td>
+              <td>Vasos personalizados, cucharas, pendón, volanteo</td>
+              <td>$100.00 / $400.00</td>
+            </tr>
+            <tr>
+              <td>Capital de Trabajo / Imprevistos</td>
+              <td>Fondo de reserva primer mes (arriendo, servicios)</td>
+              <td>$300.00 / $1.200.00</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="2">TOTAL PRESUPUESTO INICIAL</td>
+              <td>$1,250.00 USD / $5,000,000 COP</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Recursos Humanos -->
+      <div class="card">
+        <h3 style="color: var(--primary-dark); margin-bottom: 15px;">👥 Recursos Humanos</h3>
+
+        <h4 style="color: var(--primary); margin-top: 15px;">A. Análisis de Cargos:</h4>
+        <p>Se estructuran tres cargos fundamentales para operar con eficiencia: Gerente Administrador, Operario de
+          Producción/Calidad y Auxiliar de Ventas/Servicio al Cliente.</p>
+
+        <h4 style="color: var(--primary); margin-top: 15px;">B. Manual de Funciones:</h4>
+        <ul style="padding-left: 20px; margin-bottom: 20px;">
+          <li><strong>Gerente Administrador:</strong> Encargado de compras, finanzas, control de inventario y nómina.
+          </li>
+          <li><strong>Jefe de Producción:</strong> Lavado, desinfección de fresas, batido de cremas, ensamblaje de
+            postres y control de normas de higiene.</li>
+          <li><strong>Auxiliar de Ventas:</strong> Atención al público, manejo de caja/POS, empaque de pedidos y gestión
+            de redes sociales.</li>
+        </ul>
+
+        <h4 style="color: var(--primary); margin-top: 15px;">C. Nómina Mensual Esperada:</h4>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Cargo</th>
+              <th>Cantidad</th>
+              <th>Salario Base Mensual</th>
+              <th>Aux. Transporte / Beneficios</th>
+              <th>Total Nómina Mensual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gerente Administrador</td>
+              <td>1</td>
+              <td>$400.00 USD</td>
+              <td>$50.00 USD</td>
+              <td>$450.00 USD</td>
+            </tr>
+            <tr>
+              <td>Jefe de Producción / Preparador</td>
+              <td>1</td>
+              <td>$350.00 USD</td>
+              <td>$50.00 USD</td>
+              <td>$400.00 USD</td>
+            </tr>
+            <tr>
+              <td>Auxiliar de Ventas y Atención</td>
+              <td>1</td>
+              <td>$300.00 USD</td>
+              <td>$50.00 USD</td>
+              <td>$350.00 USD</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="4">TOTAL NÓMINA ESPERADA AL MES</td>
+              <td>$1,200.00 USD</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: MODELO CANVAS (9 DIAPOSITIVAS INTERACTIVAS) -->
+    <section id="canvas">
+      <h2 class="section-title">4. Modelo de Negocios Canvas (9 Componentes)</h2>
+      <p style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">
+        A continuación se presentan las <strong>9 Diapositivas</strong> interactiva con cada uno de los componentes del
+        Modelo Canvas para el emprendimiento de Fresas con Crema.
+      </p>
+
+      <div class="carousel-container">
+        <!-- Slide 1 -->
+        <div class="slide active" id="slide-1">
+          <div class="slide-header">
+            <div class="slide-title">1. Propuesta de Valor</div>
+            <span class="slide-num">Diapositiva 1 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Qué valor entregamos a nuestros clientes?</strong></p>
+            <ul>
+              <li>Fresas 100% frescas, seleccionadas con estándares de higiene superiores.</li>
+              <li>Crema especial receta de la casa con textura suave y opción baja en azúcar/deslactosada.</li>
+              <li>Personalización total del vaso (variedad de toppings finos como chocolates, almendras y leches
+                condensadas aromatizadas).</li>
+              <li>Empaques ecológicos e innovadores que mantienen la frescura del postre.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide-2">
+          <div class="slide-header">
+            <div class="slide-title">2. Segmentos de Clientes</div>
+            <span class="slide-num">Diapositiva 2 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Para quién estamos creando valor?</strong></p>
+            <ul>
+              <li>Estudiantes universitarios y escolares que buscan un snack delicioso y accesible.</li>
+              <li>Familias y niños que disfrutan de postres tradicionales los fines de semana.</li>
+              <li>Personas jóvenes/adultos (15 a 45 años) amantes de los postres artesanales e instagrameables.</li>
+              <li>Clientes corporativos u organizadores de eventos que requieren mesas de postres o banquetes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide-3">
+          <div class="slide-header">
+            <div class="slide-title">3. Canales de Distribución</div>
+            <span class="slide-num">Diapositiva 3 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Cómo llegamos a nuestros clientes?</strong></p>
+            <ul>
+              <li><strong>Local Físico / Stand:</strong> Ubicado cerca a zonas educativas o comerciales.</li>
+              <li><strong>Redes Sociales:</strong> Instagram, TikTok y Facebook para captación visual y pedidos
+                directos.</li>
+              <li><strong>Canal Digital:</strong> Sitio web corporativo con menú en línea y WhatsApp Business.</li>
+              <li><strong>Plataformas de Delivery:</strong> Alianzas con Rappi / PedidosYa.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" id="slide-4">
+          <div class="slide-header">
+            <div class="slide-title">4. Relación con Clientes</div>
+            <span class="slide-num">Diapositiva 4 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Qué tipo de relación establecemos?</strong></p>
+            <ul>
+              <li>Trato cercano, ágil y amable en la atención directa.</li>
+              <li>Programa de fidelización (tarjeta de puntos: "Por la compra de 8 vasitos, el 9no es gratis").</li>
+              <li>Interacción activa en redes sociales mediante encuestas de nuevos sabores o toppings.</li>
+              <li>Respuestas rápidas y personalizadas en canales de mensajería instantánea.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" id="slide-5">
+          <div class="slide-header">
+            <div class="slide-title">5. Fuentes de Ingreso</div>
+            <span class="slide-num">Diapositiva 5 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿De dónde proviene el dinero del negocio?</strong></p>
+            <ul>
+              <li>Venta directa de vasos de fresas con crema en diferentes presentaciones (Pequeño 8oz, Mediano 12oz,
+                Grande 16oz).</li>
+              <li>Venta de toppings adicionales premium.</li>
+              <li>Venta de bebidas complementarias (Batidos de fresa, limonadas, agua).</li>
+              <li>Servicio de catering/pedidos al por mayor para eventos privados y fiestas.</li>
+              <li>Métodos de pago: Efectivo, Nequi, Daviplata y tarjetas de crédito/débito.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide" id="slide-6">
+          <div class="slide-header">
+            <div class="slide-title">6. Recursos Clave</div>
+            <span class="slide-num">Diapositiva 6 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Qué activos necesitamos obligatoriamente?</strong></p>
+            <ul>
+              <li><strong>Físicos:</strong> Mostrador refrigerado, batidoras industriales, utensilios de cocina.</li>
+              <li><strong>Materia Prima:</strong> Proveedores directos de fresas frescas del campo y cremas lácteas de
+                alta pureza.</li>
+              <li><strong>Humanos:</strong> Personal capacitado en manipulación de alimentos y servicio al cliente.</li>
+              <li><strong>Intelectuales:</strong> Receta secreta de la crema chantilly artesanal y la marca registrable
+                "Sweet Delight".</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide" id="slide-7">
+          <div class="slide-header">
+            <div class="slide-title">7. Actividades Clave</div>
+            <span class="slide-num">Diapositiva 7 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Qué acciones principales debe realizar la empresa?</strong></p>
+            <ul>
+              <li>Selección, desinfección y preparación diaria de las fresas frescas.</li>
+              <li>Elaboración continua de las mezclas de crema garantizando máxima frescura.</li>
+              <li>Gestión de marketing digital, fotografía de producto y campañas en redes sociales.</li>
+              <li>Mantenimiento riguroso de la limpieza e higiene del establecimiento.</li>
+              <li>Gestión eficiente del inventario y compras a proveedores.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide" id="slide-8">
+          <div class="slide-header">
+            <div class="slide-title">8. Socios Clave</div>
+            <span class="slide-num">Diapositiva 8 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Quiénes son nuestros aliados estratégicos?</strong></p>
+            <ul>
+              <li><strong>Agricultores locales:</strong> Proveedores directos de fresas para reducir costos y garantizar
+                calidad.</li>
+              <li><strong>Distribuidores lácteos:</strong> Proveedores de cremas de alta calidad a precios mayoristas.
+              </li>
+              <li><strong>Empresas de empaques ecológicos:</strong> Surtidores de vasos biodegradables.</li>
+              <li><strong>Plataformas de domicilio:</strong> Empresas de mensajería urbana y delivery.</li>
+              <li><strong>Instituciones educativas cercanas:</strong> Para alianzas de promoción y eventos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide" id="slide-9">
+          <div class="slide-header">
+            <div class="slide-title">9. Estructura de Costos</div>
+            <span class="slide-num">Diapositiva 9 / 9</span>
+          </div>
+          <div class="slide-content">
+            <p><strong>¿Cuáles son los gastos fijos y variables más importantes?</strong></p>
+            <ul>
+              <li><strong>Costos Variables:</strong> Insumos (fresas, cremas, toppings), vasos biodegradables,
+                servilletas y comisiones de venta delivery.</li>
+              <li><strong>Costos Fijos:</strong> Arriendo del local comercial, servicios públicos (agua, energía,
+                internet), salarios de nómina mensual.</li>
+              <li><strong>Gastos Operativos:</strong> Publicidad en redes sociales, impuestos y licencias de
+                manipulación de alimentos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Controles de la Diapositiva -->
+        <div class="carousel-nav">
+          <button class="btn-slide" id="prevBtn" onclick="changeSlide(-1)" disabled>Anterior</button>
+          <div class="dots-indicator" id="dotsContainer"></div>
+          <button class="btn-slide" id="nextBtn" onclick="changeSlide(1)">Siguiente</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- NOTA PARA EL PROFESOR -->
+    <div class="teacher-note">
+      <h3>📌 Nota Entrega para el Profesor / Evaluación:</h3>
+      <p>Este sitio web contiene en forma integrada y profesional los puntos solicitados para la entrega de la
+        actividad:</p>
+      <ul>
+        <li>✅ <strong>Idea de Negocio Grupal (2 personas)</strong> redactada y estructurada.</li>
+        <li>✅ <strong>Diseño de Logotipo</strong> creado para la marca de fresas con crema.</li>
+        <li>✅ <strong>Recursos del Emprendimiento:</strong> Materiales, Tecnológicos, Económicos (Presupuesto) y Humanos
+          (Análisis de Cargos, Manual de Funciones, Nómina esperada del mes).</li>
+        <li>✅ <strong>Modelo Canvas completo:</strong> Presentado en formato de 9 diapositivas interactivas (un
+          componente por diapositiva) generales del modelo de negocio.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Sweet Delight - Emprendimiento de Fresas con Crema | Actividad Académica</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 9;
+
+    function initDots() {
+      const dotsContainer = document.getElementById('dotsContainer');
+      for (let i = 1; i <= totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = `dot ${i === 1 ? 'active' : ''}`;
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function goToSlide(slideNum) {
+      document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+      const dots = document.querySelectorAll('.dot');
+      dots[currentSlide - 1].classList.remove('active');
+
+      currentSlide = slideNum;
+
+      document.getElementById(`slide-${currentSlide}`).classList.add('active');
+      dots[currentSlide - 1].classList.add('active');
+
+      document.getElementById('prevBtn').disabled = currentSlide === 1;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+    }
+
+    function changeSlide(direction) {
+      let newSlide = currentSlide + direction;
+      if (newSlide >= 1 && newSlide <= totalSlides) {
+        goToSlide(newSlide);
+      }
+    }
+
+    // Inicializar puntos al cargar la página
+    initDots();
+  </script>
+</body>
+
+</html>
