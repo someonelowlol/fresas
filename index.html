@@ -765,27 +765,357 @@
     }
 
     /* Responsive Tweaks */
-    @media (max-width: 768px) {
-      .brand-title {
-        font-size: 2.3rem;
-      }
+    /* Nav Extended */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+      padding: 0 15px;
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+    }
 
-      .card {
-        padding: 20px;
-      }
+    nav a {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      color: var(--primary-dark);
+      padding: 8px 14px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.82rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(230, 57, 70, 0.18);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
 
-      .carousel-container {
-        padding: 20px;
-      }
+    nav a:hover, nav a.active {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+    }
 
-      nav {
-        gap: 6px;
-      }
+    /* Tabs & Pill Navigation for Subsections */
+    .tab-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
 
-      nav a {
-        padding: 8px 14px;
-        font-size: 0.82rem;
-      }
+    .tab-btn {
+      background: white;
+      border: 1.5px solid #ffccd5;
+      color: var(--primary-dark);
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Legal & Statutes Paper Style */
+    .legal-paper {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 35px 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      font-family: 'Outfit', serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .legal-paper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #a4161a, #e63946, #ffb703);
+    }
+
+    .legal-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #1a202c;
+      margin-bottom: 8px;
+    }
+
+    .legal-subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #718096;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    .legal-chapter {
+      margin: 25px 0 15px;
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+      font-weight: 700;
+      border-bottom: 1.5px solid #ffe5ec;
+      padding-bottom: 6px;
+    }
+
+    .legal-article {
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #2d3748;
+      text-align: justify;
+    }
+
+    .legal-article strong {
+      color: #1a202c;
+    }
+
+    /* Matrix Strategy Cards (FODA, PESTEL, Porter, BSC) */
+    .foda-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .foda-card {
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .foda-card.f {
+      background: #e8f7f5;
+      border-top: 5px solid #2a9d8f;
+    }
+
+    .foda-card.o {
+      background: #fefae0;
+      border-top: 5px solid #e9c46a;
+    }
+
+    .foda-card.d {
+      background: #fff0f3;
+      border-top: 5px solid #ff4d6d;
+    }
+
+    .foda-card.a {
+      background: #f8edeb;
+      border-top: 5px solid #c1121f;
+    }
+
+    .foda-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .foda-card.f .foda-header { color: #1b4332; }
+    .foda-card.o .foda-header { color: #854d0e; }
+    .foda-card.d .foda-header { color: #9f1239; }
+    .foda-card.a .foda-header { color: #7f1d1d; }
+
+    .foda-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .foda-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .foda-list li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    /* PESTEL Grid */
+    .pestel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin: 20px 0;
+    }
+
+    .pestel-card {
+      background: white;
+      border: 1px solid #ffd6de;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .pestel-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+    }
+
+    /* Step Process Timeline */
+    .process-timeline {
+      position: relative;
+      margin: 25px 0;
+      padding-left: 30px;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 3px;
+      background: linear-gradient(180deg, var(--primary), var(--secondary));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 25px;
+      background: white;
+      padding: 18px 22px;
+      border-radius: 12px;
+      border: 1px solid #ffe5ec;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 22px;
+      width: 14px;
+      height: 14px;
+      background: var(--primary);
+      border: 3px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--primary);
+    }
+
+    .timeline-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Balanced Scorecard (BSC) Grid */
+    .bsc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin: 20px 0;
+    }
+
+    .bsc-card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      border-left: 5px solid var(--primary);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .bsc-card.fin { border-left-color: #2a9d8f; }
+    .bsc-card.cli { border-left-color: #e76f51; }
+    .bsc-card.pro { border-left-color: #457b9d; }
+    .bsc-card.apr { border-left-color: #9d4edd; }
+
+    .bsc-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bsc-card.fin .bsc-title { color: #2a9d8f; }
+    .bsc-card.cli .bsc-title { color: #e76f51; }
+    .bsc-card.pro .bsc-title { color: #457b9d; }
+    .bsc-card.apr .bsc-title { color: #9d4edd; }
+
+    /* Accordion */
+    .accordion-item {
+      background: white;
+      border: 1px solid #ffd6de;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 16px 20px;
+      cursor: pointer;
+      background: #fff8f9;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+
+    .accordion-header:hover {
+      background: #ffe5ec;
+    }
+
+    .accordion-body {
+      padding: 20px;
+      display: none;
+      border-top: 1px solid #ffe5ec;
+      background: white;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .accordion-body.open {
+      display: block;
+      animation: fadeIn 0.3s ease;
     }
   </style>
 </head>
@@ -793,20 +1123,24 @@
 <body>
 
   <header>
-    <div class="brand-badge">🍓 Proyecto Empresarial Grupal</div>
-    <div class="brand-title">Sweet Delight - Fresas con Crema</div>
-    <div class="brand-subtitle">Plan Integral de Negocios, Organigrama, Estudio de Costos, Publicidad y Estado Financiero de Resultados</div>
+    <div class="brand-badge">🍓 Proyecto Empresarial & Plan de Negocios Integral</div>
+    <div class="brand-title">Sweet Delight - Fresas con Crema S.A.S.</div>
+    <div class="brand-subtitle">Plan Estratégico, Constitución Legal S.A.S., Proyecciones Financieras Anuales, Canvas, Marketing 360° y Estatutos</div>
   </header>
 
   <nav>
     <a href="#idea">1. Idea</a>
-    <a href="#logo">2. Logo</a>
-    <a href="#recursos">3. Recursos & Organigrama</a>
-    <a href="#canvas">4. Modelo Canvas</a>
-    <a href="#financiero">5. Costos & Precios</a>
-    <a href="#publicidad">6. Publicidad</a>
-    <a href="#estado-resultados">7. Estado de Resultados</a>
-    <a href="#simulador">8. Simulador en Vivo</a>
+    <a href="#recursos">2. Recursos & Org</a>
+    <a href="#canvas">3. Canvas</a>
+    <a href="#financiero">4. Costos & P&L</a>
+    <a href="#proyeccion-anual">5. Ventas Año 1</a>
+    <a href="#actividades-socios">6. Actividades & Socios</a>
+    <a href="#canales-marketing">7. Canales & Marketing</a>
+    <a href="#creacion-legal">8. Creación & S.A.S.</a>
+    <a href="#estatutos">9. Estatutos Oficiales</a>
+    <a href="#guia-estrategica">10. Metodología Estratégica</a>
+    <a href="#planeacion-empresa">11. Plan Estratégico Sweet Delight</a>
+    <a href="#simulador">12. Simulador</a>
   </nav>
 
   <div class="container">
@@ -818,63 +1152,59 @@
 
       <div class="card">
         <div class="card-header-styled">
-          <h3>🍓 "Sweet Delight - Fresas Gourmet con Crema"</h3>
+          <h3>🍓 "Sweet Delight - Fresas Gourmet con Crema S.A.S."</h3>
           <span class="tag-badge">👥 Equipo Emprendedor (2 Personas)</span>
         </div>
-        <p><strong>Descripción General:</strong> "Sweet Delight" es un emprendimiento enfocado en la elaboración y
-          comercialización de postres artesanales premium basados en fresas frescas seleccionadas, acompañadas de crema
-          chantilly especial de la casa, crema de leche deslactosada light y una variedad de toppings personalizados
-          (chocolates gourmet, galletas Oreo, frutos secos y leches condensadas aromatizadas).</p>
+        <p><strong>Descripción General:</strong> "Sweet Delight" es un emprendimiento formal enfocado en la elaboración y
+          comercialización de postres artesanales premium basados en fresas frescas seleccionadas del campo, acompañadas de crema
+          chantilly especial receta de la casa, crema deslactosada light y una variedad de toppings personalizados
+          (chocolates belgas, galletas Oreo, frutos secos y leches condensadas aromatizadas).</p>
 
         <h4 style="margin-top: 25px; color: var(--primary-dark); font-size: 1.15rem;">Equipo Fundador:</h4>
         <div class="grid-2" style="margin-top: 15px;">
           <div class="card" style="margin-bottom: 0; background: #fff8f9; border-left: 4px solid var(--primary);">
             <h4 style="color: var(--primary-dark);">Estudiante 1</h4>
-            <p><strong>Cargo Principal:</strong> Gerente General y Director Administrativo / Financiero</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">Responsable de la planeación estratégica, compras a proveedores, control de costos, precios y flujo de caja.</p>
+            <p><strong>Cargo Principal:</strong> Gerente General y Representante Legal (Dirección Administrativa y Financiera)</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">Responsable de la planeación estratégica, compras a proveedores, control de costos, precios, cumplimiento tributario y flujo de caja.</p>
           </div>
           <div class="card" style="margin-bottom: 0; background: #fff8f9; border-left: 4px solid var(--primary);">
             <h4 style="color: var(--primary-dark);">Estudiante 2</h4>
-            <p><strong>Cargo Principal:</strong> Jefe de Producción, Calidad y Estandarización</p>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">Responsable del protocolo de selección y desinfección de fruta, batido de cremas, control de porciones e higiene.</p>
+            <p><strong>Cargo Principal:</strong> Gerente de Operaciones y Calidad (Representante Legal Suplente)</p>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 5px;">Responsable del protocolo de selección y desinfección de fruta, batido de cremas, control de porciones, higiene BPM y atención de servicio.</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- SECCIÓN 2: DISEÑO DE LOGOTIPO -->
-    <section id="logo">
-      <h2 class="section-title">2. Diseño de Logotipo</h2>
-      <p class="section-subtitle">Identidad visual y posicionamiento de marca.</p>
-      <div class="card logo-container">
+      <!-- Logotipo Oficial -->
+      <div class="card logo-container" id="logo">
         <img src="logo.jpg" alt="Logotipo Sweet Delight - Fresas con Crema" class="logo-img">
         <h3 style="margin-top: 20px; color: var(--primary-dark); font-size: 1.4rem;">Logotipo Oficial - Sweet Delight (Strawberries & Cream)</h3>
         <p style="max-width: 680px; margin: 12px auto; color: var(--text-muted); font-size: 1rem;">
           Diseño moderno, armónico e higiénico que resalta la frescura del fruto natural y la textura cremosa del postre, utilizando
-          tonalidades rojas (frescura, pasión y apetito) y cremas calientes (suavidad, dulzura y distinción).
+          tonalidades rojas (frescura, pasión y apetito) y cremas suaves (suavidad, dulzura y distinción).
         </p>
       </div>
     </section>
 
-    <!-- SECCIÓN 3: RECURSOS DEL EMPRENDIMIENTO & ORGANIGRAMA -->
+    <!-- SECCIÓN 2: RECURSOS DEL EMPRENDIMIENTO & ORGANIGRAMA -->
     <section id="recursos">
-      <h2 class="section-title">3. Recursos del Emprendimiento & Organigrama</h2>
+      <h2 class="section-title">2. Recursos del Emprendimiento & Organigrama</h2>
       <p class="section-subtitle">Estructura organizativa, capital humano, recursos tecnológicos y presupuesto inicial.</p>
 
       <!-- ORGANIGRAMA EMPRESARIAL -->
       <div class="card">
         <div class="card-header-styled">
           <h3>🏢 Organigrama Empresarial</h3>
-          <span class="tag-badge">Estructura Funcional</span>
+          <span class="tag-badge">Estructura Funcional S.A.S.</span>
         </div>
-        <p style="margin-bottom: 20px; color: var(--text-muted);">Estructura jerárquica clara con delimitación de responsabilidades para garantizar la eficiencia operativa y comercial del negocio:</p>
+        <p style="margin-bottom: 20px; color: var(--text-muted);">Estructura jerárquica clara con delimitación de responsabilidades para garantizar la eficiencia operativa y comercial:</p>
 
         <div class="org-chart">
           <!-- Nivel 1 -->
           <div class="org-node top">
-            <div class="org-name">Junta de Socios / Dirección General</div>
-            <div class="org-role">Estudiante 1 & Estudiante 2</div>
-            <div class="org-badge">Toma de Decisiones Estratégicas</div>
+            <div class="org-name">Asamblea General de Accionistas</div>
+            <div class="org-role">Estudiante 1 (50%) & Estudiante 2 (50%)</div>
+            <div class="org-badge">Máximo Órgano de Dirección</div>
           </div>
 
           <div class="org-line-v"></div>
@@ -883,14 +1213,14 @@
           <div class="org-level-2">
             <div class="org-node">
               <div class="org-name">Gerencia General y Finanzas</div>
-              <div class="org-role">Estudiante 1</div>
+              <div class="org-role">Estudiante 1 (Representante Legal)</div>
               <div class="org-badge">Administración & Presupuesto</div>
             </div>
 
             <div class="org-node">
-              <div class="org-name">Jefatura de Producción & Calidad</div>
-              <div class="org-role">Estudiante 2</div>
-              <div class="org-badge">Operaciones & Receta Maestra</div>
+              <div class="org-name">Gerencia de Operaciones & Calidad</div>
+              <div class="org-role">Estudiante 2 (Rep. Legal Suplente)</div>
+              <div class="org-badge">Producción & Receta Maestra</div>
             </div>
           </div>
 
@@ -905,42 +1235,11 @@
             </div>
 
             <div class="org-node">
-              <div class="org-name">Especialista en Marketing Digital</div>
-              <div class="org-role">Apoyo en Redes y Publicidad</div>
-              <div class="org-badge">TikTok, Instagram & Domicilios</div>
+              <div class="org-name">Marketing Digital & Delivery</div>
+              <div class="org-role">Apoyo en Redes y Domicilios</div>
+              <div class="org-badge">TikTok, Instagram & Pedidos</div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Materiales y Tecnológicos -->
-      <div class="grid-2">
-        <div class="card">
-          <div class="card-header-styled">
-            <h3>📦 Recursos Materiales</h3>
-          </div>
-          <ul style="padding-left: 20px; line-height: 1.8;">
-            <li>Fresas de alta calidad (grado exportación seleccionadas).</li>
-            <li>Crema de leche, crema chantilly, leche condensada gourmet.</li>
-            <li>Toppings: Galleta Oreo triturada, chips de chocolate, almendras, mermeladas artesanales.</li>
-            <li>Vasos biodegradables de 8oz, 12oz y 16oz con tapas domo transparentes.</li>
-            <li>Cucharas ecológicas de bambú y servilletas de papel kraft.</li>
-            <li>Bolsas y empaques térmicos para envíos a domicilio.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-header-styled">
-            <h3>💻 Recursos Tecnológicos</h3>
-          </div>
-          <ul style="padding-left: 20px; line-height: 1.8;">
-            <li>Software de punto de venta (POS) y control de stock en la nube.</li>
-            <li>Smartphone corporativo para atención de pedidos por WhatsApp Business.</li>
-            <li>Página web corporativa y menú QR interactivo para clientes.</li>
-            <li>Batidoras industriales planetarias y vitrina mostrador refrigerada (-2°C a 4°C).</li>
-            <li>Datafono inalámbrico e integraciones con pagos QR (Nequi, Daviplata, Tarjetas).</li>
-            <li>Cámaras de monitoreo en tiempo real.</li>
-          </ul>
         </div>
       </div>
 
@@ -994,9 +1293,9 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 4: MODELO CANVAS (9 DIAPOSITIVAS INTERACTIVAS) -->
+    <!-- SECCIÓN 3: MODELO CANVAS INTERACTIVO -->
     <section id="canvas">
-      <h2 class="section-title">4. Modelo de Negocios Canvas (9 Diapositivas)</h2>
+      <h2 class="section-title">3. Modelo de Negocios Canvas (9 Diapositivas)</h2>
       <p class="section-subtitle">Visualizador interactivo de los 9 bloques del modelo Canvas.</p>
 
       <div class="carousel-container">
@@ -1009,7 +1308,7 @@
           <div class="slide-content">
             <p><strong>¿Qué valor entregamos a nuestros clientes?</strong></p>
             <ul>
-              <li>Fresas 100% frescas del día, desinfectadas bajo estrictas normas de bioseguridad.</li>
+              <li>Fresas 100% frescas del día, seleccionadas y desinfectadas bajo estrictas normas BPM.</li>
               <li>Crema especial receta de la casa con textura ultra cremosa y opción deslactosada light.</li>
               <li>Personalización completa del vaso con toppings finos (Oreo, chips belgas, frutos secos).</li>
               <li>Empaques 100% biodegradables y presentación altamente estética e instagrameable.</li>
@@ -1029,7 +1328,7 @@
               <li>Estudiantes escolares y universitarios que buscan un snack dulce, delicioso y accesible.</li>
               <li>Familias y parejas que pasean los fines de semana en busca de postres tradicionales de calidad.</li>
               <li>Jóvenes y adultos (14 a 45 años) activos en redes sociales que valoran experiencias visuales.</li>
-              <li>Clientes corporativos y organizadores de eventos que requieren mesas de postres para celebraciones.</li>
+              <li>Clientes corporativos y organizadores de eventos que requieren mesas de postres gourmet.</li>
             </ul>
           </div>
         </div>
@@ -1044,9 +1343,9 @@
             <p><strong>¿Cómo llegamos a nuestros clientes?</strong></p>
             <ul>
               <li><strong>Local / Stand Comercial:</strong> Punto de venta físico con vitrina visual llamativa.</li>
-              <li><strong>Canal Digital:</strong> Pedidos rápidos por WhatsApp Business y catálogo online.</li>
+              <li><strong>Canal Digital:</strong> Pedidos rápidos por WhatsApp Business y catálogo online con código QR.</li>
               <li><strong>Redes Sociales:</strong> Campañas en Instagram y TikTok para atraer tráfico local.</li>
-              <li><strong>Plataformas de Delivery:</strong> Integración con Rappi / Domicilios locales.</li>
+              <li><strong>Plataformas de Delivery:</strong> Integración con Rappi, Didi Food y mensajería local.</li>
             </ul>
           </div>
         </div>
@@ -1061,7 +1360,7 @@
             <p><strong>¿Qué tipo de vínculo construimos?</strong></p>
             <ul>
               <li>Atención cálida, rápida y personalizada en el punto de preparación.</li>
-              <li>Programa de fidelización: Tarjeta digital de sellos (por 8 compras, el noveno vaso es gratis).</li>
+              <li>Programa de fidelización: Tarjeta digital de sellos (Sweet Club - 9 compras = vaso gratis).</li>
               <li>Interacción permanente en redes sociales mediante encuestas de nuevos sabores y toppings.</li>
               <li>Garantía de satisfacción inmediata y resolución amable de sugerencias.</li>
             </ul>
@@ -1080,7 +1379,7 @@
               <li>Venta directa de vasos de fresas con crema en tamaños: 8 oz ($7.000), 12 oz ($10.000) y 16 oz ($13.500).</li>
               <li>Venta de adiciones de toppings premium extras ($1.500 c/u).</li>
               <li>Venta de bebidas complementarias (frappés de fresa, jugos naturales, agua mineral).</li>
-              <li>Servicio de catering y barras de postres para cumpleaños y eventos sociales.</li>
+              <li>Servicio de catering y barras de postres para cumpleaños y eventos corporativos.</li>
             </ul>
           </div>
         </div>
@@ -1161,282 +1460,40 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 5: SECTOR FINANCIERO - COSTOS FIJOS, VARIABLES Y PRECIOS -->
+    <!-- SECCIÓN 4: SECTOR FINANCIERO - COSTOS FIJOS, VARIABLES Y PRECIOS -->
     <section id="financiero">
-      <h2 class="section-title">5. Sector Financiero: Costos y Precios</h2>
-      <p class="section-subtitle">Análisis técnico de costos fijos, costos variables, costos unitarios, precio de venta y ganancia por unidad.</p>
+      <h2 class="section-title">4. Sector Financiero: Costos y Estado de Resultados</h2>
+      <p class="section-subtitle">Análisis técnico de costos fijos, costos variables, precios y rentabilidad mensual base (2.000 unidades).</p>
 
       <!-- KPIs Financieros Resumen -->
       <div class="grid-4" style="margin-bottom: 25px;">
         <div class="kpi-card">
-          <div class="kpi-title">Producción Esperada</div>
-          <div class="kpi-value">2.000</div>
-          <div class="kpi-sub">Vasos estándar / mes (aprox. 67/día)</div>
+          <div class="kpi-title">Producción Base / Mes</div>
+          <div class="kpi-value">2.000 <span style="font-size: 0.9rem;">vasos</span></div>
+          <div class="kpi-sub">Aprox. 67 unidades diarias</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-title">Costo Variable Unitario</div>
           <div class="kpi-value">$3.600 <span style="font-size: 0.9rem;">COP</span></div>
-          <div class="kpi-sub">$0.90 USD por porción</div>
+          <div class="kpi-sub">$0.90 USD por porción estándar</div>
         </div>
         <div class="kpi-card gold">
-          <div class="kpi-title">Precio de Venta (PVP)</div>
+          <div class="kpi-title">Precio Promedio (PVP)</div>
           <div class="kpi-value">$10.000 <span style="font-size: 0.9rem;">COP</span></div>
           <div class="kpi-sub">$2.50 USD (Vaso Mediano 12oz)</div>
         </div>
         <div class="kpi-card green">
           <div class="kpi-title">Ganancia por Unidad</div>
           <div class="kpi-value">$6.400 <span style="font-size: 0.9rem;">COP</span></div>
-          <div class="kpi-sub">Margen de contribución: 64%</div>
+          <div class="kpi-sub">Margen de contribución: 64.0%</div>
         </div>
       </div>
 
-      <!-- 5.1 COSTOS FIJOS MENSUALES -->
+      <!-- Estado de Resultados Mensual Base -->
       <div class="card">
         <div class="card-header-styled">
-          <h3>📌 5.1. Costos Fijos Mensuales</h3>
-          <span class="tag-badge">Independientes del nivel de producción</span>
-        </div>
-        <p style="color: var(--text-muted); margin-bottom: 15px;">Erogaciones obligatorias que la empresa debe asumir mes a mes para sostener su operación, calculadas para una <strong>producción base esperada de 2.000 unidades</strong>:</p>
-
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Concepto de Costo Fijo</th>
-              <th>Justificación / Alcance</th>
-              <th class="num-col">Valor Mensual (COP)</th>
-              <th class="num-col">Valor Mensual (USD)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Arriendo del Local / Stand</strong></td>
-              <td>Canon de arrendamiento de módulo comercial en zona peatonal</td>
-              <td class="num-col">$1.200.000</td>
-              <td class="num-col">$300.00</td>
-            </tr>
-            <tr>
-              <td><strong>Nómina Fija Mensual (Equipo Base)</strong></td>
-              <td>Sueldos básicos administrativos y operativos mínimos de planta</td>
-              <td class="num-col">$2.400.000</td>
-              <td class="num-col">$600.00</td>
-            </tr>
-            <tr>
-              <td><strong>Servicios Públicos</strong></td>
-              <td>Energía comercial (refrigeración 24/7), agua potable, gas e internet</td>
-              <td class="num-col">$450.000</td>
-              <td class="num-col">$112.50</td>
-            </tr>
-            <tr>
-              <td><strong>Mantenimiento de Equipos</strong></td>
-              <td>Revisión preventiva mensual de vitrinas de frío y batidoras</td>
-              <td class="num-col">$150.000</td>
-              <td class="num-col">$37.50</td>
-            </tr>
-            <tr>
-              <td><strong>Software POS & Permisos Sanitarios</strong></td>
-              <td>Licencia de facturación en la nube y renovación de certificaciones</td>
-              <td class="num-col">$100.000</td>
-              <td class="num-col">$25.00</td>
-            </tr>
-            <tr class="total-row">
-              <td colspan="2">TOTAL COSTOS FIJOS MENSUALES (CF)</td>
-              <td class="num-col">$4.300.000 COP</td>
-              <td class="num-col">$1,075.00 USD</td>
-            </tr>
-          </tbody>
-        </table>
-        <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">
-          * <em>Costo Fijo por Unidad Producida (CFU):</em> $4.300.000 ÷ 2.000 unidades = <strong>$2.150 COP / vaso</strong> ($0.54 USD).
-        </p>
-      </div>
-
-      <!-- 5.2 COSTOS VARIABLES -->
-      <div class="card">
-        <div class="card-header-styled">
-          <h3>🍓 5.2. Costos Variables (Por Unidad & Mensual)</h3>
-          <span class="tag-badge">Proporcionales al volumen producido</span>
-        </div>
-        <p style="color: var(--text-muted); margin-bottom: 15px;">Costos directos de materia prima, ingredientes y empaques necesarios para elaborar cada vaso de fresas con crema (tamaño estándar 12 oz):</p>
-
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Insumo / Materia Prima</th>
-              <th>Cantidad por Vaso (12 oz)</th>
-              <th class="num-col">Costo Unitario (COP)</th>
-              <th class="num-col">Costo Mensual (2.000 u.)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Fresas Frescas Seleccionadas</strong></td>
-              <td>120 gramos de fruta fresca limpia y desinfectada</td>
-              <td class="num-col">$1.600</td>
-              <td class="num-col">$3.200.000</td>
-            </tr>
-            <tr>
-              <td><strong>Crema Chantilly & Crema Especial</strong></td>
-              <td>60 ml de receta artesanal de la casa</td>
-              <td class="num-col">$900</td>
-              <td class="num-col">$1.800.000</td>
-            </tr>
-            <tr>
-              <td><strong>Toppings Surtidos & Leche Condensada</strong></td>
-              <td>Galleta Oreo, chispas de chocolate, salsa</td>
-              <td class="num-col">$600</td>
-              <td class="num-col">$1.200.000</td>
-            </tr>
-            <tr>
-              <td><strong>Vaso Biodegradable con Tapa Domo</strong></td>
-              <td>1 unidad de 12 oz ecológico con impresión de marca</td>
-              <td class="num-col">$350</td>
-              <td class="num-col">$700.000</td>
-            </tr>
-            <tr>
-              <td><strong>Cuchara de Bambú & Servilleta Kraft</strong></td>
-              <td>1 kit de servicio ecológico</td>
-              <td class="num-col">$150</td>
-              <td class="num-col">$300.000</td>
-            </tr>
-            <tr class="total-row">
-              <td colspan="2">COSTO VARIABLE UNITARIO (CVU) / TOTAL MENSUAL</td>
-              <td class="num-col">$3.600 COP</td>
-              <td class="num-col">$7.200.000 COP</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- 5.3 ANÁLISIS DE PRECIOS Y GANANCIA POR UNIDAD -->
-      <div class="card">
-        <div class="card-header-styled">
-          <h3>💰 5.3. Costos Unitarios, Precio de Venta y Ganancia por Unidad</h3>
-          <span class="tag-badge success">Rentabilidad por Porción</span>
-        </div>
-
-        <div class="grid-2" style="margin-bottom: 20px;">
-          <div style="background: #fff8f9; padding: 20px; border-radius: 12px; border: 1px solid #ffd6de;">
-            <h4 style="color: var(--primary-dark); margin-bottom: 10px;">Fórmulas Contables Aplicadas:</h4>
-            <p>🔹 <strong>Costo Total Unitario (CTU):</strong> $CVU + CFU = \$3.600 + \$2.150 =$ <strong>$5.750 COP</strong></p>
-            <p>🔹 <strong>Precio de Venta al Público (PVP):</strong> <strong>$10.000 COP</strong> ($2.50 USD)</p>
-            <p>🔹 <strong>Ganancia Bruta por Unidad (Margen de Contribución):</strong> $PVP - CVU = \$10.000 - \$3.600 =$ <strong style="color: var(--success);">$6.400 COP</strong> (64%)</p>
-            <p>🔹 <strong>Ganancia Neta por Unidad:</strong> $PVP - CTU = \$10.000 - \$5.750 =$ <strong style="color: var(--primary);">$4.250 COP</strong> (42.5%)</p>
-          </div>
-
-          <div style="background: #e8f7f5; padding: 20px; border-radius: 12px; border: 1px solid #c2ece5;">
-            <h4 style="color: #1b4332; margin-bottom: 10px;">Punto de Equilibrio (Break-Even Point):</h4>
-            <p>¿Cuántos vasos debemos vender al mes para no ganar ni perder?</p>
-            <p style="margin: 8px 0; font-size: 1.1rem; font-weight: 700; color: #1b4332;">
-              $PE = \frac{Costos\ Fijos}{PVP - CVU} = \frac{\$4.300.000}{\$6.400} =$ <strong>672 vasos / mes</strong>
-            </p>
-            <p style="font-size: 0.9rem; color: #2d6a4f;">
-              Equivale a vender solo <strong>23 vasos diarios</strong> para cubrir el 100% de arriendo, nómina y servicios. Las ventas a partir del vaso 673 generan pura utilidad operacional.
-            </p>
-          </div>
-        </div>
-
-        <h4 style="color: var(--primary-dark); margin: 20px 0 10px;">Tabla Comparativa por Tamaños de Vaso:</h4>
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Presentación</th>
-              <th class="num-col">Costo Variable</th>
-              <th class="num-col">Costo Fijo Asignado</th>
-              <th class="num-col">Costo Total Unitario</th>
-              <th class="num-col">Precio de Venta (PVP)</th>
-              <th class="num-col">Ganancia por Vaso</th>
-              <th class="num-col">Margen Bruto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Vaso Pequeño (8 oz)</strong></td>
-              <td class="num-col">$2.600</td>
-              <td class="num-col">$2.150</td>
-              <td class="num-col">$4.750</td>
-              <td class="num-col">$7.000</td>
-              <td class="num-col" style="color: var(--success); font-weight: 700;">$4.400</td>
-              <td class="num-col">62.8%</td>
-            </tr>
-            <tr style="background: #fff0f3;">
-              <td><strong>Vaso Mediano (12 oz - Estándar)</strong></td>
-              <td class="num-col">$3.600</td>
-              <td class="num-col">$2.150</td>
-              <td class="num-col">$5.750</td>
-              <td class="num-col" style="font-weight: 800;">$10.000</td>
-              <td class="num-col" style="color: var(--success); font-weight: 800;">$6.400</td>
-              <td class="num-col" style="font-weight: 700;">64.0%</td>
-            </tr>
-            <tr>
-              <td><strong>Vaso Grande (16 oz - Familiar)</strong></td>
-              <td class="num-col">$4.800</td>
-              <td class="num-col">$2.150</td>
-              <td class="num-col">$6.950</td>
-              <td class="num-col">$13.500</td>
-              <td class="num-col" style="color: var(--success); font-weight: 700;">$8.700</td>
-              <td class="num-col">64.4%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 6: PUBLICIDAD Y PLAN DE MARKETING -->
-    <section id="publicidad">
-      <h2 class="section-title">6. Estrategia y Presupuesto de Publicidad</h2>
-      <p class="section-subtitle">Canales de captación, tácticas digitales y presupuesto mensual de mercadeo.</p>
-
-      <div class="grid-3" style="margin-bottom: 25px;">
-        <div class="ad-card">
-          <div class="ad-icon">📱</div>
-          <h4>Publicidad Digital (TikTok & Meta)</h4>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">
-            Anuncios geolocalizados en un radio de 5 km mostrando videos en alta definición de la preparación de fresas con chocolate y crema.
-          </p>
-          <div style="margin-top: 12px; font-weight: 700; color: var(--primary);">Presupuesto: $350.000 COP / mes</div>
-        </div>
-
-        <div class="ad-card">
-          <div class="ad-icon">🏷️</div>
-          <h4>Material P.O.P & Volanteo Directo</h4>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">
-            Pendón visual iluminado, stickers corporativos para empaques y volantes con cupón de 15% de descuento en la primera compra.
-          </p>
-          <div style="margin-top: 12px; font-weight: 700; color: var(--primary);">Presupuesto: $150.000 COP / mes</div>
-        </div>
-
-        <div class="ad-card">
-          <div class="ad-icon">🎉</div>
-          <h4>Degustaciones & Activaciones BTL</h4>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">
-            Muestras gratis de fresas gourmet en zonas escolares y convenios con micro-influencers gastronómicos locales ("foodies").
-          </p>
-          <div style="margin-top: 12px; font-weight: 700; color: var(--primary);">Presupuesto: $100.000 COP / mes</div>
-        </div>
-      </div>
-
-      <div class="card" style="background: #fff8f9; border-left: 5px solid var(--secondary);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-          <div>
-            <h4 style="color: var(--primary-dark); font-size: 1.2rem;">Total Inversión Mensual en Publicidad:</h4>
-            <p style="color: var(--text-muted);">Este rubro se contabiliza como gasto operacional de ventas en el Estado de Resultados.</p>
-          </div>
-          <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary-dark); margin-top: 10px;">
-            $600.000 COP <span style="font-size: 1rem; font-weight: 600; color: var(--text-muted);">($150 USD)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN 7: ESTADO FINANCIERO DE RESULTADOS ESPERADOS -->
-    <section id="estado-resultados">
-      <h2 class="section-title">7. Estado Financiero de Resultados Esperados</h2>
-      <p class="section-subtitle">Estado de Ganancias y Pérdidas (P&L) proyectado mensual con estructura contable formal.</p>
-
-      <div class="card">
-        <div class="card-header-styled">
-          <h3>📊 Estado de Resultados Proyectado (Mensual)</h3>
-          <span class="tag-badge success">Base: 2.000 Unidades Vendidas</span>
+          <h3>📊 Estado de Resultados Proyectado Mensual Base</h3>
+          <span class="tag-badge success">2.000 Unidades Vendidas</span>
         </div>
 
         <table class="styled-table pnl-table">
@@ -1465,8 +1522,8 @@
               <td class="num-col">36.0%</td>
             </tr>
             <tr class="highlight-positive">
-              <td><strong>(=) Utilidad Bruta (Inicial)</strong></td>
-              <td><span class="formula-badge">Ingresos Operacionales - Costo de Ventas</span></td>
+              <td><strong>(=) Utilidad Bruta</strong></td>
+              <td><span class="formula-badge">Ingresos - Costo de Ventas</span></td>
               <td class="num-col" style="font-weight: 800; color: #1b4332;">$12.800.000</td>
               <td class="num-col" style="font-weight: 800; color: #1b4332;">$3.200.00</td>
               <td class="num-col" style="font-weight: 800; color: #1b4332;">64.0%</td>
@@ -1493,8 +1550,8 @@
               <td class="num-col" style="font-weight: 800; color: #1b4332;">39.5%</td>
             </tr>
             <tr class="op-minus">
-              <td>(+/–) Ingresos y Gastos No Operacionales</td>
-              <td>Costos y comisiones bancarias por pasarela/datafono</td>
+              <td>(+/–) No Operacionales (Gastos bancarios)</td>
+              <td>Comisiones de datáfono y pasarela digital</td>
               <td class="num-col" style="color: #c1121f;">-$150.000</td>
               <td class="num-col" style="color: #c1121f;">-$37.50</td>
               <td class="num-col">0.75%</td>
@@ -1507,15 +1564,15 @@
               <td class="num-col">38.75%</td>
             </tr>
             <tr class="op-minus">
-              <td>(–) Impuesto de Renta Estimado</td>
-              <td>Tarifa de impuesto sobre renta líquida (35%)</td>
+              <td>(–) Impuesto de Renta Estimado (35%)</td>
+              <td>Provisión fiscal societaria</td>
               <td class="num-col" style="color: #c1121f;">-$2.712.500</td>
               <td class="num-col" style="color: #c1121f;">-$678.13</td>
               <td class="num-col">13.56%</td>
             </tr>
             <tr class="pnl-table highlight-main">
               <td><strong>(=) UTILIDAD NETA (RESULTADO FINAL DEL PERÍODO)</strong></td>
-              <td><strong>Ganancia líquida libre para los socios</strong></td>
+              <td><strong>Ganancia líquida libre para socios</strong></td>
               <td class="num-col" style="font-size: 1.15rem;">$5.037.500 COP</td>
               <td class="num-col" style="font-size: 1.15rem;">$1,259.38 USD</td>
               <td class="num-col" style="font-size: 1.15rem;">25.19%</td>
@@ -1525,9 +1582,1096 @@
       </div>
     </section>
 
-    <!-- SECCIÓN 8: SIMULADOR FINANCIERO DINÁMICO EN TIEMPO REAL -->
+    <!-- SECCIÓN 5: FUENTES DE INGRESOS & PROYECCIÓN ANUAL DETALLADA -->
+    <section id="proyeccion-anual">
+      <h2 class="section-title">5. Fuentes de Ingresos y Ventas Proyectadas (Año 1)</h2>
+      <p class="section-subtitle">Estructura diversificada de monetización y proyección financiera mes a mes con estacionalidad de la demanda.</p>
+
+      <!-- 5.1 Desglose de Líneas de Ingreso -->
+      <div class="grid-3" style="margin-bottom: 25px;">
+        <div class="card" style="border-left: 4px solid var(--primary);">
+          <h4 style="color: var(--primary-dark); margin-bottom: 8px;">🍓 1. Venta Directa de Postres</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 10px;">Línea principal en 3 presentaciones:</p>
+          <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6;">
+            <li><strong>Vaso 8 oz (Pequeño):</strong> $7.000 COP ($1.75 USD)</li>
+            <li><strong>Vaso 12 oz (Estándar):</strong> $10.000 COP ($2.50 USD)</li>
+            <li><strong>Vaso 16 oz (Familiar):</strong> $13.500 COP ($3.38 USD)</li>
+          </ul>
+          <div style="margin-top: 10px; font-weight: 700; color: var(--primary); font-size: 0.85rem;">Representa el 80% del volumen</div>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--secondary);">
+          <h4 style="color: #8c6802; margin-bottom: 8px;">🍫 2. Toppings & Bebidas Gourmet</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 10px;">Ventas cruzadas de alto margen:</p>
+          <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6;">
+            <li><strong>Adiciones Extra:</strong> $1.500 COP c/u (Nutella, Oreo, Almendras, Baileys)</li>
+            <li><strong>Frappé Artesanal de Fresa:</strong> $8.500 COP ($2.13 USD)</li>
+            <li><strong>Malteada Especial:</strong> $9.500 COP ($2.38 USD)</li>
+          </ul>
+          <div style="margin-top: 10px; font-weight: 700; color: #8c6802; font-size: 0.85rem;">Incrementa el ticket promedio un 18%</div>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--success);">
+          <h4 style="color: #1b4332; margin-bottom: 8px;">🎉 3. Catering & Eventos Dulces</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 10px;">Servicio B2B y celebraciones:</p>
+          <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6;">
+            <li><strong>Mini Bar Dulce (50 porciones):</strong> $320.000 COP ($80 USD)</li>
+            <li><strong>Barra Premium (100 porciones):</strong> $600.000 COP ($150 USD)</li>
+            <li><strong>Atención corporativa y cumpleaños</strong></li>
+          </ul>
+          <div style="margin-top: 10px; font-weight: 700; color: #1b4332; font-size: 0.85rem;">Ingresos programados de fin de semana</div>
+        </div>
+      </div>
+
+      <!-- Tabla Mes a Mes Año 1 -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>📅 Proyección de Ventas y Flujo Financiero Mes a Mes (Año 1 Completo)</h3>
+          <span class="tag-badge success">Considera Estacionalidad & Crecimiento</span>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 15px; font-size: 0.95rem;">
+          La proyección incorpora la curva de aprendizaje inicial, el incremento gradual de clientes y los picos estacionales del mercado gastronómico (San Valentín en Feb, Día de la Madre en Mayo, Amor y Amistad en Sep, y Temporada Navideña en Dic):
+        </p>
+
+        <div style="overflow-x: auto;">
+          <table class="styled-table" style="font-size: 0.88rem;">
+            <thead>
+              <tr>
+                <th>Mes</th>
+                <th>Evento / Hito Comercial</th>
+                <th class="num-col">Vasos Vendidos</th>
+                <th class="num-col">Ingresos Postres (COP)</th>
+                <th class="num-col">Otros Ingresos (Bebidas/Eventos)</th>
+                <th class="num-col">Total Facturado (COP)</th>
+                <th class="num-col">Costo Variable (36%)</th>
+                <th class="num-col">Gastos Fijos + Mkt</th>
+                <th class="num-col">Utilidad Neta (COP)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mes 1 (Ene)</strong></td>
+                <td>Apertura & Marcha Blanca</td>
+                <td class="num-col">1.400</td>
+                <td class="num-col">$14.000.000</td>
+                <td class="num-col">$800.000</td>
+                <td class="num-col" style="font-weight: 700;">$14.800.000</td>
+                <td class="num-col">-$5.328.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$2.971.800</td>
+              </tr>
+              <tr style="background: #fff0f3;">
+                <td><strong>Mes 2 (Feb)</strong></td>
+                <td>San Valentín / Amor</td>
+                <td class="num-col">2.100</td>
+                <td class="num-col">$21.000.000</td>
+                <td class="num-col">$1.800.000</td>
+                <td class="num-col" style="font-weight: 700;">$22.800.000</td>
+                <td class="num-col">-$8.208.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$6.195.800</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 3 (Mar)</strong></td>
+                <td>Consolidación Local</td>
+                <td class="num-col">1.800</td>
+                <td class="num-col">$18.000.000</td>
+                <td class="num-col">$1.200.000</td>
+                <td class="num-col" style="font-weight: 700;">$19.200.000</td>
+                <td class="num-col">-$6.912.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$4.737.800</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 4 (Abr)</strong></td>
+                <td>Día del Niño & Vacaciones</td>
+                <td class="num-col">1.950</td>
+                <td class="num-col">$19.500.000</td>
+                <td class="num-col">$1.400.000</td>
+                <td class="num-col" style="font-weight: 700;">$20.900.000</td>
+                <td class="num-col">-$7.524.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$5.444.400</td>
+              </tr>
+              <tr style="background: #fff0f3;">
+                <td><strong>Mes 5 (May)</strong></td>
+                <td>Día de la Madre (Pico Alto)</td>
+                <td class="num-col">2.600</td>
+                <td class="num-col">$26.000.000</td>
+                <td class="num-col">$2.500.000</td>
+                <td class="num-col" style="font-weight: 700;">$28.500.000</td>
+                <td class="num-col">-$10.260.000</td>
+                <td class="num-col">-$5.100.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$8.411.000</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 6 (Jun)</strong></td>
+                <td>Vacaciones Escolares / Mitad de Año</td>
+                <td class="num-col">2.200</td>
+                <td class="num-col">$22.000.000</td>
+                <td class="num-col">$1.900.000</td>
+                <td class="num-col" style="font-weight: 700;">$23.900.000</td>
+                <td class="num-col">-$8.604.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$6.627.400</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 7 (Jul)</strong></td>
+                <td>Temporada Alta Vacacional</td>
+                <td class="num-col">2.300</td>
+                <td class="num-col">$23.000.000</td>
+                <td class="num-col">$1.800.000</td>
+                <td class="num-col" style="font-weight: 700;">$24.800.000</td>
+                <td class="num-col">-$8.928.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$6.999.200</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 8 (Ago)</strong></td>
+                <td>Fidelización & Sweet Club</td>
+                <td class="num-col">2.100</td>
+                <td class="num-col">$21.000.000</td>
+                <td class="num-col">$1.600.000</td>
+                <td class="num-col" style="font-weight: 700;">$22.600.000</td>
+                <td class="num-col">-$8.136.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$6.151.600</td>
+              </tr>
+              <tr style="background: #fff0f3;">
+                <td><strong>Mes 9 (Sep)</strong></td>
+                <td>Amor y Amistad (Pico Alto)</td>
+                <td class="num-col">2.700</td>
+                <td class="num-col">$27.000.000</td>
+                <td class="num-col">$2.600.000</td>
+                <td class="num-col" style="font-weight: 700;">$29.600.000</td>
+                <td class="num-col">-$10.656.000</td>
+                <td class="num-col">-$5.100.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$8.803.600</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 10 (Oct)</strong></td>
+                <td>Halloween & FresaFest</td>
+                <td class="num-col">2.250</td>
+                <td class="num-col">$22.500.000</td>
+                <td class="num-col">$1.900.000</td>
+                <td class="num-col" style="font-weight: 700;">$24.400.000</td>
+                <td class="num-col">-$8.784.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$6.806.800</td>
+              </tr>
+              <tr>
+                <td><strong>Mes 11 (Nov)</strong></td>
+                <td>Black Friday & Pre-Navidad</td>
+                <td class="num-col">2.350</td>
+                <td class="num-col">$23.500.000</td>
+                <td class="num-col">$2.100.000</td>
+                <td class="num-col" style="font-weight: 700;">$25.600.000</td>
+                <td class="num-col">-$9.216.000</td>
+                <td class="num-col">-$4.900.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$7.324.400</td>
+              </tr>
+              <tr style="background: #fff0f3;">
+                <td><strong>Mes 12 (Dic)</strong></td>
+                <td>Navidad & Fin de Año (Pico Máximo)</td>
+                <td class="num-col">3.200</td>
+                <td class="num-col">$32.000.000</td>
+                <td class="num-col">$3.800.000</td>
+                <td class="num-col" style="font-weight: 700;">$35.800.000</td>
+                <td class="num-col">-$12.888.000</td>
+                <td class="num-col">-$5.400.000</td>
+                <td class="num-col" style="color: #1b4332; font-weight: 700;">$11.082.800</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="2">TOTAL AÑO 1 CONSOLIDADO</td>
+                <td class="num-col">26.950 vasos</td>
+                <td class="num-col">$269.500.000</td>
+                <td class="num-col">$23.800.000</td>
+                <td class="num-col" style="font-size: 1.1rem;">$293.300.000 COP</td>
+                <td class="num-col">-$105.480.000</td>
+                <td class="num-col">-$59.700.000</td>
+                <td class="num-col" style="font-size: 1.15rem; color: #1b4332;">$79.456.800 COP</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-3" style="margin-top: 20px;">
+          <div class="kpi-card">
+            <div class="kpi-title">Facturación Anual Total</div>
+            <div class="kpi-value">$293.3M <span style="font-size: 0.85rem;">COP</span></div>
+            <div class="kpi-sub">Aprox. $73.325 USD anuales</div>
+          </div>
+          <div class="kpi-card green">
+            <div class="kpi-title">Utilidad Neta Anual Libre</div>
+            <div class="kpi-value">$79.45M <span style="font-size: 0.85rem;">COP</span></div>
+            <div class="kpi-sub">Aprox. $19.864 USD anuales</div>
+          </div>
+          <div class="kpi-card gold">
+            <div class="kpi-title">Retorno de Inversión (ROI)</div>
+            <div class="kpi-value">1.589%</div>
+            <div class="kpi-sub">Inversión inicial ($5M) recuperada en Mes 2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6: ACTIVIDADES CLAVES & ASOCIACIONES CLAVES -->
+    <section id="actividades-socios">
+      <h2 class="section-title">6. Actividades Claves & Asociaciones Claves</h2>
+      <p class="section-subtitle">Pilares operativos y red de alianzas estratégicas para asegurar la excelencia del producto.</p>
+
+      <!-- Actividades Claves -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>⚙️ Actividades Claves del Negocio</h3>
+          <span class="tag-badge">5 Macroprocesos Operacionales</span>
+        </div>
+
+        <div class="grid-2">
+          <div style="background: #fff8f9; padding: 20px; border-radius: 12px; border-left: 4px solid var(--primary); margin-bottom: 15px;">
+            <h4 style="color: var(--primary-dark); margin-bottom: 8px;">1. Abastecimiento & Cadena de Frío</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Recepción diaria matutina de fresa fresca seleccionada (calibre grande, maduración óptima 90%). Lavado con agua ozonizada, desinfección mediante inmersión en solución inocua y almacenamiento en refrigeración estricta entre 2°C y 4°C para conservar turgencia y nutrientes.
+            </p>
+          </div>
+
+          <div style="background: #fff8f9; padding: 20px; border-radius: 12px; border-left: 4px solid var(--secondary); margin-bottom: 15px;">
+            <h4 style="color: #8c6802; margin-bottom: 8px;">2. Producción & Estandarización de Receta</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Batido industrial diario de la crema chantilly artesanal y crema especial bajo parámetros exactos de tiempo, temperatura y aireación. Porcionado milimétrico con báscula digital (120g de fresa en vaso de 12 oz, 60ml de crema y 30g de toppings).
+            </p>
+          </div>
+
+          <div style="background: #fff8f9; padding: 20px; border-radius: 12px; border-left: 4px solid var(--success); margin-bottom: 15px;">
+            <h4 style="color: #1b4332; margin-bottom: 8px;">3. Control de Calidad e Inocuidad (BPM)</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Aplicación rigurosa de Buenas Prácticas de Manufactura (BPM), control de lotes con sistema PEPS (Primeras Entradas, Primeras Salidas), monitoreo de mermas (meta menor al 3%) y uso obligatorio de indumentaria sanitaria (gorro, tapabocas, guantes y delantal).
+            </p>
+          </div>
+
+          <div style="background: #fff8f9; padding: 20px; border-radius: 12px; border-left: 4px solid #457b9d; margin-bottom: 15px;">
+            <h4 style="color: #1d3557; margin-bottom: 8px;">4. Marketing, Ventas & Experiencia al Cliente</h4>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Producción continua de contenido multimedia para TikTok e Instagram (videos de preparación, tendencias de audio, reacciones de clientes), atención inmediata y amable por WhatsApp Business y despacho en empaques biodegradables estéticos.
+            </p>
+          </div>
+        </div>
+
+        <div style="background: #f1f5f9; padding: 16px 20px; border-radius: 10px; margin-top: 10px;">
+          <h4 style="color: #334155; margin-bottom: 5px;">5. Gestión Administrativa y Control Contable</h4>
+          <p style="font-size: 0.9rem; color: #64748b;">
+            Cierre diario de caja en software POS en la nube, conciliación de pagos electrónicos (Nequi/Daviplata/Datafono), pago puntual a proveedores locales, provisión de impuestos y liquidación mensual de rentabilidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Asociaciones Claves -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🤝 Asociaciones Claves (Socios Estratégicos)</h3>
+          <span class="tag-badge">Red de Valor & Alianzas</span>
+        </div>
+
+        <div class="grid-3">
+          <div class="ad-card">
+            <div class="ad-icon">🚜</div>
+            <h4>Cultivadores de Fresa</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Asociaciones agrícolas locales (Sibaté / Facatativá). Alianza directa sin intermediarios garantizando precio estable por kilo y fruta de primera calidad cosechada el mismo día.
+            </p>
+          </div>
+
+          <div class="ad-card">
+            <div class="ad-icon">🥛</div>
+            <h4>Distribuidores Lácteos</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Proveedores de crema de leche con 35% de tenor graso, leche condensada y quesos dulces (Colanta, Alpina, Alquería). Descuento comercial del 12% por volumen de compra mensual.
+            </p>
+          </div>
+
+          <div class="ad-card">
+            <div class="ad-icon">🌱</div>
+            <h4>Empaques Biodegradables</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Fabricantes de vasos de PLA (ácido poliláctico a base de maíz), tapas domo y cucharas de bambú personalizadas con tintas vegetales ecológicas.
+            </p>
+          </div>
+
+          <div class="ad-card">
+            <div class="ad-icon">🛵</div>
+            <h4>Plataformas Delivery & Aliados</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Integración con Rappi, Didi Food y red de mensajeros urbanos de confianza para despachos rápidos en un radio de 5 km manteniendo la temperatura del producto.
+            </p>
+          </div>
+
+          <div class="ad-card">
+            <div class="ad-icon">📸</div>
+            <h4>Micro-Influencers Gastronómicos</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              "Foodies" locales de Instagram y TikTok con audiencias de 10k a 50k seguidores. Acuerdos de degustación y canje para reseñas honestas y difusión viral.
+            </p>
+          </div>
+
+          <div class="ad-card">
+            <div class="ad-icon">🏫</div>
+            <h4>Centros Educativos & Empresas</h4>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Convenios con colegios, universidades y empresas cercanas para ofrecer descuentos por carnet estudiantil y servicio de mesas dulces para eventos de fin de año.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7: CANALES DE DISTRIBUCIÓN & ESTRATEGIAS DE MARKETING -->
+    <section id="canales-marketing">
+      <h2 class="section-title">7. Canales de Distribución & Estrategias de Marketing 360°</h2>
+      <p class="section-subtitle">Cómo conectamos con el cliente, ciclo de compra y plan integral de posicionamiento de marca.</p>
+
+      <!-- Canales de Distribución -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🚚 Canales de Distribución & Ciclo del Cliente</h3>
+          <span class="tag-badge">Estrategia Omnicanal</span>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 20px;">
+          <div>
+            <h4 style="color: var(--primary-dark); margin-bottom: 12px;">Canales Directos e Indirectos:</h4>
+            <ul style="padding-left: 20px; line-height: 1.8; font-size: 0.95rem;">
+              <li><strong>Canal Físico Directo:</strong> Stand / Barra Gourmet "Sweet Bar", ambientado visualmente con vitrina de cristal para que el cliente viva el armado de su vaso.</li>
+              <li><strong>Canal Digital Directo:</strong> WhatsApp Business con catálogo interactivo y chatbot de toma de pedidos 24/7.</li>
+              <li><strong>Canal Digital Indirecto:</strong> Marketplaces de comida (Rappi, Didi Food) para captar pedidos de conveniencia a domicilio.</li>
+              <li><strong>Canal B2B / Institucional:</strong> Carrito móvil y barras dulces para bodas, grados y celebraciones corporativas.</li>
+            </ul>
+          </div>
+
+          <div style="background: #fff8f9; padding: 20px; border-radius: 12px; border: 1px solid #ffd6de;">
+            <h4 style="color: var(--primary-dark); margin-bottom: 10px;">Ciclo de Canales (Customer Journey):</h4>
+            <div style="font-size: 0.9rem; line-height: 1.7;">
+              <p>📍 <strong>1. Conciencia:</strong> Anuncio en TikTok o vitrina física llamativa.</p>
+              <p>🔍 <strong>2. Evaluación:</strong> Consulta del menú por código QR o historias de Instagram.</p>
+              <p>💳 <strong>3. Compra:</strong> Pago rápido por Nequi, Daviplata, efectivo o datáfono.</p>
+              <p>🍓 <strong>4. Entrega:</strong> Entrega inmediata en mostrador o delivery en menos de 30 min.</p>
+              <p>⭐ <strong>5. Postventa:</strong> Registro en Sweet Club y solicitud de calificación con cupón.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estrategias de Marketing Proyectadas -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🎯 Plan y Estrategias de Marketing Proyectadas (Marketing Mix 4P)</h3>
+          <span class="tag-badge success">Plan 360° para el Año 1</span>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 25px;">
+          <div style="background: #ffffff; border: 1px solid #ffe5ec; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="color: var(--primary-dark); display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span>🍓</span> 1. Estrategia de Producto (Product)
+            </h4>
+            <ul style="padding-left: 18px; font-size: 0.92rem; line-height: 1.7; color: var(--text-main);">
+              <li><strong>Diferenciación por Calidad:</strong> Fresas 100% frescas del día y crema especial no empalagosa.</li>
+              <li><strong>Personalización Total:</strong> Concepto "Arma tu propio Sweet Delight" (Elige base + crema + 2 toppings + 1 salsa especial).</li>
+              <li><strong>Línea Saludable:</strong> Opción con crema chantilly deslactosada light y stevia para diabéticos y personas fitness.</li>
+              <li><strong>Packaging Experiencial:</strong> Vaso transparente de alta claridad con stickers coleccionables.</li>
+            </ul>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #ffe5ec; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="color: var(--primary-dark); display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span>💰</span> 2. Estrategia de Precio (Price)
+            </h4>
+            <ul style="padding-left: 18px; font-size: 0.92rem; line-height: 1.7; color: var(--text-main);">
+              <li><strong>Precios Psicológicos Accesibles:</strong> Fijación en escalones de valor ($7.000, $10.000 y $13.500 COP).</li>
+              <li><strong>Estrategia de Up-selling:</strong> Por solo $1.500 extra se ofrece duplicar la salsa o agregar topping premium.</li>
+              <li><strong>Combos por Volumen:</strong> "Combo Pareja Sweet" (2 vasos de 12 oz + 2 bebidas por $24.000 COP).</li>
+              <li><strong>Precios de Penetración:</strong> Descuento de lanzamiento del 15% durante las 2 primeras semanas.</li>
+            </ul>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #ffe5ec; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="color: var(--primary-dark); display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span>📍</span> 3. Estrategia de Plaza / Distribución (Place)
+            </h4>
+            <ul style="padding-left: 18px; font-size: 0.92rem; line-height: 1.7; color: var(--text-main);">
+              <li><strong>Ubicación de Alto Tráfico:</strong> Stand situado cerca de zonas universitarias, colegios y parques.</li>
+              <li><strong>Zona de Cobertura Delivery:</strong> Radio de 5 km optimizado con empaques térmicos.</li>
+              <li><strong>Horario Extendido:</strong> Apertura estratégica de miércoles a domingo de 1:00 p.m. a 9:00 p.m.</li>
+            </ul>
+          </div>
+
+          <div style="background: #ffffff; border: 1px solid #ffe5ec; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="color: var(--primary-dark); display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+              <span>📢</span> 4. Estrategia de Promoción (Promotion)
+            </h4>
+            <ul style="padding-left: 18px; font-size: 0.92rem; line-height: 1.7; color: var(--text-main);">
+              <li><strong>Viralidad en Redes Sociales:</strong> Videos tipo "Food Porn" en TikTok y Reels con sonido ASMR.</li>
+              <li><strong>Programa Sweet Club:</strong> Tarjeta digital donde cada compra suma puntos (9 compras = 1 gratis).</li>
+              <li><strong>Activaciones BTL:</strong> Degustaciones guiadas con minifresas en zonas de influencia escolar.</li>
+              <li><strong>Pauta Digital Geolocalizada:</strong> Meta Ads dirigidos a jóvenes y familias de la localidad ($350.000/mes).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 8: PROCESO DE CREACIÓN DE LA EMPRESA & CLASE DE EMPRESA -->
+    <section id="creacion-legal">
+      <h2 class="section-title">8. Proceso de Creación & Clase de Empresa Propuesta</h2>
+      <p class="section-subtitle">Ruta legal paso a paso para la formalización empresarial y fundamentación societaria.</p>
+
+      <!-- 8.1 Clase de Empresa Propuesta -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🏛️ Clase de Empresa Propuesta: Sociedad por Acciones Simplificada (S.A.S.)</h3>
+          <span class="tag-badge success">Regulada por la Ley 1258 de 2008</span>
+        </div>
+
+        <p style="margin-bottom: 20px; font-size: 1rem; color: var(--text-main);">
+          La empresa se constituye bajo la forma jurídica de <strong>Sociedad por Acciones Simplificada (S.A.S.)</strong> bajo la denominación comercial <strong>"SWEET DELIGHT S.A.S."</strong>. Esta tipología societaria es la más moderna, versátil y recomendada para emprendimientos en Colombia y Latinoamérica debido a los siguientes fundamentos técnicos y legales:
+        </p>
+
+        <div class="grid-3" style="margin-bottom: 20px;">
+          <div style="background: #fff8f9; padding: 18px; border-radius: 12px; border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--primary-dark); font-size: 1rem;">1. Responsabilidad Limitada</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">
+              Los socios fundadores responden única y exclusivamente hasta por el monto de sus aportes de capital, protegiendo su patrimonio personal frente a cualquier contingencia operativa o comercial.
+            </p>
+          </div>
+
+          <div style="background: #fff8f9; padding: 18px; border-radius: 12px; border-left: 4px solid var(--secondary);">
+            <h4 style="color: #8c6802; font-size: 1rem;">2. Constitución por Documento Privado</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">
+              No requiere el elevado costo de una escritura pública notarial (salvo que se aporten bienes inmuebles), lo cual reduce significativamente los gastos de formalización inicial.
+            </p>
+          </div>
+
+          <div style="background: #fff8f9; padding: 18px; border-radius: 12px; border-left: 4px solid var(--success);">
+            <h4 style="color: #1b4332; font-size: 1rem;">3. Flexibilidad Organizativa</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px;">
+              No exige una Junta Directiva obligatoria ni Revisor Fiscal inicial (mientras no se superen topes de activos/ingresos), simplificando la toma de decisiones ágiles entre los socios.
+            </p>
+          </div>
+        </div>
+
+        <h4 style="color: var(--primary-dark); margin: 20px 0 10px;">Clasificación Empresarial Multidimensional:</h4>
+        <table class="styled-table">
+          <thead>
+            <tr>
+              <th>Criterio de Clasificación</th>
+              <th>Tipo Asignado</th>
+              <th>Justificación Técnica / Legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Por su Actividad Económica</strong></td>
+              <td>Sector Terciario / Servicios & Alimentos</td>
+              <td>Elaboración y comercialización de postres preparados (Código CIIU 5619).</td>
+            </tr>
+            <tr>
+              <td><strong>Por su Tamaño Empresarial</strong></td>
+              <td>Microempresa</td>
+              <td>Menos de 10 trabajadores y activos acordes a la Ley 590 de 2000 y Decreto 957 de 2019.</td>
+            </tr>
+            <tr>
+              <td><strong>Por la Procedencia del Capital</strong></td>
+              <td>Empresa Privada Nacional</td>
+              <td>El 100% de los recursos iniciales ($5.000.000 COP) son de origen privado propio de los socios.</td>
+            </tr>
+            <tr>
+              <td><strong>Por su Ámbito Territorial</strong></td>
+              <td>Local con Proyección Regional</td>
+              <td>Inicio en sede local con modelo escalable para franquicias y múltiples puntos.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 8.2 Paso a Paso del Proceso de Creación -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>📋 Proceso Paso a Paso de Creación y Formalización Legal</h3>
+          <span class="tag-badge">Trámite Formal de Constitución</span>
+        </div>
+
+        <div class="process-timeline">
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 1: Consulta de Homonimia y Marca en RUES</span>
+              <span class="tag-badge">Fase Previa</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Verificación en la plataforma RUES (Registro Único Empresarial y Social) y en la Superintendencia de Industria y Comercio (SIC) de que el nombre "Sweet Delight S.A.S." y la marca gráfica estén disponibles y no tengan conflictos de derechos previos.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 2: Redacción y Firma de los Estatutos Sociales</span>
+              <span class="tag-badge">Documento Privado</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Elaboración del acta de constitución y estatutos privados suscritos por los dos accionistas fundadores, definiendo objeto social, capital, órganos de administración y facultades del Representante Legal.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 3: Trámite del Pre-RUT ante la DIAN</span>
+              <span class="tag-badge">DIAN</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Diligenciamiento virtual del formulario de Pre-RUT en el portal de la DIAN bajo la casilla "Para trámite en Cámara de Comercio", registrando la actividad económica CIIU 5619 (Expendio de comidas preparadas en cafeterías/postres).
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 4: Inscripción y Matrícula Mercantil en Cámara de Comercio</span>
+              <span class="tag-badge">Cámara de Comercio</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Radicación presencial o virtual de los estatutos, formularios RUES, copias de cédulas y Pre-RUT. Pago de los derechos de matrícula de la sociedad y del establecimiento comercial para obtener el Certificado de Existencia y Representación Legal.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 5: Obtención del NIT y RUT Definitivo</span>
+              <span class="tag-badge">DIAN</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              La DIAN asigna el Número de Identificación Tributaria (NIT) oficial a la sociedad y expide el RUT definitivo con las responsabilidades tributarias aplicables (IVA, Retención en la fuente, Régimen Simple o Ordinario).
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 6: Apertura de Cuenta Bancaria Comercial</span>
+              <span class="tag-badge">Sector Financiero</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Apertura de la cuenta corriente o de ahorros empresarial a nombre de Sweet Delight S.A.S. para el manejo transparente del flujo de caja, pasarelas de pago digitales (Nequi, Daviplata) y transacciones comerciales.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 7: Cumplimiento de Normativa de Establecimiento Abierto al Público</span>
+              <span class="tag-badge">Ley 1801 de 2016</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Gestión de requisitos obligatorios para operar: Concepto Sanitario y Carnets de Manipulación de Alimentos (Secretaría de Salud), Certificado de Seguridad y Extintores (Bomberos), Uso del Suelo compatible (Planeación Municipal) y paz y salvo de derechos de autor (Sayco & Acinpro).
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Paso 8: Afiliación al Sistema de Seguridad Social</span>
+              <span class="tag-badge">Talento Humano</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted);">
+              Inscripción de la sociedad como empleador ante EPS, ARL (Riesgo 1/2), Fondo de Pensiones y Cesantías, y Caja de Compensación Familiar (Compensar/Colsubsidio/Comfama) para afiliar al personal contratado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 9: ESTATUTOS DE CREACIÓN DE LA EMPRESA -->
+    <section id="estatutos">
+      <h2 class="section-title">9. Estatutos Oficiales de Creación de la Empresa</h2>
+      <p class="section-subtitle">Documento privado formal de constitución societaria conforme a la Ley 1258 de 2008.</p>
+
+      <div class="legal-paper">
+        <div class="legal-title">ACTA Y ESTATUTOS DE CONSTITUCIÓN DE SOCIEDAD POR ACCIONES SIMPLIFICADA</div>
+        <div class="legal-subtitle">"SWEET DELIGHT S.A.S."</div>
+
+        <p class="legal-article">
+          En la ciudad de Bogotá D.C., República de Colombia, a los veinticinco (25) días del mes de agosto de 2026, comparecen los señores:
+        </p>
+        <ul style="padding-left: 25px; margin-bottom: 20px; font-size: 0.92rem; line-height: 1.8;">
+          <li><strong>ACCIONISTA 1 (Estudiante 1):</strong> Mayor de edad, identificado(a) con C.C. No. 1.000.000.001 expedida en Bogotá D.C., de estado civil soltero(a), domiciliado(a) y residente en la ciudad de Bogotá D.C.</li>
+          <li><strong>ACCIONISTA 2 (Estudiante 2):</strong> Mayor de edad, identificado(a) con C.C. No. 1.000.000.002 expedida en Bogotá D.C., de estado civil soltero(a), domiciliado(a) y residente en la ciudad de Bogotá D.C.</li>
+        </ul>
+        <p class="legal-article">
+          Quienes manifestaron su voluntad libre y espontánea de constituir una <strong>SOCIEDAD POR ACCIONES SIMPLIFICADA (S.A.S.)</strong>, la cual se regirá por las disposiciones de la <strong>Ley 1258 de 2008</strong>, el Código de Comercio de Colombia y los siguientes estatutos:
+        </p>
+
+        <!-- Capítulos -->
+        <div class="legal-chapter">CAPÍTULO I: DENOMINACIÓN, DOMICILIO, NACIONALIDAD Y DURACIÓN</div>
+        <p class="legal-article">
+          <strong>ARTÍCULO 1. RAZÓN SOCIAL:</strong> La sociedad se denominará <strong>"SWEET DELIGHT S.A.S."</strong>, sociedad comercial de naturaleza por acciones simplificada.
+        </p>
+        <p class="legal-article">
+          <strong>ARTÍCULO 2. DOMICILIO:</strong> El domicilio principal de la sociedad será la ciudad de Bogotá D.C., República de Colombia. La sociedad podrá establecer sucursales, agencias o puntos de venta en cualquier lugar del territorio nacional o en el exterior, por decisión de la Asamblea General de Accionistas.
+        </p>
+        <p class="legal-article">
+          <strong>ARTÍCULO 3. DURACIÓN:</strong> El término de duración de la sociedad será <strong>indefinido</strong>, conforme a lo autorizado por el numeral 4 del artículo 5 de la Ley 1258 de 2008.
+        </p>
+
+        <div class="legal-chapter">CAPÍTULO II: OBJETO SOCIAL</div>
+        <p class="legal-article">
+          <strong>ARTÍCULO 4. OBJETO SOCIAL:</strong> La sociedad tendrá como objeto principal el desarrollo de las siguientes actividades:
+        </p>
+        <ul style="padding-left: 25px; margin-bottom: 15px; font-size: 0.92rem; line-height: 1.7;">
+          <li>a) La elaboración, preparación, procesamiento, empaque, distribución y comercialización al por mayor y al detal de postres artesanales, fresas con crema, confitería, frutas procesadas, salsas dulces y alimentos preparados.</li>
+          <li>b) La operación de establecimientos de comercio, barras de postres, cafeterías, stands comerciales y venta a través de canales digitales y de delivery.</li>
+          <li>c) La prestación de servicios de catering, mesas dulces y suministro de alimentos para eventos sociales, culturales, académicos y corporativos.</li>
+          <li>d) La importación, exportación, compra y venta de materias primas alimentarias, maquinaria gastronómica, utensilios y empaques biodegradables.</li>
+          <li>e) La celebración de toda clase de actos civiles, comerciales o financieros lícitos necesarios para el cumplimiento de sus fines.</li>
+        </ul>
+
+        <div class="legal-chapter">CAPÍTULO III: CAPITAL SOCIAL Y ACCIONES</div>
+        <p class="legal-article">
+          <strong>ARTÍCULO 5. CAPITAL AUTORIZADO:</strong> El capital autorizado de la sociedad es de <strong>DIEZ MILLONES DE PESOS MONEDA CORRIENTE ($10.000.000 COP)</strong>, dividido en diez mil (10.000) acciones ordinarias de valor nominal de mil pesos ($1.000 COP) cada una.
+        </p>
+        <p class="legal-article">
+          <strong>ARTÍCULO 6. CAPITAL SUSCRITO Y PAGADO:</strong> A la fecha de constitución, el capital suscrito y pagado en su totalidad en dinero efectivo es de <strong>CINCO MILLONES DE PESOS ($5.000.000 COP)</strong>, representado en cinco mil (5.000) acciones ordinarias, distribuido así:
+        </p>
+
+        <table class="styled-table" style="margin: 15px 0;">
+          <thead>
+            <tr>
+              <th>Accionista</th>
+              <th class="num-col">No. de Acciones</th>
+              <th class="num-col">Valor Aporte (COP)</th>
+              <th class="num-col">% Participación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Estudiante 1 (C.C. 1.000.000.001)</td>
+              <td class="num-col">2.500</td>
+              <td class="num-col">$2.500.000</td>
+              <td class="num-col">50.0%</td>
+            </tr>
+            <tr>
+              <td>Estudiante 2 (C.C. 1.000.000.002)</td>
+              <td class="num-col">2.500</td>
+              <td class="num-col">$2.500.000</td>
+              <td class="num-col">50.0%</td>
+            </tr>
+            <tr class="total-row">
+              <td>TOTAL CAPITAL PAGADO</td>
+              <td class="num-col">5.000 acciones</td>
+              <td class="num-col">$5.000.000 COP</td>
+              <td class="num-col">100.0%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="legal-chapter">CAPÍTULO IV: ÓRGANOS DE DIRECCIÓN Y ADMINISTRACIÓN</div>
+        <p class="legal-article">
+          <strong>ARTÍCULO 7. ÓRGANOS:</strong> La dirección y administración de la sociedad estará a cargo de los siguientes órganos:
+          1. La Asamblea General de Accionistas; y 2. El Representante Legal (Gerente General). La sociedad prescinde de la creación de Junta Directiva, asumiendo el Representante Legal la totalidad de funciones de administración ordinaria.
+        </p>
+        <p class="legal-article">
+          <strong>ARTÍCULO 8. ASAMBLEA GENERAL DE ACCIONISTAS:</strong> Es el máximo órgano de la sociedad, conformado por los accionistas reunidos con el quórum y condiciones fijadas por la ley. Se reunirá ordinariamente una vez al año dentro de los tres primeros meses del año, y extraordinariamente cuando sea convocada.
+        </p>
+        <p class="legal-article">
+          <strong>ARTÍCULO 9. REPRESENTACIÓN LEGAL:</strong> La representación legal de la sociedad estará a cargo de un <strong>Gerente General</strong>, quien tendrá un suplente que lo reemplazará en sus faltas absolutas, temporales o accidentales. El Representante Legal queda investido de las más amplias facultades para ejecutar todos los actos y contratos comprendidos dentro del giro ordinario de los negocios sociales sin límite de cuantía hasta por cincuenta (50) salarios mínimos mensuales vigentes.
+        </p>
+
+        <div class="legal-chapter">CAPÍTULO V: NOMBRAMIENTOS INICIALES</div>
+        <p class="legal-article">
+          Por acuerdo unánime de los accionistas constituyentes, se designan para los cargos de dirección y administración a:
+        </p>
+        <ul style="padding-left: 25px; margin-bottom: 20px; font-size: 0.92rem; line-height: 1.8;">
+          <li><strong>GERENTE GENERAL Y REPRESENTANTE LEGAL PRINCIPAL:</strong> El señor(a) <strong>Estudiante 1</strong>, identificado(a) con C.C. No. 1.000.000.001.</li>
+          <li><strong>REPRESENTANTE LEGAL SUPLENTE:</strong> El señor(a) <strong>Estudiante 2</strong>, identificado(a) con C.C. No. 1.000.000.002.</li>
+        </ul>
+        <p class="legal-article">
+          Los designados aceptan los cargos para los cuales fueron nombrados y manifiestan no hallarse incursos en ninguna causal legal de inhabilidad ni incompatibilidad.
+        </p>
+
+        <div class="legal-chapter">CAPÍTULO VI: DISOLUCIÓN, LIQUIDACIÓN Y CLÁUSULA COMPROMISORIA</div>
+        <p class="legal-article">
+          <strong>ARTÍCULO 10. DISOLUCIÓN:</strong> La sociedad se disolverá por las causales previstas en el artículo 34 de la Ley 1258 de 2008 y las normas comerciales aplicables.
+        </p>
+        <p class="legal-article">
+          <strong>ARTÍCULO 11. CLÁUSULA COMPROMISORIA:</strong> Todas las diferencias que ocurran a los accionistas entre sí o con la sociedad con motivo del contrato social serán resueltas prioritariamente mediante arreglo directo; en su defecto, serán sometidas a conciliación o arbitramento en el Centro de Arbitraje y Conciliación de la Cámara de Comercio del domicilio principal.
+        </p>
+
+        <!-- Firmas -->
+        <div style="display: flex; justify-content: space-around; margin-top: 40px; flex-wrap: wrap; gap: 30px;">
+          <div style="text-align: center; min-width: 220px;">
+            <div style="border-bottom: 1.5px solid #2d3748; width: 200px; margin: 0 auto 8px;"></div>
+            <strong>ESTUDIANTE 1</strong><br>
+            <span style="font-size: 0.85rem; color: #718096;">C.C. 1.000.000.001</span><br>
+            <span style="font-size: 0.85rem; color: var(--primary);">Gerente General & Accionista</span>
+          </div>
+
+          <div style="text-align: center; min-width: 220px;">
+            <div style="border-bottom: 1.5px solid #2d3748; width: 200px; margin: 0 auto 8px;"></div>
+            <strong>ESTUDIANTE 2</strong><br>
+            <span style="font-size: 0.85rem; color: #718096;">C.C. 1.000.000.002</span><br>
+            <span style="font-size: 0.85rem; color: var(--primary);">Rep. Legal Suplente & Accionista</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 10: METODOLOGÍA DEL PASO A PASO DE LA PLANEACIÓN ESTRATÉGICA -->
+    <section id="guia-estrategica">
+      <h2 class="section-title">10. Metodología: Paso a Paso de la Planeación Estratégica</h2>
+      <p class="section-subtitle">Marco teórico y metodológico universal para diseñar la estrategia empresarial de cualquier organización.</p>
+
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🧭 Las 6 Fases Fundamentales de la Planeación Estratégica</h3>
+          <span class="tag-badge">Guía Metodológica Integral</span>
+        </div>
+
+        <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">
+          La planeación estratégica es el proceso sistemático mediante el cual una organización define su visión de futuro, analiza su entorno competitivo y establece objetivos, estrategias y planes de acción medibles para alcanzar ventajas competitivas sostenibles:
+        </p>
+
+        <div class="process-timeline">
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Fase 1: Diagnóstico Estratégico Situacional (Interno y Externo)</span>
+              <span class="tag-badge">Diagnóstico</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Evaluación profunda de la situación actual de la empresa. Se compone de:
+            </p>
+            <ul style="padding-left: 20px; font-size: 0.88rem; line-height: 1.6; margin-top: 5px; color: var(--text-main);">
+              <li><strong>Análisis Externo (Macroentorno):</strong> Matriz <strong>PESTEL</strong> (Factores Políticos, Económicos, Sociales, Tecnológicos, Ecológicos y Legales) y Análisis de Industria mediante las <strong>5 Fuerzas de Porter</strong>.</li>
+              <li><strong>Análisis Interno (Microentorno):</strong> Cadena de Valor, evaluación de capacidades y recursos VRIO (Valiosos, Raros, Inimitables, Organizados).</li>
+              <li><strong>Síntesis Diagnóstica:</strong> Matriz <strong>FODA / DAFO</strong> (Fortalezas, Oportunidades, Debilidades y Amenazas) y cruce de estrategias FO, DO, FA, DA.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Fase 2: Definición de la Filosofía e Identidad Corporativa</span>
+              <span class="tag-badge">Direccionamiento</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Establecimiento del ADN y propósito fundamental de la compañía:
+            </p>
+            <ul style="padding-left: 20px; font-size: 0.88rem; line-height: 1.6; margin-top: 5px; color: var(--text-main);">
+              <li><strong>Misión:</strong> ¿Quiénes somos, qué hacemos y a quién servimos en el presente?</li>
+              <li><strong>Visión:</strong> ¿Hacia dónde nos dirigimos y qué queremos ser en el horizonte de 3 a 5 años?</li>
+              <li><strong>Valores y Principios:</strong> Normas éticas, conducta y cultura organizacional innegociable.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Fase 3: Formulación de Objetivos Estratégicos (SMART)</span>
+              <span class="tag-badge">Metas Claras</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Conversión de la visión en metas concretas que cumplan con la metodología <strong>SMART</strong> (Específicos, Medibles, Alcanzables, Relevantes y con Tiempo límite). Se estructuran habitualmente bajo las 4 perspectivas del <strong>Cuadro de Mando Integral (Balanced Scorecard)</strong>: Financiera, Clientes, Procesos Internos y Aprendizaje/Crecimiento.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Fase 4: Selección y Diseño de Estrategias Competitivas</span>
+              <span class="tag-badge">Estrategia</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Definición de cómo la empresa competirá y ganará en el mercado. Elección de la estrategia genérica de Michael Porter (Liderazgo en Costos, Diferenciación o Enfoque/Nicho), estrategias de crecimiento de Ansoff (Penetración, Desarrollo de Productos o Mercados) y estrategias de innovación (Océano Azul).
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Fase 5: Despliegue Operativo y Plan de Acción (Planes de Ejecución)</span>
+              <span class="tag-badge">Operatividad</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Traducción de las estrategias a la realidad cotidiana: definición de proyectos, tareas específicas, asignación de presupuestos, cronogramas de Gantt y matriz RACI de responsables para cada área.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">
+              <span>Fase 6: Sistema de Monitoreo, Control y Evaluación (KPIs)</span>
+              <span class="tag-badge">Control & Mejora</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              Implementación de tableros de control con Indicadores Clave de Desempeño (<strong>KPIs</strong>), reuniones periódicas de seguimiento estratégico mensual/trimestral y ajustes tácticos oportunos ante desviaciones del entorno.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 11: PLANEACIÓN ESTRATÉGICA PROPIA PARA SWEET DELIGHT S.A.S. -->
+    <section id="planeacion-empresa">
+      <h2 class="section-title">11. Plan Estratégico Propio: Sweet Delight S.A.S.</h2>
+      <p class="section-subtitle">Aplicación completa y personalizada de la planeación estratégica para nuestro negocio de postres.</p>
+
+      <!-- 11.1 Misión, Visión y Valores -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🌟 Filosofía e Identidad Corporativa</h3>
+          <span class="tag-badge success">Misión, Visión & Valores 2026-2031</span>
+        </div>
+
+        <div class="grid-2" style="margin-bottom: 20px;">
+          <div style="background: #fff8f9; padding: 22px; border-radius: 14px; border-left: 5px solid var(--primary);">
+            <h4 style="color: var(--primary-dark); font-size: 1.2rem; margin-bottom: 10px;">🎯 Misión Corporativa</h4>
+            <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-main);">
+              "En <strong>Sweet Delight S.A.S.</strong> transformamos momentos cotidianos en experiencias dulces e inolvidables, elaborando postres artesanales de fresas con crema de la más alta frescura, inocuidad y personalización gastronómica. Apoyamos al agricultor local mediante compras justas y promovemos la sostenibilidad utilizando empaques 100% biodegradables, brindando a cada cliente una atención cálida, rápida y memorable."
+            </p>
+          </div>
+
+          <div style="background: #e8f7f5; padding: 22px; border-radius: 14px; border-left: 5px solid var(--success);">
+            <h4 style="color: #1b4332; font-size: 1.2rem; margin-bottom: 10px;">🚀 Visión Corporativa (2031)</h4>
+            <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-main);">
+              "Para el año <strong>2031</strong>, <strong>Sweet Delight S.A.S.</strong> será reconocida como la marca líder y referente regional en postres artesanales gourmet basados en fresas frescas, consolidando una red de <strong>5 puntos de venta propios y franquiciados</strong>, un canal digital de delivery altamente automatizado y un modelo empresarial sostenible con triple impacto: económico, social y ambiental."
+            </p>
+          </div>
+        </div>
+
+        <h4 style="color: var(--primary-dark); margin: 20px 0 12px;">Valores Corporativos Fundamentales:</h4>
+        <div class="grid-4">
+          <div class="pestel-card" style="text-align: center;">
+            <div style="font-size: 1.8rem; margin-bottom: 6px;">✨</div>
+            <strong style="color: var(--primary-dark);">Pasión por la Calidad</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Obsesión por la frescura de la fruta y la textura perfecta de la crema.</p>
+          </div>
+          <div class="pestel-card" style="text-align: center;">
+            <div style="font-size: 1.8rem; margin-bottom: 6px;">🌿</div>
+            <strong style="color: #2a9d8f;">Sostenibilidad</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Uso de empaques biodegradables y cero tolerancia al desperdicio.</p>
+          </div>
+          <div class="pestel-card" style="text-align: center;">
+            <div style="font-size: 1.8rem; margin-bottom: 6px;">🤝</div>
+            <strong style="color: #8c6802;">Transparencia & Ética</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Relaciones justas con proveedores campesinos y precios honestos.</p>
+          </div>
+          <div class="pestel-card" style="text-align: center;">
+            <div style="font-size: 1.8rem; margin-bottom: 6px;">❤️</div>
+            <strong style="color: var(--primary-dark);">Calidez Humana</strong>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Servicio al cliente empático, alegre y siempre dispuesto a sorprender.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11.2 Diagnóstico FODA Cruzado -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>📊 Matriz FODA / DAFO Diagnóstica de Sweet Delight S.A.S.</h3>
+          <span class="tag-badge">Análisis Situacional</span>
+        </div>
+
+        <div class="foda-grid">
+          <!-- Fortalezas -->
+          <div class="foda-card f">
+            <div class="foda-header">
+              <span>💪</span>
+              <span>FORTALEZAS (Internas)</span>
+            </div>
+            <ul class="foda-list">
+              <li>Receta artesanal exclusiva de crema chantilly de alta densidad no empalagosa.</li>
+              <li>Alianzas directas con cultivadores garantizando fresas frescas a menor costo.</li>
+              <li>Flexibilidad de personalización del vaso con amplia variedad de toppings gourmet.</li>
+              <li>Empaques 100% biodegradables y presentación visual altamente atractiva.</li>
+              <li>Estructura societaria S.A.S. ágil con bajos costos fijos iniciales.</li>
+            </ul>
+          </div>
+
+          <!-- Oportunidades -->
+          <div class="foda-card o">
+            <div class="foda-header">
+              <span>🌍</span>
+              <span>OPORTUNIDADES (Externas)</span>
+            </div>
+            <ul class="foda-list">
+              <li>Crecimiento de la cultura de postres "instagrameables" y virales en TikTok.</li>
+              <li>Expansión de plataformas de delivery y pagos digitales rápidos (QR/Nequi).</li>
+              <li>Alta demanda de servicios de catering y barras de postres para eventos sociales.</li>
+              <li>Apertura de puntos en centros comerciales o ferias gastronómicas locales.</li>
+              <li>Tendencia de consumo de alimentos saludables (línea sin azúcar y deslactosada).</li>
+            </ul>
+          </div>
+
+          <!-- Debilidades -->
+          <div class="foda-card d">
+            <div class="foda-header">
+              <span>⚠️</span>
+              <span>DEBILIDADES (Internas)</span>
+            </div>
+            <ul class="foda-list">
+              <li>Marca nueva en etapa de reconocimiento frente a reposterías tradicionales.</li>
+              <li>Capacidad instalada de producción limitada a 1 punto de venta inicial.</li>
+              <li>Dependencia crítica de la cadena de frío para productos altamente perecederos.</li>
+              <li>Presupuesto publicitario modesto en los primeros meses.</li>
+            </ul>
+          </div>
+
+          <!-- Amenazas -->
+          <div class="foda-card a">
+            <div class="foda-header">
+              <span>🛡️</span>
+              <span>AMENAZAS (Externas)</span>
+            </div>
+            <ul class="foda-list">
+              <li>Volatilidad en los precios de la fresa y derivados lácteos por clima o inflación.</li>
+              <li>Entrada de competidores informales de bajo precio sin normas sanitarias.</li>
+              <li>Altas comisiones de plataformas de delivery de terceros (Rappi 20-25%).</li>
+              <li>Incremento en cánones de arrendamiento comercial en zonas de alto tráfico.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Estrategias Cruzadas FO, DO, FA, DA -->
+        <h4 style="color: var(--primary-dark); margin: 25px 0 12px;">Estrategias Cruzadas de la Matriz DAFO:</h4>
+        <div class="grid-2">
+          <div style="background: #e8f7f5; padding: 18px; border-radius: 12px; border: 1px solid #c2ece5;">
+            <strong style="color: #1b4332;">Estrategias FO (Fortalezas + Oportunidades):</strong>
+            <p style="font-size: 0.9rem; color: #2d6a4f; margin-top: 5px;">
+              Explotar la receta exclusiva y la estética del empaque para lanzar campañas virales en TikTok e impulsar la línea de catering para eventos sociales corporativos.
+            </p>
+          </div>
+
+          <div style="background: #fefae0; padding: 18px; border-radius: 12px; border: 1px solid #f2e29f;">
+            <strong style="color: #854d0e;">Estrategias DO (Debilidades + Oportunidades):</strong>
+            <p style="font-size: 0.9rem; color: #713f12; margin-top: 5px;">
+              Aprovechar el auge de pedidos por WhatsApp y domicilios propios para mitigar la limitación física del punto de venta y acelerar el reconocimiento de marca.
+            </p>
+          </div>
+
+          <div style="background: #fff0f3; padding: 18px; border-radius: 12px; border: 1px solid #ffd6de;">
+            <strong style="color: #9f1239;">Estrategias FA (Fortalezas + Amenazas):</strong>
+            <p style="font-size: 0.9rem; color: #881337; margin-top: 5px;">
+              Utilizar convenios de precio fijo con cultivadores locales para blindar el margen de costos variables frente a la inflación de materias primas.
+            </p>
+          </div>
+
+          <div style="background: #f8edeb; padding: 18px; border-radius: 12px; border: 1px solid #fcd5ce;">
+            <strong style="color: #7f1d1d;">Estrategias DA (Debilidades + Amenazas):</strong>
+            <p style="font-size: 0.9rem; color: #7f1d1d; margin-top: 5px;">
+              Estandarizar al 100% las porciones y mermas mediante báscula y capacitar al equipo en servicio al cliente para diferenciarse de competidores informales.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11.3 Análisis PESTEL de Sweet Delight -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>🔬 Análisis PESTEL del Entorno Competitivo</h3>
+          <span class="tag-badge">Macroentorno Gastronómico</span>
+        </div>
+
+        <div class="pestel-grid">
+          <div class="pestel-card">
+            <span class="pestel-badge" style="background: #e0f2fe; color: #0369a1;">P - Político</span>
+            <p style="font-size: 0.88rem; color: var(--text-main); margin-top: 5px;">
+              Incentivos a la formalización de microempresas y programas gubernamentales de apoyo a jóvenes emprendedores y economía popular.
+            </p>
+          </div>
+
+          <div class="pestel-card">
+            <span class="pestel-badge" style="background: #fef9c3; color: #854d0e;">E - Económico</span>
+            <p style="font-size: 0.88rem; color: var(--text-main); margin-top: 5px;">
+              Sector de postres y antojos con demanda inelástica en segmentos de precio accesible ($7k-$10k COP), favoreciendo compras impulsivas de fin de semana.
+            </p>
+          </div>
+
+          <div class="pestel-card">
+            <span class="pestel-badge" style="background: #fce7f3; color: #9d174d;">S - Social / Cultural</span>
+            <p style="font-size: 0.88rem; color: var(--text-main); margin-top: 5px;">
+              Hábito arraigado de consumir postres en salidas familiares, celebraciones y momentos de premio personal ("treat culture").
+            </p>
+          </div>
+
+          <div class="pestel-card">
+            <span class="pestel-badge" style="background: #ede9fe; color: #6b21a8;">T - Tecnológico</span>
+            <p style="font-size: 0.88rem; color: var(--text-main); margin-top: 5px;">
+              Adopción masiva de billeteras electrónicas (Nequi/Daviplata), cartas QR interactivas y viralización de productos a través de algoritmos de video corto.
+            </p>
+          </div>
+
+          <div class="pestel-card">
+            <span class="pestel-badge" style="background: #dcfce7; color: #15803d;">E - Ecológico</span>
+            <p style="font-size: 0.88rem; color: var(--text-main); margin-top: 5px;">
+              Mayor conciencia ciudadana sobre la reducción de plásticos de un solo uso, exigiendo el empleo de empaques biodegradables y compostables.
+            </p>
+          </div>
+
+          <div class="pestel-card">
+            <span class="pestel-badge" style="background: #fee2e2; color: #991b1b;">L - Legal</span>
+            <p style="font-size: 0.88rem; color: var(--text-main); margin-top: 5px;">
+              Exigencia de certificación en manipulación de alimentos (Resolución 2674/2013), rotulado nutricional y registro en Cámara de Comercio.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11.4 Balanced Scorecard (Cuadro de Mando Integral) -->
+      <div class="card">
+        <div class="card-header-styled">
+          <h3>📈 Cuadro de Mando Integral (Balanced Scorecard) de Sweet Delight S.A.S.</h3>
+          <span class="tag-badge success">4 Perspectivas Estratégicas</span>
+        </div>
+
+        <div class="bsc-grid">
+          <!-- Perspectiva Financiera -->
+          <div class="bsc-card fin">
+            <div class="bsc-title">
+              <span>💰</span> Perspectiva Financiera
+            </div>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6; color: var(--text-main);">
+              <li><strong>Objetivo:</strong> Maximizar la rentabilidad neta y flujo de caja libre.</li>
+              <li><strong>Meta Año 1:</strong> Ventas de $293.3M COP y margen neto > 25%.</li>
+              <li><strong>KPIs:</strong> Utilidad neta mensual, margen de contribución (64%) y ROI.</li>
+            </ul>
+          </div>
+
+          <!-- Perspectiva de Clientes -->
+          <div class="bsc-card cli">
+            <div class="bsc-title">
+              <span>👥</span> Perspectiva de Clientes
+            </div>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6; color: var(--text-main);">
+              <li><strong>Objetivo:</strong> Posicionar a Sweet Delight como la opción favorita de postres.</li>
+              <li><strong>Meta Año 1:</strong> Calificación promedio de 4.8/5.0 y 2.000 clientes en Sweet Club.</li>
+              <li><strong>KPIs:</strong> Tasa de recompra (>35%), NPS (Net Promoter Score) y ticket promedio.</li>
+            </ul>
+          </div>
+
+          <!-- Perspectiva de Procesos Internos -->
+          <div class="bsc-card pro">
+            <div class="bsc-title">
+              <span>⚙️</span> Perspectiva de Procesos
+            </div>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6; color: var(--text-main);">
+              <li><strong>Objetivo:</strong> Estandarización operativa con cero desperdicios.</li>
+              <li><strong>Meta Año 1:</strong> Despacho de pedidos en mostrador en menos de 2 minutos.</li>
+              <li><strong>KPIs:</strong> Porcentaje de merma de fruta (<3%), tiempo de entrega delivery (<30 min).</li>
+            </ul>
+          </div>
+
+          <!-- Perspectiva de Aprendizaje y Crecimiento -->
+          <div class="bsc-card apr">
+            <div class="bsc-title">
+              <span>💡</span> Aprendizaje & Crecimiento
+            </div>
+            <ul style="padding-left: 18px; font-size: 0.88rem; line-height: 1.6; color: var(--text-main);">
+              <li><strong>Objetivo:</strong> Desarrollar un equipo motivado, creativo y altamente capacitado.</li>
+              <li><strong>Meta Año 1:</strong> 100% del personal certificado en BPM y servicio al cliente.</li>
+              <li><strong>KPIs:</strong> Horas de capacitación/mes, clima laboral y retención de talento.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 12: SIMULADOR FINANCIERO DINÁMICO EN TIEMPO REAL -->
     <section id="simulador">
-      <h2 class="section-title">8. Simulador Financiero Interactivo</h2>
+      <h2 class="section-title">12. Simulador Financiero Interactivo</h2>
       <p class="section-subtitle">Ajusta las variables de ventas, precios, costos y publicidad para evaluar en vivo la rentabilidad del emprendimiento.</p>
 
       <div class="simulator-container">
@@ -1552,7 +2696,7 @@
           <!-- Slider 2: Precio de Venta -->
           <div class="control-group">
             <label>
-              <span>Precio de Venta (PVP):</span>
+              <span>Precio de Venta Promedio (PVP):</span>
               <span class="control-val" id="valPrice">$10.000 COP</span>
             </label>
             <input type="range" id="inputPrice" min="6000" max="18000" step="500" value="10000" oninput="updateSimulation()">
@@ -1655,24 +2799,25 @@
 
     <!-- NOTA PARA EL PROFESOR / EVALUACIÓN -->
     <div class="teacher-note">
-      <h3>📌 Resumen de Cumplimiento de la Actividad Académica:</h3>
-      <p>Este sitio web contiene todos los requerimientos y módulos solicitados de forma rigurosa y visualmente interactiva:</p>
+      <h3>📌 Resumen de Cumplimiento de la Actividad Académica Integral:</h3>
+      <p>Este portal y documento contiene todos los requerimientos y módulos solicitados con el más alto rigor técnico, legal y financiero:</p>
       <ul>
-        <li>✅ <strong>Idea de Negocio Grupal (2 personas)</strong> con definición del equipo emprendedor.</li>
-        <li>✅ <strong>Diseño de Logotipo Oficial</strong> integrado con identidad de marca.</li>
-        <li>✅ <strong>Recursos del Emprendimiento:</strong> Materiales, Tecnológicos, Económicos y Humanos.</li>
-        <li>✅ <strong>Organigrama Estructurado:</strong> Gráfico jerárquico con cargos y responsabilidades.</li>
-        <li>✅ <strong>Modelo Canvas de 9 Diapositivas:</strong> Carrusel interactivo completo.</li>
-        <li>✅ <strong>Costos Fijos y Variables:</strong> Detalle mensual con base en la producción esperada de 2.000 unidades.</li>
-        <li>✅ <strong>Costos Unitarios, Precio de Venta y Ganancia por Unidad:</strong> Análisis de margen de contribución y punto de equilibrio (672 vasos/mes).</li>
-        <li>✅ <strong>Estrategia y Presupuesto de Publicidad:</strong> Canales digitales (TikTok, Meta Ads), BTL y material POP.</li>
-        <li>✅ <strong>Estado Financiero de Resultados Esperados:</strong> Estructura completa desde Ingresos Operacionales hasta Utilidad Neta con impuestos.</li>
+        <li>✅ <strong>Fuentes de Ingresos & Ventas Proyectadas Año 1:</strong> Desglose mes a mes con estacionalidad, líneas de productos, bebidas, catering y proyección total de $293.300.000 COP.</li>
+        <li>✅ <strong>Actividades Claves:</strong> 5 macroprocesos operacionales (abastecimiento, batido, BPM, marketing, administración).</li>
+        <li>✅ <strong>Asociaciones Claves:</strong> Red de aliados campesinos, distribuidores lácteos, empaques eco y foodies.</li>
+        <li>✅ <strong>Canales:</strong> Distribución física, WhatsApp Business con QR, apps de delivery y ciclo del cliente.</li>
+        <li>✅ <strong>Estrategias de Marketing Proyectadas:</strong> Marketing Mix 360° (4P), TikTok/Reels ASMR, Sweet Club y pauta digital.</li>
+        <li>✅ <strong>Proceso de Creación de la Empresa:</strong> Ruta legal de 8 pasos ante DIAN, Cámara de Comercio, Bomberos y Salud.</li>
+        <li>✅ <strong>Clase de Empresa Propuesta:</strong> Justificación jurídica y económica de la <strong>S.A.S. (Sociedad por Acciones Simplificada)</strong>.</li>
+        <li>✅ <strong>Estatutos de Creación:</strong> Documento estatutario formal completo de 6 capítulos con firmas de los socios.</li>
+        <li>✅ <strong>Metodología de Planeación Estratégica:</strong> Guía paso a paso de las 6 fases de la planeación organizacional.</li>
+        <li>✅ <strong>Planeación Estratégica de Sweet Delight S.A.S.:</strong> Misión, Visión 2031, Valores, Matriz FODA cruzada, Análisis PESTEL y Cuadro de Mando Integral (Balanced Scorecard) con KPIs.</li>
         <li>✅ <strong>Simulador Financiero en Vivo:</strong> Ajuste dinámico de parámetros con soporte en pesos (COP) y dólares (USD).</li>
       </ul>
     </div>
 
     <footer>
-      <p>&copy; 2026 Sweet Delight - Emprendimiento de Fresas con Crema | Proyecto Empresarial y Financiero</p>
+      <p>&copy; 2026 Sweet Delight S.A.S. - Fresas Gourmet con Crema | Proyecto Empresarial y Plan Estratégico Integral</p>
     </footer>
 
   </div>
@@ -1684,6 +2829,7 @@
 
     function initDots() {
       const dotsContainer = document.getElementById('dotsContainer');
+      if (!dotsContainer) return;
       dotsContainer.innerHTML = '';
       for (let i = 1; i <= totalSlides; i++) {
         const dot = document.createElement('div');
@@ -1735,7 +2881,10 @@
     }
 
     function updateSimulation() {
-      const units = parseInt(document.getElementById('inputUnits').value);
+      const inputUnits = document.getElementById('inputUnits');
+      if (!inputUnits) return;
+      
+      const units = parseInt(inputUnits.value);
       const price = parseInt(document.getElementById('inputPrice').value);
       const varCost = parseInt(document.getElementById('inputVarCost').value);
       const fixedCost = parseInt(document.getElementById('inputFixedCost').value);
