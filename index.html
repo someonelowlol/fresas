@@ -1117,6 +1117,504 @@
       display: block;
       animation: fadeIn 0.3s ease;
     }
+  
+    /* ========================================================
+       SECCIÓN 13: PRESENTACIÓN EJECUTIVA POWERPOINT (PPTX)
+       ======================================================== */
+    .pptx-section-container {
+      margin-top: 50px;
+    }
+
+    .pptx-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background: linear-gradient(135deg, #ffffff, #fff5f7);
+      padding: 18px 24px;
+      border-radius: var(--radius);
+      border: 1.5px solid #ffccd5;
+      box-shadow: var(--shadow);
+      margin-bottom: 25px;
+    }
+
+    .pptx-actions-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pptx-actions-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-download-pptx {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #c1121f, #e63946);
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 20px rgba(230, 57, 70, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-download-pptx:hover {
+      background: linear-gradient(135deg, #a4161a, #c1121f);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.45);
+    }
+
+    .btn-pptx-ctrl {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      border: 1.5px solid #ffccd5;
+      color: var(--primary-dark);
+      padding: 9px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .btn-pptx-ctrl:hover, .btn-pptx-ctrl.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .pptx-select-slide {
+      background: white;
+      border: 1.5px solid #ffccd5;
+      color: var(--text-main);
+      padding: 9px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .pptx-select-slide:focus {
+      border-color: var(--primary);
+    }
+
+    .pptx-deck-frame {
+      position: relative;
+      background: #1e1b18;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 50px rgba(164, 22, 26, 0.2);
+      border: 3px solid #ffccd5;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .pptx-deck-frame.fullscreen-mode {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 999999;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      background: #121113;
+    }
+
+    .pptx-deck-frame.fullscreen-mode .pptx-slide-content-area {
+      flex: 1;
+      overflow-y: auto;
+      min-height: auto;
+    }
+
+    .pptx-progress-bar-container {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.15);
+      position: relative;
+    }
+
+    .pptx-progress-bar {
+      height: 100%;
+      width: 10%;
+      background: linear-gradient(90deg, #ff758f, #ffb703);
+      transition: width 0.35s ease;
+    }
+
+    .pptx-slide-content-area {
+      background: #ffffff;
+      min-height: 540px;
+      padding: 38px 40px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pptx-slide-item {
+      display: none;
+      animation: pptxSlideIn 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+
+    .pptx-slide-item.active {
+      display: block;
+    }
+
+    @keyframes pptxSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .pptx-slide-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #fff0f3;
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pptx-slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #c1121f, #e63946);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pptx-slide-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      color: var(--primary-dark);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .pptx-pill-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 16px 20px;
+      background: #faf4f5;
+      border-top: 1.5px solid #ffe5ec;
+    }
+
+    .pptx-pill {
+      background: white;
+      border: 1px solid #ffd6de;
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pptx-pill:hover {
+      background: #ffe5ec;
+      border-color: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    .pptx-pill.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 10px rgba(230, 57, 70, 0.25);
+    }
+
+    .pptx-bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: #ffffff;
+      border-top: 1px solid #f0f0f0;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .pptx-nav-btn {
+      background: linear-gradient(135deg, #c1121f, #e63946);
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+    }
+
+    .pptx-nav-btn:hover:not(:disabled) {
+      background: linear-gradient(135deg, #a4161a, #c1121f);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(230, 57, 70, 0.35);
+    }
+
+    .pptx-nav-btn:disabled {
+      background: #e2e8f0;
+      color: #94a3b8;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .pptx-slide-counter {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Estilos de diapositivas específicas */
+    .pptx-cover-slide {
+      text-align: center;
+      padding: 30px 20px;
+      background: radial-gradient(circle at center, #fff0f3 0%, #ffffff 70%);
+      border-radius: 14px;
+    }
+
+    .pptx-cover-logo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 10px 25px rgba(230, 57, 70, 0.25);
+      margin-bottom: 18px;
+    }
+
+    .pptx-quote-box {
+      background: linear-gradient(135deg, #fff0f3, #fffbfc);
+      border-left: 5px solid var(--primary);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(230, 57, 70, 0.06);
+    }
+
+    .pptx-quote-box p {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .pptx-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pptx-feature-box {
+      background: #ffffff;
+      border: 1.5px solid #ffe5ec;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .pptx-feature-box:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary-light);
+    }
+
+    .pptx-feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .pptx-feature-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .pptx-feature-desc {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    .pptx-highlight-banner {
+      background: linear-gradient(90deg, #c1121f, #e63946);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-top: 15px;
+      box-shadow: 0 4px 14px rgba(193, 18, 31, 0.2);
+    }
+
+    .pptx-journey-flow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin: 22px 0;
+      flex-wrap: wrap;
+    }
+
+    .pptx-journey-step {
+      background: #fff8f9;
+      border: 1.5px solid #ffd6de;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: center;
+      flex: 1;
+      min-width: 130px;
+      position: relative;
+    }
+
+    .pptx-step-num {
+      width: 26px;
+      height: 26px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 800;
+      margin: 0 auto 6px;
+    }
+
+    .pptx-step-name {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--primary-dark);
+    }
+
+    .pptx-step-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .pptx-canvas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin: 15px 0;
+    }
+
+    .pptx-canvas-card {
+      background: white;
+      border: 1.5px solid #ffd6de;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .pptx-canvas-card-title {
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pptx-canvas-card p {
+      font-size: 0.85rem;
+      line-height: 1.45;
+      color: var(--text-main);
+    }
+
+    .pptx-qa-item {
+      background: #fffdfd;
+      border: 1.5px solid #ffe5ec;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    .pptx-qa-question {
+      padding: 14px 18px;
+      background: #fff5f7;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .pptx-qa-question:hover {
+      background: #ffe5ec;
+    }
+
+    .pptx-qa-answer {
+      padding: 16px 20px;
+      display: none;
+      background: white;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text-main);
+      border-top: 1px dashed #ffd6de;
+    }
+
+    .pptx-qa-answer.open {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
   </style>
 </head>
 
@@ -1141,6 +1639,7 @@
     <a href="#guia-estrategica">10. Metodología Estratégica</a>
     <a href="#planeacion-empresa">11. Plan Estratégico Sweet Delight</a>
     <a href="#simulador">12. Simulador</a>
+    <a href="#presentacion-pptx">📊 13. Presentación PPTX</a>
   </nav>
 
   <div class="container">
@@ -2797,6 +3296,698 @@
       </div>
     </section>
 
+    
+    <!-- SECCIÓN 13: PRESENTACIÓN EJECUTIVA POWERPOINT (PITCH DECK) -->
+    <section id="presentacion-pptx" class="pptx-section-container">
+      <h2 class="section-title">13. Presentación Ejecutiva PowerPoint (Pitch Deck)</h2>
+      <p class="section-subtitle">Visualizador interactivo de diapositivas oficiales de Sweet Delight S.A.S. con opción de pantalla completa, navegación guiada y descarga directa del archivo PowerPoint original (.pptx).</p>
+
+      <!-- Barra Superior de Acciones & Descarga -->
+      <div class="pptx-toolbar">
+        <div class="pptx-actions-left">
+          <a href="Sweet_Delight_S.A.S._-_Plan_de_Negocio_Fresas_con_Crema.pptx" download="Sweet_Delight_S.A.S._-_Plan_de_Negocio_Fresas_con_Crema.pptx" class="btn-download-pptx">
+            <span>📥</span>
+            <span>Descargar Presentación (.pptx)</span>
+            <span style="font-size: 0.78rem; opacity: 0.9; background: rgba(0,0,0,0.25); padding: 2px 8px; border-radius: 12px; margin-left: 4px;">748 KB</span>
+          </a>
+          <button class="btn-pptx-ctrl" id="btnPptxPlay" onclick="togglePptxAutoplay()">
+            <span id="pptxPlayIcon">▶️</span> <span id="pptxPlayText">Auto-Play</span>
+          </button>
+        </div>
+
+        <div class="pptx-actions-right">
+          <select id="pptxSelect" class="pptx-select-slide" onchange="goToPptxSlide(parseInt(this.value))">
+            <option value="1">Diapositiva 1: Portada Oficial</option>
+            <option value="2">Diapositiva 2: 1. La Idea en una Frase</option>
+            <option value="3">Diapositiva 3: 2. Clientes y Canales</option>
+            <option value="4">Diapositiva 4: 3. Modelo Canvas</option>
+            <option value="5">Diapositiva 5: 4. Oferta y Marketing Mix</option>
+            <option value="6">Diapositiva 6: 5. Inversión y Operación</option>
+            <option value="7">Diapositiva 7: 6. Rentabilidad y P&L</option>
+            <option value="8">Diapositiva 8: 7. Proyección Primer Año</option>
+            <option value="9">Diapositiva 9: 8. Formalización y FODA</option>
+            <option value="10">Diapositiva 10: Conclusiones y Repaso</option>
+          </select>
+          <button class="btn-pptx-ctrl" onclick="togglePptxFullscreen()" title="Pantalla Completa (F)">
+            <span>⛶</span> Modo Presentación
+          </button>
+        </div>
+      </div>
+
+      <!-- Marco del Visor de Diapositivas -->
+      <div class="pptx-deck-frame" id="pptxDeckFrame">
+        
+        <!-- Barra de Progreso Superior -->
+        <div class="pptx-progress-bar-container">
+          <div class="pptx-progress-bar" id="pptxProgressBar"></div>
+        </div>
+
+        <!-- Área de Contenido de Diapositivas -->
+        <div class="pptx-slide-content-area">
+          
+          <!-- SLIDE 1: PORTADA OFICIAL -->
+          <div class="pptx-slide-item active" id="pptxSlide-1">
+            <div class="pptx-cover-slide">
+              <img src="logo.jpg" alt="Sweet Delight Logo" class="pptx-cover-logo" onerror="this.style.display='none'">
+              <div class="tag-badge" style="background: rgba(230, 57, 70, 0.15); color: var(--primary-dark); font-size: 0.95rem; margin-bottom: 12px;">🍓 PROYECTO EMPRESARIAL & PLAN DE NEGOCIO</div>
+              <h1 style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--primary-dark); margin-bottom: 8px; font-weight: 800;">SWEET DELIGHT S.A.S.</h1>
+              <h3 style="font-size: 1.35rem; color: #a4161a; margin-bottom: 20px; font-weight: 600;">Plan de Negocio: Fresas Gourmet con Crema</h3>
+              <div style="display: inline-block; background: #fff0f3; border: 1.5px solid #ffccd5; border-radius: 30px; padding: 6px 20px; font-size: 0.9rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 25px;">
+                🎓 PRESENTACIÓN DIDÁCTICA • SECTOR FINANCIERO • AGOSTO 2026
+              </div>
+              <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 0.95rem;">
+                Propuesta integral de valor, estructuración legal S.A.S., estados financieros anuales, marketing mix 360°, cuadro de mando integral y plan de expansión regional.
+              </p>
+            </div>
+          </div>
+
+          <!-- SLIDE 2: LA IDEA EN UNA FRASE -->
+          <div class="pptx-slide-item" id="pptxSlide-2">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">1. La Idea en una Frase</div>
+              <span class="pptx-slide-badge">Propuesta de Valor</span>
+            </div>
+            <div class="pptx-quote-box">
+              <p>“Sweet Delight es un emprendimiento que convierte un postre tradicional en una <strong>experiencia gourmet personalizable</strong>, altamente estética y sostenible.”</p>
+            </div>
+            <div class="pptx-feature-grid">
+              <div class="pptx-feature-box">
+                <div class="pptx-feature-icon">🍓</div>
+                <div class="pptx-feature-title">FRESCURA</div>
+                <div class="pptx-feature-desc">Fruta 100% del día, seleccionada y desinfectada bajo estrictas normas de higiene BPM.</div>
+              </div>
+              <div class="pptx-feature-box">
+                <div class="pptx-feature-icon">🥣</div>
+                <div class="pptx-feature-title">RECETA PROPIA</div>
+                <div class="pptx-feature-desc">Crema ultra cremosa con opción deslactosada light para incluir a todo tipo de clientes.</div>
+              </div>
+              <div class="pptx-feature-box">
+                <div class="pptx-feature-icon">🌱</div>
+                <div class="pptx-feature-title">SOSTENIBILIDAD</div>
+                <div class="pptx-feature-desc">Empaques 100% biodegradables, alineados con una visión de triple impacto ambiental.</div>
+              </div>
+              <div class="pptx-feature-box">
+                <div class="pptx-feature-icon">📸</div>
+                <div class="pptx-feature-title">EXPERIENCIA</div>
+                <div class="pptx-feature-desc">Presentación instagrameable diseñada para atraer y viralizarse a través de redes sociales.</div>
+              </div>
+            </div>
+            <div class="pptx-highlight-banner">
+              💡 IDEA CLAVE: EL NEGOCIO NO VENDE SOLO FRESAS; VENDE UNA EXPERIENCIA COMPLETA.
+            </div>
+          </div>
+
+          <!-- SLIDE 3: CLIENTES Y CANALES -->
+          <div class="pptx-slide-item" id="pptxSlide-3">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">2. Clientes y Canales</div>
+              <span class="pptx-slide-badge">Mercado & Customer Journey</span>
+            </div>
+            <div class="grid-2" style="margin-bottom: 20px;">
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                  👥 Segmentos de Clientes
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  <div class="pptx-feature-box" style="padding: 12px 16px;">
+                    <strong>🎓 Estudiantes:</strong> Escolares y universitarios en busca de un snack dulce, rápido y accesible.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px 16px;">
+                    <strong>👨‍👩‍👧 Familias y Parejas:</strong> Consumidores tradicionales que pasean los fines de semana.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px 16px;">
+                    <strong>📱 Jóvenes Digitales (14-45 años):</strong> Valoran la estética fotográfica y experiencias interactivas.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px 16px;">
+                    <strong>🏢 Clientes Corporativos:</strong> Empresas que requieren barras de postres para eventos especiales.
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 6px;">
+                  🛵 Canales de Distribución
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid var(--primary);">
+                    <strong>🏪 Punto Físico:</strong> Stand gourmet con vitrina visual llamativa en zonas de alto tráfico peatonal.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid var(--success);">
+                    <strong>📲 Canal Digital:</strong> Pedidos rápidos vía WhatsApp Business y catálogo interactivo con código QR.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid var(--secondary);">
+                    <strong>🚀 Delivery:</strong> Integración con Rappi, Didi Food y mensajería local propia en radio de 5 km.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: #faf4f5; border-radius: 12px; padding: 14px 18px;">
+              <div style="font-weight: 700; font-size: 0.85rem; color: var(--primary-dark); text-transform: uppercase; margin-bottom: 8px;">
+                🔄 Customer Journey (Ciclo del Cliente)
+              </div>
+              <div class="pptx-journey-flow" style="margin: 0;">
+                <div class="pptx-journey-step">
+                  <div class="pptx-step-num">1</div>
+                  <div class="pptx-step-name">Descubre</div>
+                  <div class="pptx-step-sub">TikTok / Reels ASMR</div>
+                </div>
+                <div style="color: var(--primary); font-weight: 800;">➔</div>
+                <div class="pptx-journey-step">
+                  <div class="pptx-step-num">2</div>
+                  <div class="pptx-step-name">Consulta</div>
+                  <div class="pptx-step-sub">Catálogo QR / Chat</div>
+                </div>
+                <div style="color: var(--primary); font-weight: 800;">➔</div>
+                <div class="pptx-journey-step">
+                  <div class="pptx-step-num">3</div>
+                  <div class="pptx-step-name">Compra</div>
+                  <div class="pptx-step-sub">Punto o Domicilio</div>
+                </div>
+                <div style="color: var(--primary); font-weight: 800;">➔</div>
+                <div class="pptx-journey-step">
+                  <div class="pptx-step-num">4</div>
+                  <div class="pptx-step-name">Recibe</div>
+                  <div class="pptx-step-sub">Empaque Eco Premium</div>
+                </div>
+                <div style="color: var(--primary); font-weight: 800;">➔</div>
+                <div class="pptx-journey-step">
+                  <div class="pptx-step-num">5</div>
+                  <div class="pptx-step-name">Vuelve</div>
+                  <div class="pptx-step-sub">Sweet Club 9+1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 4: MODELO DE NEGOCIO CANVAS -->
+          <div class="pptx-slide-item" id="pptxSlide-4">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">3. Modelo de Negocio Canvas</div>
+              <span class="pptx-slide-badge">Estrategia Integral 9 Bloques</span>
+            </div>
+            <div class="pptx-canvas-grid">
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">🎁 Propuesta de Valor</div>
+                <p>Postres frescos, 100% personalizados, estéticos, deliciosos y sostenibles con empaques biodegradables.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">👥 Segmentos de Clientes</div>
+                <p>Estudiantes universitarios, familias, parejas, amantes de lo dulce e instagrameable y empresas para eventos.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">📣 Canales</div>
+                <p>Punto físico gourmet, WhatsApp Business, redes sociales (TikTok/IG), delivery agregadores y catering.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">🤝 Relación con Clientes</div>
+                <p>Atención cálida e interactiva, garantía total de satisfacción y programa de lealtad Sweet Club (9+1 gratis).</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">💰 Fuentes de Ingreso</div>
+                <p>Venta de vasos (8, 12, 16 oz), toppings premium adicionales, bebidas complementarias y barras de catering.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">🔑 Recursos Clave</div>
+                <p>Cadena de frío y vitrinas, fresas frescas seleccionadas, personal capacitado, receta artesanal y marca.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">⚙️ Actividades Clave</div>
+                <p>Producción estandarizada con BPM, marketing de contenidos en video, control de calidad y gestión contable.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">🤝 Socios Clave</div>
+                <p>Cultivadores de fresa locales, distribuidores lácteos certificados, proveedores de empaques eco y repartidores.</p>
+              </div>
+              <div class="pptx-canvas-card">
+                <div class="pptx-canvas-card-title">📊 Estructura de Costos</div>
+                <p>Materia prima fresca, envases ecológicos, arriendo comercial, nómina operativa, servicios y pauta digital.</p>
+              </div>
+            </div>
+            <p style="text-align: center; font-size: 0.88rem; color: var(--text-muted); margin-top: 10px;">
+              <em>El modelo Canvas permite visualizar cómo el negocio crea, entrega y captura valor de forma integral.</em>
+            </p>
+          </div>
+
+          <!-- SLIDE 5: OFERTA Y MARKETING MIX -->
+          <div class="pptx-slide-item" id="pptxSlide-5">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">4. Oferta y Marketing Mix (4P)</div>
+              <span class="pptx-slide-badge">Precios & Estrategia 360°</span>
+            </div>
+            
+            <div class="grid-2">
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">📋 Lista de Precios Oficial (Escenario Base)</h4>
+                <table class="styled-table" style="margin: 0 0 15px 0;">
+                  <thead>
+                    <tr>
+                      <th>Producto / Presentación</th>
+                      <th>Tamaño</th>
+                      <th style="text-align: right;">Precio (COP)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>🍓 Vaso Pequeño</td>
+                      <td>8 oz</td>
+                      <td class="num-col" style="color: var(--primary-dark); font-weight: 700;">$7.000</td>
+                    </tr>
+                    <tr style="background: #fff0f3;">
+                      <td>⭐ Vaso Estándar (Más Vendido)</td>
+                      <td>12 oz</td>
+                      <td class="num-col" style="color: var(--primary-dark); font-weight: 700;">$10.000</td>
+                    </tr>
+                    <tr>
+                      <td>🍧 Vaso Familiar</td>
+                      <td>16 oz</td>
+                      <td class="num-col" style="color: var(--primary-dark); font-weight: 700;">$13.500</td>
+                    </tr>
+                    <tr>
+                      <td>🍫 Toppings Premium Adicionales</td>
+                      <td>Porción</td>
+                      <td class="num-col" style="color: var(--primary-dark); font-weight: 700;">$1.500</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">🎯 Marketing Mix 360°</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">1. PRODUCTO</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Personalización total (base + crema + toppings). Línea saludable y empaque eco.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">2. PRECIO</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Precios psicológicos, Up-selling (+18% ticket) y descuento del 15% en lanzamiento.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">3. PLAZA</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Stand en zona estudiantil, radio delivery de 5 km y horario estratégico Mié-Dom.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">4. PROMOCIÓN</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Viralidad TikTok/Reels ASMR, Sweet Club 9+1 y pauta digital geolocalizada.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 6: INVERSIÓN Y OPERACIÓN -->
+          <div class="pptx-slide-item" id="pptxSlide-6">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">5. Inversión y Operación</div>
+              <span class="pptx-slide-badge">Presupuesto & Procesos BPM</span>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">💼 Presupuesto Inicial Requerido</h4>
+                <table class="styled-table" style="margin: 0;">
+                  <thead>
+                    <tr>
+                      <th>Rubro de Inversión</th>
+                      <th style="text-align: right;">Valor (COP)</th>
+                      <th style="text-align: right;">%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>❄️ Maquinaria y Equipos (Frío/Batidoras)</td>
+                      <td class="num-col">$2.600.000</td>
+                      <td class="num-col">52%</td>
+                    </tr>
+                    <tr>
+                      <td>🍓 Insumos de Apertura (Fresas/Lácteos)</td>
+                      <td class="num-col">$800.000</td>
+                      <td class="num-col">16%</td>
+                    </tr>
+                    <tr>
+                      <td>📦 Empaques Eco & Publicidad Inicial</td>
+                      <td class="num-col">$400.000</td>
+                      <td class="num-col">8%</td>
+                    </tr>
+                    <tr>
+                      <td>💵 Capital de Trabajo Operativo</td>
+                      <td class="num-col">$1.200.000</td>
+                      <td class="num-col">24%</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td><strong>TOTAL INVERSIÓN INICIAL</strong></td>
+                      <td class="num-col" style="color: var(--primary-dark); font-size: 1.05rem;"><strong>$5.000.000</strong></td>
+                      <td class="num-col"><strong>100%</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">⚙️ Procesos Críticos Operacionales (BPM)</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid var(--primary);">
+                    <div style="font-weight: 700; color: var(--primary-dark); font-size: 0.88rem;">1. Abastecimiento Diario</div>
+                    <p style="font-size: 0.82rem; margin: 0;">Lavado, desinfección por inmersión y porcionado de fresas bajo normas BPM.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid var(--secondary);">
+                    <div style="font-weight: 700; color: var(--primary-dark); font-size: 0.88rem;">2. Preparación Artesanal</div>
+                    <p style="font-size: 0.82rem; margin: 0;">Elaboración matutina de crema secreta con textura ultra cremosa y control de dulzor.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid var(--accent);">
+                    <div style="font-weight: 700; color: var(--primary-dark); font-size: 0.88rem;">3. Personalización en Vivo</div>
+                    <p style="font-size: 0.82rem; margin: 0;">Armado visual del vaso en 45 segundos frente al cliente con toppings seleccionados.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid var(--success);">
+                    <div style="font-weight: 700; color: var(--primary-dark); font-size: 0.88rem;">4. Control de Calidad Permanente</div>
+                    <p style="font-size: 0.82rem; margin: 0;">Supervisión estricta de temperatura (2°C - 4°C) y rotación FIFO de materias primas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="pptx-highlight-banner" style="background: linear-gradient(90deg, #1b4332, #2a9d8f); margin-top: 15px;">
+              🏆 CLAVE OPERATIVA: ESTANDARIZACIÓN ESTRICTA DE PORCIONES Y CUMPLIMIENTO BPM.
+            </div>
+          </div>
+
+          <!-- SLIDE 7: RENTABILIDAD Y ESTADO DE RESULTADOS -->
+          <div class="pptx-slide-item" id="pptxSlide-7">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">6. Rentabilidad y Estado de Resultados</div>
+              <span class="pptx-slide-badge">P&L Mensual (2.000 Vasos)</span>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">📊 Estado de Resultados Mensual Base</h4>
+                <table class="styled-table" style="margin: 0;">
+                  <thead>
+                    <tr>
+                      <th>Concepto Contable</th>
+                      <th style="text-align: right;">Valor (COP)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>(+) Ingresos Operacionales (2.000 vasos @ $10.000)</td>
+                      <td class="num-col" style="font-weight: 700; color: #1b4332;">$20.000.000</td>
+                    </tr>
+                    <tr>
+                      <td>(–) Costo de Ventas (COGS: $3.600/vaso)</td>
+                      <td class="num-col" style="color: #c1121f;">-$7.200.000</td>
+                    </tr>
+                    <tr style="background: #e8f7f5; font-weight: 700;">
+                      <td>(=) Utilidad Bruta (64.0%)</td>
+                      <td class="num-col" style="color: #1b4332;">$12.800.000</td>
+                    </tr>
+                    <tr>
+                      <td>(–) Gastos Administrativos & Fijos (Nómina/Arriendo)</td>
+                      <td class="num-col" style="color: #c1121f;">-$4.300.000</td>
+                    </tr>
+                    <tr>
+                      <td>(–) Publicidad & Marketing Digital</td>
+                      <td class="num-col" style="color: #c1121f;">-$600.000</td>
+                    </tr>
+                    <tr style="background: #fff0f3; font-weight: 700;">
+                      <td>(=) Utilidad Operacional</td>
+                      <td class="num-col" style="color: var(--primary-dark);">$7.900.000</td>
+                    </tr>
+                    <tr>
+                      <td>(–) Impuestos y Otros (Est. 35%)</td>
+                      <td class="num-col" style="color: #c1121f;">-$2.862.500</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td><strong>(=) UTILIDAD NETA ESTIMADA</strong></td>
+                      <td class="num-col" style="font-size: 1.15rem; color: #1b4332;"><strong>$5.037.500</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div style="display: flex; flex-direction: column; justify-content: center; gap: 15px;">
+                <div class="kpi-card green" style="padding: 24px; text-align: center; border-left-width: 6px;">
+                  <div class="kpi-title" style="font-size: 0.95rem;">Margen Neto del Proyecto</div>
+                  <div class="kpi-value" style="font-size: 3rem; margin: 10px 0; color: #1b4332;">25.19%</div>
+                  <p style="color: #2d3748; font-size: 0.95rem; line-height: 1.5;">
+                    Por cada <strong>$100</strong> de ventas brutas, Sweet Delight conserva más de <strong>$25</strong> de ganancia neta libre tras pagar todos los costos, sueldos, arriendos e impuestos.
+                  </p>
+                </div>
+                
+                <div class="kpi-card gold" style="padding: 18px; border-left-width: 6px;">
+                  <div class="kpi-title">Punto de Equilibrio Operativo</div>
+                  <div class="kpi-value" style="font-size: 1.8rem; margin: 6px 0;">672 vasos / mes</div>
+                  <p style="color: var(--text-muted); font-size: 0.85rem;">
+                    Con solo vender 23 vasos al día se cubren la totalidad de los costos fijos y gastos de administración.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 8: PROYECCIÓN DEL PRIMER AÑO -->
+          <div class="pptx-slide-item" id="pptxSlide-8">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">7. Proyección del Primer Año</div>
+              <span class="pptx-slide-badge">Consolidado Anual & Estacionalidad</span>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">📈 Resumen Consolidado Anual (Año 1)</h4>
+                <table class="styled-table" style="margin: 0;">
+                  <thead>
+                    <tr>
+                      <th>Indicador Estratégico</th>
+                      <th style="text-align: right;">Valor Proyectado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>🍧 Vasos Totales Vendidos</td>
+                      <td class="num-col">26.950 unidades</td>
+                    </tr>
+                    <tr>
+                      <td>🍓 Ingresos por Venta de Postres</td>
+                      <td class="num-col">$269.500.000 COP</td>
+                    </tr>
+                    <tr>
+                      <td>🎂 Otros Ingresos (Catering & Eventos)</td>
+                      <td class="num-col">$23.800.000 COP</td>
+                    </tr>
+                    <tr style="background: #e8f7f5; font-weight: 700;">
+                      <td><strong>(=) Facturación Bruta Total</strong></td>
+                      <td class="num-col" style="color: #1b4332; font-size: 1.05rem;"><strong>$293.300.000 COP</strong></td>
+                    </tr>
+                    <tr>
+                      <td>(–) Costos Variables Totales (COGS)</td>
+                      <td class="num-col" style="color: #c1121f;">-$105.480.000 COP</td>
+                    </tr>
+                    <tr>
+                      <td>(–) Gastos Fijos + Pauta Anual</td>
+                      <td class="num-col" style="color: #c1121f;">-$59.700.000 COP</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td><strong>(=) UTILIDAD NETA ANUAL ACUMULADA</strong></td>
+                      <td class="num-col" style="font-size: 1.2rem; color: #1b4332;"><strong>$79.456.800 COP</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">🗓️ Estacionalidad & Picos de Demanda</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #ff4d6d;">
+                    <strong>🌸 Mayo (Mes de la Madre):</strong> Demanda de 2.800 vasos (+40%). Utilidad neta mensual superior a $8.2M COP.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #c1121f;">
+                    <strong>❤️ Septiembre (Amor y Amistad):</strong> Ventas de 3.200 vasos con combos para parejas. Utilidad neta de $9.5M COP.
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #ffb703;">
+                    <strong>🎄 Diciembre (Temporada Navideña):</strong> Récord de 3.800 vasos + catering de novenas. Utilidad neta de $11.4M COP.
+                  </div>
+                </div>
+                <div class="pptx-quote-box" style="padding: 12px 16px; margin: 0;">
+                  <p style="font-size: 0.88rem; font-style: normal;">
+                    <strong>💡 Estrategia:</strong> La diversificación con catering corporativo aporta el 8% de los ingresos, blindando la estabilidad financiera ante fluctuaciones del clima.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 9: FORMALIZACIÓN Y ESTRATEGIA -->
+          <div class="pptx-slide-item" id="pptxSlide-9">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">8. Formalización Legal y Estrategia</div>
+              <span class="pptx-slide-badge">Estructura S.A.S. & FODA</span>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 18px;">
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">⚖️ Tipo de Empresa: S.A.S.</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">Responsabilidad Limitada</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Patrimonio personal de socios 100% blindado ante deudas comerciales.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">Flexibilidad Total</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Constitución por documento privado y acuerdos estatutarios ágiles.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">Escalabilidad</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Facilidad para emitir nuevas acciones y captar inversionistas o socios ángel.</p>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 12px;">
+                    <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.85rem; margin-bottom: 4px;">Formalidad Legal</div>
+                    <p style="font-size: 0.8rem; margin: 0;">Matrícula en Cámara de Comercio, RUT DIAN, concepto sanitario y Sayco.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 style="color: var(--primary-dark); font-size: 1.05rem; margin-bottom: 10px;">🧭 Identidad Corporativa</h4>
+                <div class="pptx-feature-box" style="padding: 12px; margin-bottom: 8px; border-left: 4px solid var(--primary);">
+                  <strong>🎯 Misión:</strong> Transformar momentos cotidianos en experiencias dulces con postres artesanales frescos, impulsando el campo local y la sostenibilidad.
+                </div>
+                <div class="pptx-feature-box" style="padding: 12px; border-left: 4px solid var(--secondary);">
+                  <strong>🚀 Visión 2031:</strong> Ser la cadena líder regional de fresas con crema con 5 sedes activas y modelo de triple impacto (Económico, Social y Ambiental).
+                </div>
+              </div>
+            </div>
+
+            <!-- Matriz FODA Mini -->
+            <div style="background: #faf4f5; border-radius: 12px; padding: 14px 18px;">
+              <div style="font-weight: 800; font-size: 0.85rem; color: var(--primary-dark); text-transform: uppercase; margin-bottom: 8px;">
+                📊 Diagnóstico Estratégico FODA
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px;">
+                <div style="background: #e8f7f5; padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; border-left: 3px solid #2a9d8f;">
+                  <strong>Fortalezas:</strong> Receta propia, estética viral y frescura garantizada.
+                </div>
+                <div style="background: #fefae0; padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; border-left: 3px solid #e9c46a;">
+                  <strong>Oportunidades:</strong> Delivery local, catering corporativo y foodies.
+                </div>
+                <div style="background: #fff0f3; padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; border-left: 3px solid #ff4d6d;">
+                  <strong>Debilidades:</strong> Dependencia de perecederos y capacidad inicial.
+                </div>
+                <div style="background: #f8edeb; padding: 8px 12px; border-radius: 8px; font-size: 0.8rem; border-left: 3px solid #c1121f;">
+                  <strong>Amenazas:</strong> Inflación de lácteos y competencia informal de calle.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 10: CONCLUSIONES Y PREGUNTAS DE REPASO -->
+          <div class="pptx-slide-item" id="pptxSlide-10">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title">Conclusiones y Preguntas de Repaso</div>
+              <span class="pptx-slide-badge">Evaluación Didáctica</span>
+            </div>
+
+            <div class="pptx-quote-box" style="margin-bottom: 20px;">
+              <p style="font-size: 1.05rem;">
+                “Sweet Delight integra producto, experiencia y control financiero riguroso en un modelo <strong>altamente rentable, viable y escalable</strong>. El éxito se sustenta en la frescura diaria, el cumplimiento BPM y la fidelización del Sweet Club.”
+              </p>
+            </div>
+
+            <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              ❓ Preguntas de Repaso Académico (Haz clic para ver la solución):
+            </h4>
+
+            <div class="pptx-qa-list">
+              
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxQA(this)">
+                  <span>1. ¿Cuál es el elemento central de la propuesta de valor de Sweet Delight?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  <strong>Respuesta:</strong> Convertir un postre tradicional en una <strong>experiencia gourmet personalizable</strong>, basada en frescura 100% del día con protocolo BPM, crema artesanal de receta propia, presentación instagrameable y empaques 100% biodegradables.
+                </div>
+              </div>
+
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxQA(this)">
+                  <span>2. ¿Qué porcentaje de margen neto proyecta el escenario base del negocio?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  <strong>Respuesta:</strong> Un margen neto del <strong>25.19%</strong>, lo que equivale a conservar más de <strong>$25 COP libres</strong> por cada $100 COP facturados, generando <strong>$5.037.500 COP</strong> de utilidad neta mensual en el escenario base de 2.000 vasos.
+                </div>
+              </div>
+
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxQA(this)">
+                  <span>3. ¿Cuáles son las tres fuentes principales de ingresos identificadas?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  <strong>Respuesta:</strong> 1) Venta directa en punto físico de vasos de postre (8 oz, 12 oz y 16 oz), 2) Adicionales de toppings premium y bebidas complementarias, y 3) Barras de postres y catering para eventos corporativos y celebraciones familiares.
+                </div>
+              </div>
+
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxQA(this)">
+                  <span>4. ¿Por qué se eligió la forma jurídica S.A.S. para este emprendimiento?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  <strong>Respuesta:</strong> Por la <strong>responsabilidad limitada</strong> que protege el patrimonio personal de los socios, la flexibilidad de constitución por documento privado, los menores costos notariales y su estructura ideal para escalar y recibir futuros inversionistas.
+                </div>
+              </div>
+
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxQA(this)">
+                  <span>5. ¿Cómo influye la estacionalidad en la utilidad neta anual proyectada?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  <strong>Respuesta:</strong> Impulsa picos de ventas en festividades clave como Mayo (Madre), Septiembre (Amor y Amistad) y Diciembre (Navidad), donde las utilidades mensuales suben entre $8.2M y $11.4M COP, totalizando una <strong>utilidad neta anual de $79.456.800 COP</strong> sobre $293.3M COP de ingresos.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tira de Miniaturas / Píldoras de Navegación Rápida -->
+        <div class="pptx-pill-nav" id="pptxPillNav">
+          <button class="pptx-pill active" onclick="goToPptxSlide(1)">1. Portada</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(2)">2. Idea</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(3)">3. Clientes & Canales</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(4)">4. Canvas</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(5)">5. Precios & 4P</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(6)">6. Inversión & BPM</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(7)">7. Rentabilidad & P&L</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(8)">8. Proyección Año 1</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(9)">9. Legal & FODA</button>
+          <button class="pptx-pill" onclick="goToPptxSlide(10)">10. Conclusiones & Q&A</button>
+        </div>
+
+        <!-- Barra Inferior de Navegación -->
+        <div class="pptx-bottom-bar">
+          <button class="pptx-nav-btn" id="pptxPrevBtn" onclick="changePptxSlide(-1)" disabled>
+            <span>◀</span> Diapositiva Anterior
+          </button>
+
+          <div class="pptx-slide-counter">
+            <span>Diapositiva</span>
+            <span id="pptxCurrentNum" style="background: #ffe5ec; color: var(--primary-dark); padding: 3px 10px; border-radius: 12px; font-weight: 800;">1</span>
+            <span>de 10</span>
+          </div>
+
+          <button class="pptx-nav-btn" id="pptxNextBtn" onclick="changePptxSlide(1)">
+            Siguiente Diapositiva <span>▶</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
     <!-- NOTA PARA EL PROFESOR / EVALUACIÓN -->
     <div class="teacher-note">
       <h3>📌 Resumen de Cumplimiento de la Actividad Académica Integral:</h3>
@@ -2813,6 +4004,7 @@
         <li>✅ <strong>Metodología de Planeación Estratégica:</strong> Guía paso a paso de las 6 fases de la planeación organizacional.</li>
         <li>✅ <strong>Planeación Estratégica de Sweet Delight S.A.S.:</strong> Misión, Visión 2031, Valores, Matriz FODA cruzada, Análisis PESTEL y Cuadro de Mando Integral (Balanced Scorecard) con KPIs.</li>
         <li>✅ <strong>Simulador Financiero en Vivo:</strong> Ajuste dinámico de parámetros con soporte en pesos (COP) y dólares (USD).</li>
+        <li>✅ <strong>Presentación Ejecutiva PowerPoint Oficial (.PPTX):</strong> Visor interactivo de 10 diapositivas integradas con controles de pitch deck, modo pantalla completa, autoplay y descarga directa del archivo ejecutable (748 KB).</li>
       </ul>
     </div>
 
@@ -2945,6 +4137,139 @@
       initDots();
       updateSimulation();
     });
+  
+    // --- LÓGICA DEL VISOR DE PRESENTACIÓN POWERPOINT (PPTX) ---
+    let pptxCurrent = 1;
+    const pptxTotal = 10;
+    let pptxAutoplayTimer = null;
+
+    function goToPptxSlide(slideNum) {
+      if (slideNum < 1 || slideNum > pptxTotal) return;
+
+      // Ocultar actual
+      const currentElem = document.getElementById(`pptxSlide-${pptxCurrent}`);
+      if (currentElem) currentElem.classList.remove('active');
+
+      const pills = document.querySelectorAll('.pptx-pill');
+      if (pills[pptxCurrent - 1]) pills[pptxCurrent - 1].classList.remove('active');
+
+      // Activar nueva
+      pptxCurrent = slideNum;
+      const nextElem = document.getElementById(`pptxSlide-${pptxCurrent}`);
+      if (nextElem) nextElem.classList.add('active');
+
+      if (pills[pptxCurrent - 1]) pills[pptxCurrent - 1].classList.add('active');
+
+      // Actualizar Controles
+      const prevBtn = document.getElementById('pptxPrevBtn');
+      const nextBtn = document.getElementById('pptxNextBtn');
+      if (prevBtn) prevBtn.disabled = (pptxCurrent === 1);
+      if (nextBtn) nextBtn.disabled = (pptxCurrent === pptxTotal);
+
+      const numElem = document.getElementById('pptxCurrentNum');
+      if (numElem) numElem.innerText = pptxCurrent;
+
+      const selectElem = document.getElementById('pptxSelect');
+      if (selectElem) selectElem.value = pptxCurrent;
+
+      // Barra de Progreso
+      const progBar = document.getElementById('pptxProgressBar');
+      if (progBar) {
+        const pct = (pptxCurrent / pptxTotal) * 100;
+        progBar.style.width = pct + '%';
+      }
+    }
+
+    function changePptxSlide(delta) {
+      const target = pptxCurrent + delta;
+      if (target >= 1 && target <= pptxTotal) {
+        goToPptxSlide(target);
+      }
+    }
+
+    function togglePptxAutoplay() {
+      const btn = document.getElementById('btnPptxPlay');
+      const icon = document.getElementById('pptxPlayIcon');
+      const text = document.getElementById('pptxPlayText');
+
+      if (pptxAutoplayTimer) {
+        clearInterval(pptxAutoplayTimer);
+        pptxAutoplayTimer = null;
+        if (btn) btn.classList.remove('active');
+        if (icon) icon.innerText = '▶️';
+        if (text) text.innerText = 'Auto-Play';
+      } else {
+        if (btn) btn.classList.add('active');
+        if (icon) icon.innerText = '⏸️';
+        if (text) text.innerText = 'Pausar';
+        pptxAutoplayTimer = setInterval(() => {
+          if (pptxCurrent < pptxTotal) {
+            goToPptxSlide(pptxCurrent + 1);
+          } else {
+            goToPptxSlide(1);
+          }
+        }, 6000);
+      }
+    }
+
+    function togglePptxFullscreen() {
+      const frame = document.getElementById('pptxDeckFrame');
+      if (!frame) return;
+
+      if (!document.fullscreenElement) {
+        if (frame.requestFullscreen) {
+          frame.requestFullscreen();
+        } else if (frame.webkitRequestFullscreen) {
+          frame.webkitRequestFullscreen();
+        }
+        frame.classList.add('fullscreen-mode');
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+        frame.classList.remove('fullscreen-mode');
+      }
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+      const frame = document.getElementById('pptxDeckFrame');
+      if (frame && !document.fullscreenElement) {
+        frame.classList.remove('fullscreen-mode');
+      }
+    });
+
+    // Control por Teclado (Flechas izq/der)
+    document.addEventListener('keydown', (e) => {
+      const targetTag = e.target.tagName.toLowerCase();
+      if (targetTag === 'input' || targetTag === 'textarea' || targetTag === 'select') return;
+
+      if (e.key === 'ArrowLeft') {
+        changePptxSlide(-1);
+      } else if (e.key === 'ArrowRight' || e.key === ' ') {
+        if (e.key === ' ') e.preventDefault();
+        changePptxSlide(1);
+      } else if (e.key === 'f' || e.key === 'F') {
+        togglePptxFullscreen();
+      }
+    });
+
+    // Acordeón Didáctico de Preguntas en Diapositiva 10
+    function togglePptxQA(header) {
+      const item = header.parentElement;
+      const answer = item.querySelector('.pptx-qa-answer');
+      const arrow = header.querySelector('.qa-arrow');
+      if (!answer) return;
+
+      const isOpen = answer.classList.contains('open');
+      if (isOpen) {
+        answer.classList.remove('open');
+        if (arrow) arrow.innerText = '➕';
+      } else {
+        answer.classList.add('open');
+        if (arrow) arrow.innerText = '➖';
+      }
+    }
+
   </script>
 </body>
 
