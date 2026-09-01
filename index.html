@@ -1615,6 +1615,114 @@
       animation: fadeIn 0.3s ease;
     }
 
+    /* Estilos específicos para la Presentación Tecnológica 14 */
+    .btn-download-tech-pptx {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #1b4332, #2a9d8f);
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 20px rgba(42, 157, 143, 0.35);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-download-tech-pptx:hover {
+      background: linear-gradient(135deg, #143628, #1b4332);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(27, 67, 50, 0.5);
+    }
+
+    .tech-pill {
+      display: inline-block;
+      background: #e8f7f5;
+      color: #1b4332;
+      border: 1.5px solid #a7e0d8;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .tech-pill.gold {
+      background: #fefae0;
+      color: #854d0e;
+      border-color: #fde047;
+    }
+
+    .tech-pill.blue {
+      background: #e0f2fe;
+      color: #0369a1;
+      border-color: #bae6fd;
+    }
+
+    .tech-diagram-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border: 2px solid #e2e8f0;
+      transition: transform 0.3s ease;
+      display: block;
+      margin: 15px auto;
+    }
+
+    .tech-diagram-img:hover {
+      transform: scale(1.015);
+    }
+
+    .tech-step-badge {
+      width: 28px;
+      height: 28px;
+      background: #2a9d8f;
+      color: white;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-right: 8px;
+    }
+
+    .tech-flow-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .tech-flow-card {
+      background: #ffffff;
+      border: 1.5px solid #a7e0d8;
+      border-radius: 12px;
+      padding: 12px 14px;
+      flex: 1;
+      min-width: 130px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(42, 157, 143, 0.08);
+    }
+
+    .tech-flow-card h5 {
+      color: #1b4332;
+      font-size: 0.88rem;
+      margin-top: 4px;
+      font-weight: 700;
+    }
+
+    .tech-arrow {
+      color: #2a9d8f;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
   </style>
 </head>
 
@@ -1639,7 +1747,8 @@
     <a href="#guia-estrategica">10. Metodología Estratégica</a>
     <a href="#planeacion-empresa">11. Plan Estratégico Sweet Delight</a>
     <a href="#simulador">12. Simulador</a>
-    <a href="#presentacion-pptx">📊 13. Presentación PPTX</a>
+    <a href="#presentacion-pptx">📊 13. PPTX Plan Negocio</a>
+    <a href="#presentacion-tecnologia-pptx">⚡ 14. PPTX Sistemas Tecnológicos</a>
   </nav>
 
   <div class="container">
@@ -3988,10 +4097,575 @@
       </div>
     </section>
 
+
+    <!-- SECCIÓN 14: PRESENTACIÓN EJECUTIVA POWERPOINT: IMPACTO DE LOS SISTEMAS TECNOLÓGICOS EN LA PRODUCCIÓN -->
+    <section id="presentacion-tecnologia-pptx" class="pptx-section-container">
+      <h2 class="section-title">14. Presentación Oficial: Impacto de los Sistemas Tecnológicos en la Producción (Siglos XX - XXI)</h2>
+      <p class="section-subtitle">Investigación aplicada a los procesos empresariales de producción, caso de estudio en la Industria Agroalimentaria (Grupo Bimbo) y convergencia de ciencias transversales.</p>
+
+      <!-- Barra Superior de Acciones & Descarga -->
+      <div class="pptx-toolbar" style="background: linear-gradient(135deg, #f0fdf4, #e8f7f5); border-color: #a7e0d8;">
+        <div class="pptx-actions-left">
+          <a href="Impacto_de_los_Sistemas_Tecnol%C3%B3gicos_en_la_Producci%C3%B3n.pptx" download="Impacto_de_los_Sistemas_Tecnológicos_en_la_Producción.pptx" class="btn-download-tech-pptx">
+            <span>📥</span>
+            <span>Descargar Presentación (.pptx)</span>
+            <span style="font-size: 0.78rem; opacity: 0.95; background: rgba(0,0,0,0.25); padding: 2px 8px; border-radius: 12px; margin-left: 4px;">2.29 MB</span>
+          </a>
+          <button class="btn-pptx-ctrl" id="btnPptxTechPlay" onclick="togglePptxTechAutoplay()" style="border-color: #a7e0d8; color: #1b4332;">
+            <span id="pptxTechPlayIcon">▶️</span> <span id="pptxTechPlayText">Auto-Play</span>
+          </button>
+        </div>
+
+        <div class="pptx-actions-right">
+          <select id="pptxTechSelect" class="pptx-select-slide" onchange="goToPptxTechSlide(parseInt(this.value))" style="border-color: #a7e0d8;">
+            <option value="1">Diapositiva 1: Portada Oficial</option>
+            <option value="2">Diapositiva 2: 1. De la Mecanización a la Producción Inteligente</option>
+            <option value="3">Diapositiva 3: 2. Tecnologías que Cambiaron la Producción</option>
+            <option value="4">Diapositiva 4: 3. Industria Agroalimentaria: Proceso Integrado</option>
+            <option value="5">Diapositiva 5: 4. Tecnologías Aplicadas a Cada Fase</option>
+            <option value="6">Diapositiva 6: 5. Caso de Estudio: Grupo Bimbo</option>
+            <option value="7">Diapositiva 7: 6. Consistencia y Calidad (Del Dato a la Acción)</option>
+            <option value="8">Diapositiva 8: 7. Ciencias Transversales en la Producción</option>
+            <option value="9">Diapositiva 9: 8. Beneficios y Retos de la Transformación</option>
+            <option value="10">Diapositiva 10: 9. Conclusiones y Preguntas Clave</option>
+          </select>
+          <button class="btn-pptx-ctrl" onclick="togglePptxTechFullscreen()" title="Pantalla Completa (F)" style="border-color: #a7e0d8; color: #1b4332;">
+            <span>⛶</span> Modo Presentación
+          </button>
+        </div>
+      </div>
+
+      <!-- Marco del Visor de Diapositivas -->
+      <div class="pptx-deck-frame" id="pptxTechDeckFrame" style="border-color: #a7e0d8;">
+        
+        <!-- Barra de Progreso Superior -->
+        <div class="pptx-progress-bar-container">
+          <div class="pptx-progress-bar" id="pptxTechProgressBar" style="background: linear-gradient(90deg, #2a9d8f, #e9c46a);"></div>
+        </div>
+
+        <!-- Área de Contenido de Diapositivas -->
+        <div class="pptx-slide-content-area">
+          
+          <!-- SLIDE 1: PORTADA OFICIAL -->
+          <div class="pptx-tech-slide-item active" id="pptxTechSlide-1">
+            <div class="pptx-cover-slide" style="background: radial-gradient(circle at center, #f0fdf4 0%, #ffffff 70%);">
+              <div style="margin-bottom: 15px;">
+                <img src="assets/pptx_tech/image-1-1.jpeg" alt="Tecnología Industrial" style="max-width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #2a9d8f; box-shadow: 0 10px 25px rgba(42, 157, 143, 0.25);">
+              </div>
+              <div class="tag-badge success" style="font-size: 0.95rem; margin-bottom: 12px;">⚡ SISTEMAS TECNOLÓGICOS • SIGLOS XX Y XXI</div>
+              <h1 style="font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #1b4332; margin-bottom: 8px; font-weight: 800; line-height: 1.2;">IMPACTO DE LOS SISTEMAS TECNOLÓGICOS EN LA PRODUCCIÓN</h1>
+              <h3 style="font-size: 1.3rem; color: #2a9d8f; margin-bottom: 20px; font-weight: 600;">Análisis Técnico-Empresarial • Caso de Estudio: Industria Agroalimentaria</h3>
+              <div style="display: inline-block; background: #e8f7f5; border: 1.5px solid #a7e0d8; border-radius: 30px; padding: 6px 20px; font-size: 0.9rem; font-weight: 700; color: #1b4332; margin-bottom: 25px;">
+                🏭 INDUSTRIA 4.0 • CASO GRUPO BIMBO • CIENCIAS TRANSVERSALES
+              </div>
+              <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 0.95rem;">
+                Evaluación exhaustiva de los impactos de la electricidad, automotores, aviación, redes de agua, microelectrónica, telecomunicaciones, computación y refrigeración sobre los procesos productivos industriales modernos.
+              </p>
+            </div>
+          </div>
+
+          <!-- SLIDE 2: DE LA MECANIZACIÓN A LA PRODUCCIÓN INTELIGENTE -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-2">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">1. De la Mecanización a la Producción Inteligente</div>
+              <span class="tech-pill">Evolución Histórica & Paradigmas</span>
+            </div>
+            
+            <div class="grid-3" style="margin-bottom: 22px;">
+              <div class="pptx-feature-box" style="border-top: 4px solid #457b9d; padding: 18px;">
+                <div style="font-size: 1.5rem; margin-bottom: 8px;">⚙️</div>
+                <div style="font-weight: 800; color: #1d3557; font-size: 1rem; margin-bottom: 6px;">SIGLO XX (Inicios)</div>
+                <div style="font-size: 0.88rem; color: var(--text-main); line-height: 1.5;">
+                  • <strong>Electricidad:</strong> Motores fraccionados e independientes.<br>
+                  • <strong>Transporte Masivo:</strong> Automóviles y aviones de carga.<br>
+                  • <strong>Comunicaciones:</strong> Radio, teléfono y refrigeración industrial.
+                </div>
+              </div>
+
+              <div class="pptx-feature-box" style="border-top: 4px solid #e76f51; padding: 18px;">
+                <div style="font-size: 1.5rem; margin-bottom: 8px;">🎛️</div>
+                <div style="font-weight: 800; color: #b73e23; font-size: 1rem; margin-bottom: 6px;">FINALES SIGLO XX</div>
+                <div style="font-size: 0.88rem; color: var(--text-main); line-height: 1.5;">
+                  • <strong>Semiconductores & Sensores:</strong> Miniaturización electrónica.<br>
+                  • <strong>PLCs:</strong> Controladores lógicos programables en línea.<br>
+                  • <strong>Informática Integrada:</strong> CAD/CAM, MRP y ERP centralizado.
+                </div>
+              </div>
+
+              <div class="pptx-feature-box" style="border-top: 4px solid #2a9d8f; padding: 18px;">
+                <div style="font-size: 1.5rem; margin-bottom: 8px;">🤖</div>
+                <div style="font-weight: 800; color: #1b4332; font-size: 1rem; margin-bottom: 6px;">SIGLO XXI (Industria 4.0)</div>
+                <div style="font-size: 0.88rem; color: var(--text-main); line-height: 1.5;">
+                  • <strong>Internet de las Cosas (IoT):</strong> Conectividad total y sensores.<br>
+                  • <strong>Inteligencia Artificial:</strong> Gemelos Digitales y Machine Learning.<br>
+                  • <strong>Robótica Avanzada:</strong> Mantenimiento predictivo y AGVs.
+                </div>
+              </div>
+            </div>
+
+            <div class="pptx-highlight-banner" style="background: linear-gradient(90deg, #1b4332, #2a9d8f);">
+              💡 IDEA CLAVE: La tecnología ha evolucionado desde la potencia mecánica hacia la precisión digital y la capacidad predictiva en tiempo real.
+            </div>
+          </div>
+
+          <!-- SLIDE 3: TECNOLOGÍAS QUE CAMBIARON LA PRODUCCIÓN -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-3">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">2. Tecnologías que Cambiaron la Producción</div>
+              <span class="tech-pill">Matriz de Impacto en Procesos</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="styled-table" style="margin: 0 0 15px 0; font-size: 0.88rem;">
+                <thead>
+                  <tr style="background: linear-gradient(135deg, #1b4332, #2a9d8f); color: white;">
+                    <th style="width: 25%;">Tecnología Desarrollada</th>
+                    <th style="width: 37%;">Impacto Directo en Producción</th>
+                    <th style="width: 38%;">Transformación Empresarial</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>⚡ Generación de Electricidad</strong></td>
+                    <td>Motores eléctricos independientes e iluminación artificial industrial continua.</td>
+                    <td><span class="tag-badge success">Producción 24/7</span> Flexibilidad en diseño de planta y velocidad de ensamble.</td>
+                  </tr>
+                  <tr style="background: #fcfdfe;">
+                    <td><strong>🚗✈️ Transporte (Auto / Avión)</strong></td>
+                    <td>Logística flexible punto a punto y tránsito transcontinental rápido de insumos críticos.</td>
+                    <td><span class="tag-badge" style="background: #e0f2fe; color: #0369a1;">Just-in-Time</span> Cadenas de suministro globales y reducción de inventarios fijos.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>💧❄️ Red de Agua & Refrigeración</strong></td>
+                    <td>Pureza hídrica estandarizada y control termohigrométrico continuo en planta y transporte.</td>
+                    <td><span class="tag-badge" style="background: #fefae0; color: #854d0e;">Cadena de Frío</span> Estandarización de higiene e inocuidad farmacéutica/alimentaria.</td>
+                  </tr>
+                  <tr style="background: #fcfdfe;">
+                    <td><strong>🎛️ Semiconductores & Sensores</strong></td>
+                    <td>Reemplazo de control manual por Controladores Lógicos Programables (PLC) y sensórica en tiempo real.</td>
+                    <td><span class="tag-badge success">Cero Defectos</span> Automatización industrial y eliminación drástica del error humano.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>💻🧠 Informática, ERP e IA</strong></td>
+                    <td>Digitalización total de diseño y manufactura (CAD/CAM) y gestión integral mediante ERP.</td>
+                    <td><span class="tag-badge" style="background: #f3e8ff; color: #6b21a8;">Integración CIM</span> Gemelos Digitales (Digital Twins) y mantenimiento predictivo por IA.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SLIDE 4: INDUSTRIA AGROALIMENTARIA: UN PROCESO INTEGRADO -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-4">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">3. Industria Agroalimentaria: Un Proceso Integrado</div>
+              <span class="tech-pill">Cadena de Valor & Flujo de Planta</span>
+            </div>
+
+            <div class="tech-flow-container">
+              <div class="tech-flow-card">
+                <span class="tech-step-badge">1</span>
+                <h5>Recepción & Clasificación</h5>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Selección Óptica</p>
+              </div>
+              <div class="tech-arrow">➔</div>
+              <div class="tech-flow-card">
+                <span class="tech-step-badge">2</span>
+                <h5>Transformación Térmica</h5>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Pasteurización/UHT</p>
+              </div>
+              <div class="tech-arrow">➔</div>
+              <div class="tech-flow-card">
+                <span class="tech-step-badge">3</span>
+                <h5>Envasado Aséptico</h5>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Atmósfera MAP</p>
+              </div>
+              <div class="tech-arrow">➔</div>
+              <div class="tech-flow-card">
+                <span class="tech-step-badge">4</span>
+                <h5>Control Calidad</h5>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Rayos X & Visión</p>
+              </div>
+              <div class="tech-arrow">➔</div>
+              <div class="tech-flow-card">
+                <span class="tech-step-badge">5</span>
+                <h5>Paletizado & Frío</h5>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0;">Robots & AGVs</p>
+              </div>
+            </div>
+
+            <div class="grid-2" style="align-items: center; gap: 20px; margin-top: 15px;">
+              <div>
+                <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 12px;">
+                  La <strong>industria agroalimentaria</strong> integra la transformación de materias primas biológicas altamente perecederas en alimentos procesados seguros y de calidad uniforme.
+                </p>
+                <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #2a9d8f;">
+                  <strong style="color: #1b4332;">Requisitos Críticos del Sector:</strong>
+                  <ul style="margin: 6px 0 0 18px; font-size: 0.85rem;">
+                    <li>Control estricto de inocuidad microbiológica según normas HACCP.</li>
+                    <li>Gestión milimétrica de curvas de tiempo y temperatura.</li>
+                    <li>Trazabilidad digital total de extremo a extremo (del campo a la mesa).</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="text-align: center;">
+                <img src="assets/pptx_tech/image-4-2.png" alt="Esquema Inspección Visión Artificial" class="tech-diagram-img" style="max-height: 200px;">
+                <span style="font-size: 0.75rem; color: var(--text-muted);">FIG 04.1: SISTEMA DE INSPECCIÓN POR VISIÓN ARTIFICIAL Y CONTROL EN LÍNEA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 5: TECNOLOGÍAS APLICADAS A CADA FASE -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-5">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">4. Tecnologías Aplicadas a Cada Fase</div>
+              <span class="tech-pill">Ingeniería de Procesos Automatizados</span>
+            </div>
+
+            <div class="grid-2" style="gap: 15px;">
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid #2a9d8f;">
+                  <strong style="color: #1b4332; font-size: 0.92rem;">1. Recepción y Selección Óptica:</strong>
+                  <p style="font-size: 0.82rem; margin: 3px 0 0;">Cámaras de visión artificial y sensores multiespectrales clasifican por calibre, color, madurez y defectos superficiales a alta velocidad.</p>
+                </div>
+                <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid #e76f51;">
+                  <strong style="color: #b73e23; font-size: 0.92rem;">2. Transformación y Dosificación:</strong>
+                  <p style="font-size: 0.82rem; margin: 3px 0 0;">Procesos térmicos continuos (UHT / Pasteurización flash) monitoreados por PLC en tiempo real, controlando perfiles de calor y viscosidad.</p>
+                </div>
+                <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid #457b9d;">
+                  <strong style="color: #1d3557; font-size: 0.92rem;">3. Envasado Aséptico:</strong>
+                  <p style="font-size: 0.82rem; margin: 3px 0 0;">Atmósfera modificada (MAP) y termoformado hermético de alta velocidad para aislar el producto de contaminantes y oxígeno.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid #9d4edd;">
+                  <strong style="color: #6b21a8; font-size: 0.92rem;">4. Inspección No Destructiva:</strong>
+                  <p style="font-size: 0.82rem; margin: 3px 0 0;">Detección en tiempo real de cuerpos extraños mediante Rayos X y detectores de metales; verificación de sello por cámaras ópticas.</p>
+                </div>
+                <div class="pptx-feature-box" style="padding: 12px 16px; border-left: 4px solid #ffb703;">
+                  <strong style="color: #854d0e; font-size: 0.92rem;">5. Fin de Línea y Logística Inteligente:</strong>
+                  <p style="font-size: 0.82rem; margin: 3px 0 0;">Celdas de paletizado robótico y almacenamiento en cámaras frigoríficas inteligentes con vehículos de guiado automático (AGV).</p>
+                </div>
+                <div style="background: #e8f7f5; border-radius: 10px; padding: 10px 14px; text-align: center; border: 1px dashed #2a9d8f;">
+                  <span style="font-weight: 700; font-size: 0.82rem; color: #1b4332;">⚡ EFICIENCIA: Reducción de mermas en un 40% y cero contacto humano contaminante.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 6: CASO DE ESTUDIO: GRUPO BIMBO -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-6">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">5. Caso de Estudio: Grupo Bimbo S.A.B. de C.V.</div>
+              <span class="tech-pill gold">Referente Mundial en Manufactura Avanzada</span>
+            </div>
+
+            <div class="grid-2" style="align-items: center; gap: 20px;">
+              <div>
+                <div style="display: flex; flex-direction: column; gap: 9px;">
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #2a9d8f;">
+                    <strong style="color: #1b4332; font-size: 0.88rem;">🎛️ SCADA y PLC:</strong>
+                    <span style="font-size: 0.82rem; color: var(--text-main);"> Dosificación 100% automatizada con sensores de torque y humedad para el punto exacto de la masa.</span>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #e76f51;">
+                    <strong style="color: #b73e23; font-size: 0.88rem;">🔥 Hornos Túnel Digitales:</strong>
+                    <span style="font-size: 0.82rem; color: var(--text-main);"> Monitoreo térmico multizona con algoritmos predictivos para optimizar energía y homogeneidad.</span>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #457b9d;">
+                    <strong style="color: #1d3557; font-size: 0.88rem;">🦾 Robótica Delta:</strong>
+                    <span style="font-size: 0.82rem; color: var(--text-main);"> Brazos Spider de alta velocidad con visión artificial para empaque de cientos de piezas por minuto.</span>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #9d4edd;">
+                    <strong style="color: #6b21a8; font-size: 0.88rem;">👥 Digital Twin & IoT:</strong>
+                    <span style="font-size: 0.82rem; color: var(--text-main);"> Machine Learning y sensores de vibración que alertan fallas mecánicas antes de paradas de línea.</span>
+                  </div>
+                  <div class="pptx-feature-box" style="padding: 10px 14px; border-left: 4px solid #ffb703;">
+                    <strong style="color: #854d0e; font-size: 0.88rem;">🚛 Logística Conectada:</strong>
+                    <span style="font-size: 0.82rem; color: var(--text-main);"> Integración SAP S/4HANA y telemetría en flotilla eléctrica para garantizar frescura óptima.</span>
+                  </div>
+                </div>
+              </div>
+              <div style="text-align: center;">
+                <img src="assets/pptx_tech/image-6-2.png" alt="Esquema Manufactura Avanzada Bimbo" class="tech-diagram-img" style="max-height: 230px;">
+                <span style="font-size: 0.75rem; color: var(--text-muted);">ESQUEMA DE INTEGRACIÓN SISTÉMICA EN PLANTAS BIMBO 4.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 7: CÓMO SE OBTIENE CONSISTENCIA Y CALIDAD -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-7">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">6. Cómo se Obtiene Consistencia y Calidad</div>
+              <span class="tech-pill">Del Dato al Resultado Operativo</span>
+            </div>
+
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">
+              <em>La automatización moderna no solo busca velocidad, sino <strong>repetibilidad milimétrica</strong> y prevención mediante decisiones automatizadas en tiempo real.</em>
+            </p>
+
+            <div class="grid-4" style="gap: 12px; margin-bottom: 18px;">
+              <div class="pptx-feature-box" style="padding: 12px; text-align: center;">
+                <div style="font-size: 1.4rem;">🍞</div>
+                <strong style="font-size: 0.85rem; color: #1b4332;">Amasado Preciso</strong>
+                <p style="font-size: 0.78rem; margin-top: 4px; color: var(--text-muted);">Humedad y torque calculan el gluten exacto.</p>
+              </div>
+              <div class="pptx-feature-box" style="padding: 12px; text-align: center;">
+                <div style="font-size: 1.4rem;">🌡️</div>
+                <strong style="font-size: 0.85rem; color: #1b4332;">Fermentación</strong>
+                <p style="font-size: 0.78rem; margin-top: 4px; color: var(--text-muted);">Microclima regulado para consistencia celular.</p>
+              </div>
+              <div class="pptx-feature-box" style="padding: 12px; text-align: center;">
+                <div style="font-size: 1.4rem;">🎯</div>
+                <strong style="font-size: 0.85rem; color: #1b4332;">Cero Defectos</strong>
+                <p style="font-size: 0.78rem; margin-top: 4px; color: var(--text-muted);">Visión óptica descarta piezas fuera de forma.</p>
+              </div>
+              <div class="pptx-feature-box" style="padding: 12px; text-align: center;">
+                <div style="font-size: 1.4rem;">⚙️</div>
+                <strong style="font-size: 0.85rem; color: #1b4332;">Mantenimiento</strong>
+                <p style="font-size: 0.78rem; margin-top: 4px; color: var(--text-muted);">Vibración y calor anticipan desgaste de piezas.</p>
+              </div>
+            </div>
+
+            <!-- Loop de Control -->
+            <div style="background: #f8fafc; border-radius: 12px; padding: 14px 18px; border: 1.5px solid #e2e8f0;">
+              <div style="font-weight: 700; font-size: 0.82rem; color: #1e293b; text-transform: uppercase; margin-bottom: 8px; text-align: center;">
+                🔄 Ciclo Cibernético de Control en Tiempo Real
+              </div>
+              <div class="tech-flow-container" style="margin: 0;">
+                <div class="tech-flow-card" style="padding: 8px;">
+                  <strong style="color: #2a9d8f; font-size: 0.8rem;">1. CAPTURA</strong>
+                  <p style="font-size: 0.72rem; margin: 0;">Sensores IoT en línea</p>
+                </div>
+                <div class="tech-arrow">➔</div>
+                <div class="tech-flow-card" style="padding: 8px;">
+                  <strong style="color: #457b9d; font-size: 0.8rem;">2. PROCESO</strong>
+                  <p style="font-size: 0.72rem; margin: 0;">PLC / SCADA central</p>
+                </div>
+                <div class="tech-arrow">➔</div>
+                <div class="tech-flow-card" style="padding: 8px;">
+                  <strong style="color: #9d4edd; font-size: 0.8rem;">3. ANÁLISIS</strong>
+                  <p style="font-size: 0.72rem; margin: 0;">Algoritmos vs estándar</p>
+                </div>
+                <div class="tech-arrow">➔</div>
+                <div class="tech-flow-card" style="padding: 8px;">
+                  <strong style="color: #e76f51; font-size: 0.8rem;">4. ACCIÓN</strong>
+                  <p style="font-size: 0.72rem; margin: 0;">Actuador ajusta parámetro</p>
+                </div>
+                <div class="tech-arrow">➔</div>
+                <div class="tech-flow-card" style="padding: 8px;">
+                  <strong style="color: #1b4332; font-size: 0.8rem;">5. REGISTRO</strong>
+                  <p style="font-size: 0.72rem; margin: 0;">Trazabilidad ERP SAP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 8: CIENCIAS TRANSVERSALES EN LA PRODUCCIÓN -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-8">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">7. Ciencias Transversales en la ProduCCIÓN</div>
+              <span class="tech-pill blue">Convergencia Interdisciplinaria</span>
+            </div>
+
+            <div class="grid-3" style="gap: 14px;">
+              <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #2a9d8f;">
+                <div style="font-weight: 800; color: #1b4332; font-size: 0.95rem; margin-bottom: 6px;">⚛️ FÍSICA</div>
+                <ul style="font-size: 0.8rem; margin-left: 16px; line-height: 1.5;">
+                  <li><strong>Termodinámica:</strong> Curvas de calor, cocción y refrigeración eficiente.</li>
+                  <li><strong>Mecánica de Fluidos:</strong> Reología de masas y bombas.</li>
+                  <li><strong>Óptica:</strong> Sensores láser y espectrometría.</li>
+                </ul>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #e76f51;">
+                <div style="font-weight: 800; color: #b73e23; font-size: 0.95rem; margin-bottom: 6px;">🧪 QUÍMICA & BIOQUÍMICA</div>
+                <ul style="font-size: 0.8rem; margin-left: 16px; line-height: 1.5;">
+                  <li><strong>Química de Alimentos:</strong> Reacción de Maillard y gelatinización.</li>
+                  <li><strong>Microbiología:</strong> Cinética térmica de inactivación (D & z-values).</li>
+                  <li><strong>Materiales:</strong> Polímeros barrera al oxígeno.</li>
+                </ul>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #457b9d;">
+                <div style="font-weight: 800; color: #1d3557; font-size: 0.95rem; margin-bottom: 6px;">📐 MATEMÁTICAS & ESTADÍSTICA</div>
+                <ul style="font-size: 0.8rem; margin-left: 16px; line-height: 1.5;">
+                  <li><strong>Investigación de Operaciones:</strong> Programación lineal de lotes.</li>
+                  <li><strong>Control Estadístico (SPC):</strong> Six Sigma y gráficos de control.</li>
+                  <li><strong>Modelado:</strong> Balanceo dinámico de líneas.</li>
+                </ul>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #9d4edd;">
+                <div style="font-weight: 800; color: #6b21a8; font-size: 0.95rem; margin-bottom: 6px;">💻 INFORMÁTICA & IA</div>
+                <ul style="font-size: 0.8rem; margin-left: 16px; line-height: 1.5;">
+                  <li><strong>Redes Industriales:</strong> Protocolos OPC UA, MQTT, Modbus.</li>
+                  <li><strong>Inteligencia Artificial:</strong> Visión y modelos predictivos.</li>
+                  <li><strong>Digital Twin:</strong> Simulaciones de planta completa.</li>
+                </ul>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #ffb703;">
+                <div style="font-weight: 800; color: #854d0e; font-size: 0.95rem; margin-bottom: 6px;">🏭 INGENIERÍA INDUSTRIAL</div>
+                <ul style="font-size: 0.8rem; margin-left: 16px; line-height: 1.5;">
+                  <li><strong>Lean Manufacturing:</strong> Cero desperdicio (Muda) y flujo continuo.</li>
+                  <li><strong>TPM:</strong> Mantenimiento Productivo Total.</li>
+                  <li><strong>Takt-Time:</strong> Sincronización del ritmo productivo.</li>
+                </ul>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 14px; border-left: 4px solid #c1121f;">
+                <div style="font-weight: 800; color: #9f1239; font-size: 0.95rem; margin-bottom: 6px;">🦺 ERGONOMÍA & BIOMECÁNICA</div>
+                <ul style="font-size: 0.8rem; margin-left: 16px; line-height: 1.5;">
+                  <li><strong>Biomecánica Ocupacional:</strong> Prevención de lesiones (RULA/NIOSH).</li>
+                  <li><strong>Diseño de Interfaz:</strong> HMIs intuitivas humano-máquina.</li>
+                  <li><strong>Salud Ocupacional:</strong> Automatización de cargas pesadas.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 9: BENEFICIOS Y RETOS DE LA TRANSFORMACIÓN -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-9">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">8. Beneficios y Retos de la Transformación</div>
+              <span class="tech-pill">Impacto Estratégico & Desafíos</span>
+            </div>
+
+            <div class="grid-2" style="margin-bottom: 20px;">
+              <div class="card" style="margin-bottom: 0; background: #f0fdf4; border: 1.5px solid #86efac;">
+                <h4 style="color: #166534; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  <span>🟢</span> Beneficios Competitivos Clave
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+                  <div><strong>🚀 Productividad:</strong> Mayor velocidad de línea, eliminación de cuellos de botella y cero desperdicios (*Muda*).</div>
+                  <div><strong>🎯 Calidad Uniforme:</strong> Repetibilidad garantizada en cada lote mediante control estadístico continuo.</div>
+                  <div><strong>🔍 Trazabilidad Total:</strong> Visibilidad inmediata desde el origen agrícola hasta el punto de venta final.</div>
+                  <div><strong>🛡️ Seguridad & Inocuidad:</strong> Eliminación de riesgos de contaminación cruzada y protección del operador.</div>
+                </div>
+              </div>
+
+              <div class="card" style="margin-bottom: 0; background: #fef2f2; border: 1.5px solid #fca5a5;">
+                <h4 style="color: #991b1b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  <span>🔴</span> Desafíos de Implementación
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
+                  <div><strong>💰 Inversión de Capital:</strong> Elevado CAPEX inicial en maquinaria, sensores, licencias y robots.</div>
+                  <div><strong>🔒 Ciberseguridad Industrial:</strong> Protección de redes OT/IT contra ransomware y ataques externos.</div>
+                  <div><strong>👥 Talento & Brecha Digital:</strong> Necesidad urgente de capacitar y retener ingenieros y técnicos especializados.</div>
+                  <div><strong>🔄 Integración Legacy:</strong> Reto técnico para sincronizar maquinaria antigua con plataformas en la nube.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pptx-highlight-banner" style="background: linear-gradient(90deg, #1b4332, #2a9d8f);">
+              🏆 ESTRATEGIA: La tecnología es un habilitador; el éxito depende de la integración armónica entre procesos, datos y personas.
+            </div>
+          </div>
+
+          <!-- SLIDE 10: CONCLUSIONES Y EVALUACIÓN -->
+          <div class="pptx-tech-slide-item" id="pptxTechSlide-10">
+            <div class="pptx-slide-top-meta">
+              <div class="pptx-slide-title" style="color: #1b4332;">9. Conclusiones y Visión Estratégica</div>
+              <span class="tech-pill gold">Síntesis Ejecutiva</span>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 20px;">
+              <div class="pptx-feature-box" style="padding: 16px; border-top: 4px solid #2a9d8f;">
+                <div style="font-weight: 800; color: #1b4332; font-size: 0.92rem; margin-bottom: 6px;">1. Evolución de Sistemas</div>
+                <p style="font-size: 0.82rem; line-height: 1.5; margin: 0;">
+                  Los sistemas del siglo XX sentaron las bases de la escala industrial masiva; los del siglo XXI aportan conectividad, inteligencia y capacidad predictiva autónoma.
+                </p>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 16px; border-top: 4px solid #457b9d;">
+                <div style="font-weight: 800; color: #1d3557; font-size: 0.92rem; margin-bottom: 6px;">2. Integración Sistémica</div>
+                <p style="font-size: 0.82rem; line-height: 1.5; margin: 0;">
+                  El valor real en la industria agroalimentaria no proviene de tecnologías aisladas, sino del ecosistema integrado entre sensórica, control SCADA, ERP y analítica.
+                </p>
+              </div>
+
+              <div class="pptx-feature-box" style="padding: 16px; border-top: 4px solid #ffb703;">
+                <div style="font-weight: 800; color: #854d0e; font-size: 0.92rem; margin-bottom: 6px;">3. Visión de Futuro</div>
+                <p style="font-size: 0.82rem; line-height: 1.5; margin: 0;">
+                  La competitividad empresarial del futuro dependerá de fusionar la vanguardia tecnológica con el rigor científico multidisciplinar y la toma de decisiones humanas guiada por datos.
+                </p>
+              </div>
+            </div>
+
+            <div class="pptx-quote-box" style="background: linear-gradient(135deg, #f0fdf4, #ffffff); border-left-color: #2a9d8f; margin-bottom: 18px;">
+              <p style="color: #1b4332; font-size: 1.05rem;">
+                “La producción inteligente no reemplaza el criterio empresarial: lo amplifica con datos, precisión y capacidad de anticipación.”
+              </p>
+            </div>
+
+            <!-- Acordeón de Repaso / Preguntas -->
+            <div>
+              <h4 style="font-size: 0.95rem; color: #1b4332; margin-bottom: 10px; font-weight: 700;">
+                ❓ Preguntas Clave de Síntesis Académica:
+              </h4>
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxTechQA(this)" style="color: #1b4332; background: #f0fdf4;">
+                  <span>¿Por qué la refrigeración y la red de agua fueron determinantes para la producción moderna?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  La red de agua garantizó la estandarización de pureza y volumen requeridos para procesos higiénicos continuos, mientras que la refrigeración creó la <strong>cadena de frío</strong>, permitiendo extender la vida útil de los perecederos y viabilizar el comercio masivo de alimentos y productos biológicos.
+                </div>
+              </div>
+              <div class="pptx-qa-item">
+                <div class="pptx-qa-question" onclick="togglePptxTechQA(this)" style="color: #1b4332; background: #f0fdf4;">
+                  <span>¿Qué papel cumple el gemelo digital (Digital Twin) en una planta como Grupo Bimbo?</span>
+                  <span class="qa-arrow">➕</span>
+                </div>
+                <div class="pptx-qa-answer">
+                  El Gemelo Digital replica virtualmente el comportamiento térmico, mecánico y químico de las líneas de producción, alimentándose de sensores IoT en tiempo real para simular escenarios, optimizar el gasto de energía y habilitar el mantenimiento predictivo antes de que ocurra una falla.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Barra Inferior de Navegación del Visor -->
+        <div class="pptx-bottom-bar" style="background: #f8fafc; border-color: #e2e8f0;">
+          <button class="pptx-nav-btn" id="pptxTechPrevBtn" onclick="changePptxTechSlide(-1)" disabled style="background: linear-gradient(135deg, #1b4332, #2a9d8f);">
+            <span>◀</span> Anterior
+          </button>
+
+          <!-- Píldoras de Diapositivas -->
+          <div class="pptx-pills-container">
+            <button class="pptx-pill active" onclick="goToPptxTechSlide(1)">1</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(2)">2</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(3)">3</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(4)">4</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(5)">5</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(6)">6</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(7)">7</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(8)">8</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(9)">9</button>
+            <button class="pptx-pill" onclick="goToPptxTechSlide(10)">10</button>
+          </div>
+
+          <div class="pptx-slide-counter">
+            <span>Diapositiva</span>
+            <span id="pptxTechCurrentNum" style="color: #2a9d8f;">1</span>
+            <span>de 10</span>
+          </div>
+
+          <button class="pptx-nav-btn" id="pptxTechNextBtn" onclick="changePptxTechSlide(1)" style="background: linear-gradient(135deg, #1b4332, #2a9d8f);">
+            Siguiente Diapositiva <span>▶</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
     <!-- NOTA PARA EL PROFESOR / EVALUACIÓN -->
     <div class="teacher-note">
       <h3>📌 Resumen de Cumplimiento de la Actividad Académica Integral:</h3>
-      <p>Este portal y documento contiene todos los requerimientos y módulos solicitados con el más alto rigor técnico, legal y financiero:</p>
+      <p>Este portal y documento contiene todos los requerimientos y módulos solicitados con el más alto rigor técnico, legal, científico y financiero:</p>
       <ul>
         <li>✅ <strong>Fuentes de Ingresos & Ventas Proyectadas Año 1:</strong> Desglose mes a mes con estacionalidad, líneas de productos, bebidas, catering y proyección total de $293.300.000 COP.</li>
         <li>✅ <strong>Actividades Claves:</strong> 5 macroprocesos operacionales (abastecimiento, batido, BPM, marketing, administración).</li>
@@ -4004,7 +4678,8 @@
         <li>✅ <strong>Metodología de Planeación Estratégica:</strong> Guía paso a paso de las 6 fases de la planeación organizacional.</li>
         <li>✅ <strong>Planeación Estratégica de Sweet Delight S.A.S.:</strong> Misión, Visión 2031, Valores, Matriz FODA cruzada, Análisis PESTEL y Cuadro de Mando Integral (Balanced Scorecard) con KPIs.</li>
         <li>✅ <strong>Simulador Financiero en Vivo:</strong> Ajuste dinámico de parámetros con soporte en pesos (COP) y dólares (USD).</li>
-        <li>✅ <strong>Presentación Ejecutiva PowerPoint Oficial (.PPTX):</strong> Visor interactivo de 10 diapositivas integradas con controles de pitch deck, modo pantalla completa, autoplay y descarga directa del archivo ejecutable (748 KB).</li>
+        <li>✅ <strong>Presentación Ejecutiva PowerPoint Sweet Delight (.PPTX):</strong> Visor interactivo de 10 diapositivas integradas con controles de pitch deck, modo pantalla completa y autoplay.</li>
+        <li>✅ <strong>Presentación Oficial Impacto Sistemas Tecnológicos (.PPTX):</strong> Visor interactivo de 10 diapositivas de alta fidelidad técnica con diagramas HD, análisis de Grupo Bimbo, ciencias transversales aplicadas y descarga directa del archivo ejecutable (2.29 MB).</li>
       </ul>
     </div>
 
@@ -4255,6 +4930,129 @@
 
     // Acordeón Didáctico de Preguntas en Diapositiva 10
     function togglePptxQA(header) {
+      const item = header.parentElement;
+      const answer = item.querySelector('.pptx-qa-answer');
+      const arrow = header.querySelector('.qa-arrow');
+      if (!answer) return;
+
+      const isOpen = answer.classList.contains('open');
+      if (isOpen) {
+        answer.classList.remove('open');
+        if (arrow) arrow.innerText = '➕';
+      } else {
+        answer.classList.add('open');
+        if (arrow) arrow.innerText = '➖';
+      }
+    }
+
+    // --- LÓGICA DEL VISOR DE PRESENTACIÓN SISTEMAS TECNOLÓGICOS (PPTX 14) ---
+    let pptxTechCurrent = 1;
+    const pptxTechTotal = 10;
+    let pptxTechAutoplayTimer = null;
+
+    function goToPptxTechSlide(slideNum) {
+      if (slideNum < 1 || slideNum > pptxTechTotal) return;
+
+      // Ocultar actual
+      const currentElem = document.getElementById(`pptxTechSlide-${pptxTechCurrent}`);
+      if (currentElem) currentElem.classList.remove('active');
+
+      const deck = document.getElementById('presentacion-tecnologia-pptx');
+      if (deck) {
+        const pills = deck.querySelectorAll('.pptx-pill');
+        if (pills[pptxTechCurrent - 1]) pills[pptxTechCurrent - 1].classList.remove('active');
+      }
+
+      // Activar nueva
+      pptxTechCurrent = slideNum;
+      const nextElem = document.getElementById(`pptxTechSlide-${pptxTechCurrent}`);
+      if (nextElem) nextElem.classList.add('active');
+
+      if (deck) {
+        const pills = deck.querySelectorAll('.pptx-pill');
+        if (pills[pptxTechCurrent - 1]) pills[pptxTechCurrent - 1].classList.add('active');
+      }
+
+      // Actualizar Controles
+      const prevBtn = document.getElementById('pptxTechPrevBtn');
+      const nextBtn = document.getElementById('pptxTechNextBtn');
+      if (prevBtn) prevBtn.disabled = (pptxTechCurrent === 1);
+      if (nextBtn) nextBtn.disabled = (pptxTechCurrent === pptxTechTotal);
+
+      const numElem = document.getElementById('pptxTechCurrentNum');
+      if (numElem) numElem.innerText = pptxTechCurrent;
+
+      const selectElem = document.getElementById('pptxTechSelect');
+      if (selectElem) selectElem.value = pptxTechCurrent;
+
+      // Barra de Progreso
+      const progBar = document.getElementById('pptxTechProgressBar');
+      if (progBar) {
+        const pct = (pptxTechCurrent / pptxTechTotal) * 100;
+        progBar.style.width = pct + '%';
+      }
+    }
+
+    function changePptxTechSlide(delta) {
+      const target = pptxTechCurrent + delta;
+      if (target >= 1 && target <= pptxTechTotal) {
+        goToPptxTechSlide(target);
+      }
+    }
+
+    function togglePptxTechAutoplay() {
+      const btn = document.getElementById('btnPptxTechPlay');
+      const icon = document.getElementById('pptxTechPlayIcon');
+      const text = document.getElementById('pptxTechPlayText');
+
+      if (pptxTechAutoplayTimer) {
+        clearInterval(pptxTechAutoplayTimer);
+        pptxTechAutoplayTimer = null;
+        if (btn) btn.classList.remove('active');
+        if (icon) icon.innerText = '▶️';
+        if (text) text.innerText = 'Auto-Play';
+      } else {
+        if (btn) btn.classList.add('active');
+        if (icon) icon.innerText = '⏸️';
+        if (text) text.innerText = 'Pausar';
+        pptxTechAutoplayTimer = setInterval(() => {
+          if (pptxTechCurrent < pptxTechTotal) {
+            goToPptxTechSlide(pptxTechCurrent + 1);
+          } else {
+            goToPptxTechSlide(1);
+          }
+        }, 6500);
+      }
+    }
+
+    function togglePptxTechFullscreen() {
+      const frame = document.getElementById('pptxTechDeckFrame');
+      if (!frame) return;
+
+      if (!document.fullscreenElement) {
+        if (frame.requestFullscreen) {
+          frame.requestFullscreen();
+        } else if (frame.webkitRequestFullscreen) {
+          frame.webkitRequestFullscreen();
+        }
+        frame.classList.add('fullscreen-mode');
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+        frame.classList.remove('fullscreen-mode');
+      }
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+      const frame = document.getElementById('pptxTechDeckFrame');
+      if (frame && !document.fullscreenElement) {
+        frame.classList.remove('fullscreen-mode');
+      }
+    });
+
+    // Acordeón Didáctico de Preguntas en Diapositiva 10 Tech
+    function togglePptxTechQA(header) {
       const item = header.parentElement;
       const answer = item.querySelector('.pptx-qa-answer');
       const arrow = header.querySelector('.qa-arrow');
