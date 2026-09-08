@@ -1749,6 +1749,7 @@
     <a href="#simulador">12. Simulador</a>
     <a href="#presentacion-pptx">📊 13. PPTX Plan Negocio</a>
     <a href="#presentacion-tecnologia-pptx">⚡ 14. PPTX Sistemas Tecnológicos</a>
+    <a href="#nomina-integral" style="background: linear-gradient(135deg, #1b4332, #2a9d8f); color: white; border-color: #2a9d8f;">💼 15. Cuadro de Nómina Oficial</a>
   </nav>
 
   <div class="container">
@@ -4683,6 +4684,316 @@
       </ul>
     </div>
 
+
+    <!-- SECCIÓN 15: CUADRO DE NÓMINA OFICIAL Y LIQUIDACIÓN INTEGRAL (COLOMBIA 2026) -->
+    <section id="nomina-integral" style="margin-top: 60px;">
+      <div class="card" style="border: 2px solid #2a9d8f; background: #ffffff; box-shadow: 0 15px 40px rgba(42, 157, 143, 0.12);">
+        <div class="card-header-styled" style="border-bottom: 3px solid #e8f7f5; padding-bottom: 20px;">
+          <div>
+            <span class="tag-badge" style="background: #2a9d8f; color: white; font-size: 0.95rem; padding: 6px 16px; margin-bottom: 10px; display: inline-block;">
+              💼 Nómina Oficial y Procesos Laborales 2026
+            </span>
+            <h2 style="color: #1b4332; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 5px;">
+              15. Cuadro de Nómina Oficial, Prestaciones Sociales & Seguridad Social
+            </h2>
+            <p style="color: #6c757d; font-size: 1.05rem; margin-top: 6px;">
+              Liquidación integral para <strong>15 trabajadores</strong> (5 casos especializados + 10 operarios de planta) calculada bajo la legislación laboral colombiana y la plantilla interactiva de <a href="https://hycontroller.co/nomina" target="_blank" style="color: #2a9d8f; font-weight: 700; text-decoration: underline;">HyController Nómina</a>.
+            </p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+            <button onclick="descargarNominaCSV()" style="background: linear-gradient(135deg, #1b4332, #2a9d8f); color: white; border: none; padding: 12px 22px; border-radius: 30px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3); transition: all 0.3s ease;">
+              📥 Descargar Planilla Excel (CSV)
+            </button>
+          </div>
+        </div>
+
+        <!-- Barra de Control Interactivo -->
+        <div style="background: #f8faf9; border-radius: 14px; padding: 20px; margin: 20px 0 30px; border: 1px solid #d8f3dc;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: #1b4332; display: block; margin-bottom: 5px;">⏰ JORNADA / DIVISOR MENSUAL:</label>
+                <div style="display: inline-flex; background: #e8f7f5; padding: 4px; border-radius: 25px;">
+                  <button id="btnDiv210" onclick="cambiarDivisorNomina(210)" style="border: none; background: #2a9d8f; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.88rem; transition: all 0.2s;">
+                    42h / Divisor 210 (Ley 2101 Vigente 2026)
+                  </button>
+                  <button id="btnDiv240" onclick="cambiarDivisorNomina(240)" style="border: none; background: transparent; color: #1b4332; padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.88rem; transition: all 0.2s;">
+                    48h / Divisor 240 (Tradicional)
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: #1b4332; display: block; margin-bottom: 5px;">🛡️ TARIFA ARL (RIESGO I):</label>
+                <div style="display: inline-flex; background: #e8f7f5; padding: 4px; border-radius: 25px;">
+                  <button id="btnArlStd" onclick="cambiarArlNomina(0.00522)" style="border: none; background: #2a9d8f; color: white; padding: 8px 14px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.88rem; transition: all 0.2s;">
+                    0.522% (Estándar Legal)
+                  </button>
+                  <button id="btnArlHy" onclick="cambiarArlNomina(0.00696)" style="border: none; background: transparent; color: #1b4332; padding: 8px 14px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.88rem; transition: all 0.2s;">
+                    0.696% (HyController)
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <label style="font-size: 0.85rem; font-weight: 700; color: #1b4332; display: block; margin-bottom: 5px;">🏛️ EXONERACIÓN ART. 114-1 E.T.:</label>
+                <div style="display: inline-flex; background: #e8f7f5; padding: 4px; border-radius: 25px;">
+                  <button id="btnExonOff" onclick="cambiarExoneracionNomina(false)" style="border: none; background: #2a9d8f; color: white; padding: 8px 14px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 0.88rem; transition: all 0.2s;">
+                    Aportes Plenos (100%)
+                  </button>
+                  <button id="btnExonOn" onclick="cambiarExoneracionNomina(true)" style="border: none; background: transparent; color: #1b4332; padding: 8px 14px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.88rem; transition: all 0.2s;">
+                    Con Exoneración (SENA/ICBF/Salud 0%)
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div style="min-width: 250px;">
+              <label style="font-size: 0.85rem; font-weight: 700; color: #1b4332; display: block; margin-bottom: 5px;">🔍 BUSCAR TRABAJADOR:</label>
+              <input type="text" id="filtroNominaInput" onkeyup="filtrarTablaNomina()" placeholder="Buscar por nombre o cédula..." style="width: 100%; padding: 9px 15px; border-radius: 25px; border: 1px solid #2a9d8f; outline: none; font-size: 0.9rem;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Parámetros Legales Oficiales en Mini-Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+          <div style="background: #ffffff; border-radius: 12px; padding: 15px; border-left: 4px solid #2a9d8f; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+            <div style="font-size: 0.8rem; color: #6c757d; font-weight: 600; text-transform: uppercase;">Salario Mínimo (SMLMV)</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #1b4332;">$1.750.905 COP</div>
+            <div style="font-size: 0.78rem; color: #2a9d8f; margin-top: 3px;">Año Vigente 2026</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 12px; padding: 15px; border-left: 4px solid #ffb703; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+            <div style="font-size: 0.8rem; color: #6c757d; font-weight: 600; text-transform: uppercase;">Auxilio de Transporte</div>
+            <div style="font-size: 1.3rem; font-weight: 800; color: #b78a02;">$249.095 COP</div>
+            <div style="font-size: 0.78rem; color: #6c757d; margin-top: 3px;">Tope: Hasta 2 SMLMV ($3.501.810)</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 12px; padding: 15px; border-left: 4px solid #e63946; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+            <div style="font-size: 0.8rem; color: #6c757d; font-weight: 600; text-transform: uppercase;">Recargos Laborales</div>
+            <div style="font-size: 1.1rem; font-weight: 800; color: #c1121f;">RN: 35% | HED: 25%</div>
+            <div style="font-size: 0.78rem; color: #6c757d; margin-top: 3px;">HEN: 75% | Dom/Fest: 100%</div>
+          </div>
+          <div style="background: #ffffff; border-radius: 12px; padding: 15px; border-left: 4px solid #457b9d; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+            <div style="font-size: 0.8rem; color: #6c757d; font-weight: 600; text-transform: uppercase;">Deducciones de Ley</div>
+            <div style="font-size: 1.1rem; font-weight: 800; color: #1d3557;">Salud: 4% | Pensión: 4%</div>
+            <div style="font-size: 0.78rem; color: #6c757d; margin-top: 3px;">A cargo del trabajador (Total 8%)</div>
+          </div>
+        </div>
+
+        <!-- Tarjetas KPIs Consolidadas Dinámicas -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 30px;">
+          <div class="kpi-card" style="border-left-color: #2a9d8f;">
+            <div style="font-size: 0.85rem; color: #6c757d; font-weight: 600;">TOTAL DEVENGADO NÓMINA</div>
+            <div id="kpiTotDev" style="font-size: 1.55rem; font-weight: 800; color: #1b4332;">$36.114.751</div>
+            <div style="font-size: 0.8rem; color: #2a9d8f;">Básicos + Extras + Recargos + Auxilio</div>
+          </div>
+          <div class="kpi-card" style="border-left-color: #e63946;">
+            <div style="font-size: 0.85rem; color: #6c757d; font-weight: 600;">TOTAL DEDUCIDO EMPLEADOS</div>
+            <div id="kpiTotDed" style="font-size: 1.55rem; font-weight: 800; color: #c1121f;">$2.610.194</div>
+            <div style="font-size: 0.8rem; color: #6c757d;">Salud (4%) + Pensión (4%)</div>
+          </div>
+          <div class="kpi-card" style="border-left-color: #1b4332;">
+            <div style="font-size: 0.85rem; color: #6c757d; font-weight: 600;">TOTAL NETO A PAGAR</div>
+            <div id="kpiNeto" style="font-size: 1.55rem; font-weight: 800; color: #1b4332;">$33.504.557</div>
+            <div style="font-size: 0.8rem; color: #2a9d8f;">Transferencias netas a 15 empleados</div>
+          </div>
+          <div class="kpi-card" style="border-left-color: #ffb703;">
+            <div style="font-size: 0.85rem; color: #6c757d; font-weight: 600;">PRESTACIONES SOCIALES</div>
+            <div id="kpiPrestaciones" style="font-size: 1.55rem; font-weight: 800; color: #b78a02;">$7.381.146</div>
+            <div style="font-size: 0.8rem; color: #6c757d;">Cesantías, Int., Prima y Vacaciones</div>
+          </div>
+          <div class="kpi-card" style="border-left-color: #457b9d;">
+            <div style="font-size: 0.85rem; color: #6c757d; font-weight: 600;">PARAFISCALES & SEG. SOCIAL</div>
+            <div id="kpiSegParaf" style="font-size: 1.55rem; font-weight: 800; color: #1d3557;">$9.795.404</div>
+            <div id="lblSegParaf" style="font-size: 0.8rem; color: #6c757d;">Caja, SENA, ICBF, Salud, Pensión, ARL</div>
+          </div>
+          <div class="kpi-card" style="border-left-color: #c1121f; background: #fff0f3;">
+            <div style="font-size: 0.85rem; color: #c1121f; font-weight: 700;">COSTO TOTAL EMPRESA</div>
+            <div id="kpiCostoEmp" style="font-size: 1.65rem; font-weight: 900; color: #a4161a;">$53.291.301</div>
+            <div style="font-size: 0.8rem; color: #a4161a;">Inversión mensual total en talento</div>
+          </div>
+        </div>
+
+        <!-- Análisis Detallado de los 6 Casos Solicitados -->
+        <h3 style="color: #1b4332; font-size: 1.4rem; margin: 30px 0 15px; display: flex; align-items: center; gap: 8px;">
+          <span>🔍</span> Desglose Metodológico de los Casos de Estudio
+        </h3>
+
+        <div class="grid-3" style="gap: 15px; margin-bottom: 30px;">
+          <!-- Caso 1 -->
+          <div style="background: #ffffff; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; border-top: 4px solid #2a9d8f;">
+            <div style="font-weight: 700; color: #1b4332; font-size: 1.05rem; margin-bottom: 6px;">
+              Caso 1: SMLMV (2:00 p.m.) + 5 Horas Extras
+            </div>
+            <div style="font-size: 0.88rem; color: #4a5568; line-height: 1.5;">
+              <p>• <strong>Empleado:</strong> Juan Carlos Pérez Gómez (C.C. 1.010.201.001).</p>
+              <p>• <strong>Turno ordinario:</strong> 2:00 p.m. a 10:00 p.m. De 2 a 9 p.m. son 7h diurnas; de 9 a 10 p.m. es 1h nocturna ordinaria por día trabajado (30h/mes al 35% = $87.545,25).</p>
+              <p>• <strong>5 Extras Diurnas (HED 125%):</strong> $52.110,27.</p>
+              <p>• <strong>Auxilio de Transporte:</strong> $249.095.</p>
+              <p>• <strong>Total Devengado:</strong> $2.139.655,52 | <strong>Neto:</strong> $1.988.410,68.</p>
+            </div>
+          </div>
+
+          <!-- Caso 2 -->
+          <div style="background: #ffffff; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; border-top: 4px solid #e63946;">
+            <div style="font-weight: 700; color: #c1121f; font-size: 1.05rem; margin-bottom: 6px;">
+              Caso 2: $4.000.000 (6:00 a.m.) + 4 Extras Dom.
+            </div>
+            <div style="font-size: 0.88rem; color: #4a5568; line-height: 1.5;">
+              <p>• <strong>Empleado:</strong> María Fernanda Rodríguez Silva (C.C. 1.020.302.002).</p>
+              <p>• <strong>Auxilio de Transporte:</strong> <strong>$0</strong> (Supera 2 SMLMV = $3.501.810).</p>
+              <p>• <strong>Turno:</strong> 6:00 a.m. (100% diurno ordinario).</p>
+              <p>• <strong>4 Horas Extras Diurnas Dominicales (HEDD 200%):</strong> Factor 2.0 (75% dominical + 25% extra) = 4 × ($19.047,62 × 2.0) = <strong>$152.380,95</strong>.</p>
+              <p>• <strong>Total Devengado:</strong> $4.152.380,95 | <strong>Neto:</strong> $3.820.190,48.</p>
+            </div>
+          </div>
+
+          <!-- Caso 3 -->
+          <div style="background: #ffffff; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; border-top: 4px solid #ffb703;">
+            <div style="font-weight: 700; color: #b78a02; font-size: 1.05rem; margin-bottom: 6px;">
+              Caso 3: $3.000.000 (1:00 p.m.) + 5 Extras Festivas
+            </div>
+            <div style="font-size: 0.88rem; color: #4a5568; line-height: 1.5;">
+              <p>• <strong>Empleado:</strong> Carlos Alberto Martínez López (C.C. 1.030.403.003).</p>
+              <p>• <strong>Auxilio de Transporte:</strong> <strong>$249.095</strong> (Aplica por devengar menos de 2 SMLMV).</p>
+              <p>• <strong>Turno:</strong> 1:00 p.m. a 9:00 p.m. (100% diurno).</p>
+              <p>• <strong>5 Extras Diurnas Festivas (HEDF 200%):</strong> 5 × ($14.285,71 × 2.0) = <strong>$142.857,14</strong>.</p>
+              <p>• <strong>Total Devengado:</strong> $3.391.952,14 | <strong>Neto:</strong> $3.140.523,57.</p>
+            </div>
+          </div>
+
+          <!-- Caso 4 -->
+          <div style="background: #ffffff; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; border-top: 4px solid #457b9d;">
+            <div style="font-weight: 700; color: #1d3557; font-size: 1.05rem; margin-bottom: 6px;">
+              Caso 4: $2.500.000 (8:00 p.m.) - Recargo Nocturno
+            </div>
+            <div style="font-size: 0.88rem; color: #4a5568; line-height: 1.5;">
+              <p>• <strong>Empleado:</strong> Diana Marcela Gómez Castro (C.C. 1.040.504.004).</p>
+              <p>• <strong>¿Cómo le queda su recargo nocturno?</strong></p>
+              <p>1. De 8:00 a 9:00 p.m. (1h) es horario diurno (sin recargo).</p>
+              <p>2. De 9:00 p.m. a 4:00 a.m. son <strong>7 horas nocturnas ordinarias diarias</strong> (Art. 160 CST).</p>
+              <p>3. Recargo por hora (35%): $11.904,76 × 35% = $4.166,67.</p>
+              <p>4. Total mes (30 días × 7h = 210h): <strong>$875.000,00</strong> *(o $765.625 con div. 240)*.</p>
+              <p>• <strong>Total Devengado:</strong> $3.624.095,00 | <strong>Neto:</strong> $3.354.095,00.</p>
+            </div>
+          </div>
+
+          <!-- Caso 5 -->
+          <div style="background: #ffffff; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; border-top: 4px solid #7209b7;">
+            <div style="font-weight: 700; color: #7209b7; font-size: 1.05rem; margin-bottom: 6px;">
+              Caso 5: SMLMV (7:00 p.m.) + 5 Extras Nocturnas
+            </div>
+            <div style="font-size: 0.88rem; color: #4a5568; line-height: 1.5;">
+              <p>• <strong>Empleado:</strong> Andrés Felipe Morales Vargas (C.C. 1.050.605.005).</p>
+              <p>• <strong>Turno:</strong> 7:00 p.m. a 3:00 a.m. De 7 a 9 p.m. diurnas (2h). De 9 p.m. a 3 a.m. son 6h nocturnas ordinarias al 35% (180h/mes = $525.271,50).</p>
+              <p>• <strong>5 Extras Nocturnas (HEN 175%):</strong> 5 × ($8.337,64 × 1.75) = <strong>$72.954,38</strong>.</p>
+              <p>• <strong>Auxilio de Transporte:</strong> $249.095.</p>
+              <p>• <strong>Total Devengado:</strong> $2.598.225,88 | <strong>Neto:</strong> $2.410.295,40.</p>
+            </div>
+          </div>
+
+          <!-- Caso 6 -->
+          <div style="background: #ffffff; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; border-top: 4px solid #2a9d8f;">
+            <div style="font-weight: 700; color: #1b4332; font-size: 1.05rem; margin-bottom: 6px;">
+              Caso 6: 10 Operarios SMLMV (8:00 a.m.) + 2 HED c/u
+            </div>
+            <div style="font-size: 0.88rem; color: #4a5568; line-height: 1.5;">
+              <p>• <strong>Empleados:</strong> 10 operarios de planta (C.C. 1.060... al 1.155...).</p>
+              <p>• <strong>Turno:</strong> 8:00 a.m. a 5:00 p.m. (100% diurno ordinario).</p>
+              <p>• <strong>2 Extras Diurnas (HED 125%) c/u:</strong> 2 × ($8.337,64 × 1.25) = <strong>$20.844,11</strong> por empleado (Total los diez = $208.441,10).</p>
+              <p>• <strong>Auxilio de Transporte:</strong> $249.095 cada uno.</p>
+              <p>• <strong>Total Devengado individual:</strong> $2.020.844,11 | <strong>Neto c/u:</strong> $1.879.104,18.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLA 1: CUADRO DE NÓMINA OFICIAL (DEVENGADOS Y DEDUCCIONES) -->
+        <h3 style="color: #1b4332; font-size: 1.35rem; margin: 30px 0 12px; display: flex; align-items: center; justify-content: space-between;">
+          <span>📋 Cuadro de Devengados, Deducciones y Neto a Pagar</span>
+          <span style="font-size: 0.85rem; font-weight: normal; color: #6c757d;">Total: 15 Trabajadores Activos</span>
+        </h3>
+
+        <div style="overflow-x: auto; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 40px;">
+          <table class="styled-table" id="tablaNominaTrabajadores" style="margin: 0; min-width: 1200px;">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Documento</th>
+                <th>Nombre del Trabajador</th>
+                <th>Cargo</th>
+                <th class="num-col">Básico</th>
+                <th class="num-col">V. Hora</th>
+                <th>Concepto Extras</th>
+                <th class="num-col">V. Extras</th>
+                <th>Concepto Recargos</th>
+                <th class="num-col">V. Recargos</th>
+                <th class="num-col">Aux. Transp.</th>
+                <th class="num-col" style="background: #a4161a;">Total Devengado</th>
+                <th class="num-col">IBC</th>
+                <th class="num-col">Salud (4%)</th>
+                <th class="num-col">Pensión (4%)</th>
+                <th class="num-col" style="color: #ffb703;">Total Deducido</th>
+                <th class="num-col" style="background: #1b4332; color: #ffffff;">Neto a Pagar</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTablaNomina">
+              <!-- Renderizado dinámicamente vía JavaScript -->
+            </tbody>
+            <tfoot id="pieTablaNomina">
+              <!-- Totales renderizados dinámicamente -->
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- TABLA 2: APROPIACIONES PATRONALES (PRESTACIONES, PARAFISCALES Y SEGURIDAD SOCIAL) -->
+        <h3 style="color: #1b4332; font-size: 1.35rem; margin: 30px 0 12px; display: flex; align-items: center; justify-content: space-between;">
+          <span>🏢 Cuadro de Apropiaciones Patronales (Costo Real de la Empresa)</span>
+          <span style="font-size: 0.85rem; font-weight: normal; color: #6c757d;">Prestaciones Sociales, Parafiscales y Seguridad Social</span>
+        </h3>
+
+        <div style="overflow-x: auto; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px;">
+          <table class="styled-table" id="tablaApropiacionesPatronales" style="margin: 0; min-width: 1300px;">
+            <thead>
+              <tr style="background: linear-gradient(135deg, #1b4332, #2a9d8f);">
+                <th>No.</th>
+                <th>Trabajador</th>
+                <th class="num-col">Cesantías (8.33%)</th>
+                <th class="num-col">Int. Ces. (1%)</th>
+                <th class="num-col">Prima (8.33%)</th>
+                <th class="num-col">Vacaciones (4.17%)</th>
+                <th class="num-col" style="background: #264653;">Total Prestaciones</th>
+                <th class="num-col">Caja (4%)</th>
+                <th class="num-col">SENA (2%)</th>
+                <th class="num-col">ICBF (3%)</th>
+                <th class="num-col" style="background: #e76f51;">Total Parafiscales</th>
+                <th class="num-col">Salud Pat. (8.5%)</th>
+                <th class="num-col">Pensión Pat. (12%)</th>
+                <th class="num-col" id="colArlHead">ARL (0.522%)</th>
+                <th class="num-col" style="background: #2a9d8f;">Total Seg. Social</th>
+                <th class="num-col" style="background: #c1121f; color: #ffffff;">Costo Total Empresa</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTablaPatronal">
+              <!-- Renderizado dinámicamente vía JavaScript -->
+            </tbody>
+            <tfoot id="pieTablaPatronal">
+              <!-- Totales renderizados dinámicamente -->
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Resumen de Marco Legal y Notas Técnicas -->
+        <div style="background: #fff8f0; border-left: 5px solid #ffb703; border-radius: 10px; padding: 20px; margin-top: 25px;">
+          <h4 style="color: #b78a02; font-size: 1.1rem; margin-bottom: 8px;">⚖️ Fundamento Legal y Notas de Auditoría:</h4>
+          <ul style="color: #4a5568; font-size: 0.9rem; line-height: 1.6; padding-left: 20px;">
+            <li><strong>Ley 2101 de 2021:</strong> Estableció la reducción gradual de la jornada laboral en Colombia, alcanzando en 2026 la jornada máxima de 42 horas semanales, lo que fija el divisor técnico oficial en <strong>210 horas mensuales</strong> ($42 / 6 	imes 30$).</li>
+            <li><strong>Auxilio de Transporte:</strong> No constituye factor salarial para cotización a seguridad social ni parafiscales (IBC), pero se incluye obligatoriamente en la base de liquidación de Cesantías y Prima de Servicios (Art. 7 Ley 1 de 1963).</li>
+            <li><strong>Vacaciones:</strong> Se liquidan sobre el salario ordinario fijo devengado sin incluir el auxilio de transporte ni horas extras no habituales (Art. 192 CST).</li>
+            <li><strong>Exoneración Art. 114-1 del Estatuto Tributario:</strong> Las sociedades comerciales y personas jurídicas están exentas de pagar aportes a Salud Patronal (8.5%), SENA (2%) e ICBF (3%) por trabajadores que devenguen menos de 10 SMLMV. Al activar el selector en el panel superior puede verificar el ahorro tributario en tiempo real.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <footer>
       <p>&copy; 2026 Sweet Delight S.A.S. - Fresas Gourmet con Crema | Proyecto Empresarial y Plan Estratégico Integral</p>
     </footer>
@@ -5067,6 +5378,545 @@
         if (arrow) arrow.innerText = '➖';
       }
     }
+
+
+    // ==========================================
+    // SISTEMA DE NÓMINA INTEGRADA COLOMBIA 2026
+    // ==========================================
+    const SMLMV_2026 = 1750905;
+    const AUX_TRANSPORTE_2026 = 249095;
+    const TOPE_AUX_TRANSPORTE = SMLMV_2026 * 2; // $3.501.810
+
+    let nominaConfig = {
+      divisor: 210,
+      tarifaArl: 0.00522,
+      exonerado: false
+    };
+
+    const nominaEmpleadosData = [
+      {
+        id: 1,
+        doc: "1.010.201.001",
+        nombre: "Juan Carlos Pérez Gómez",
+        cargo: "Operario de Producción (2pm)",
+        basico: SMLMV_2026,
+        horasRn: 30, // 1h nocturna diaria de 9pm a 10pm en 30 días
+        extrasDesc: "5 HED (125%)",
+        extrasHoras: 5,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 2,
+        doc: "1.020.302.002",
+        nombre: "María Fernanda Rodríguez Silva",
+        cargo: "Directora de Operaciones (6am)",
+        basico: 4000000,
+        horasRn: 0,
+        extrasDesc: "4 HEDD (200%)",
+        extrasHoras: 4,
+        extrasFactor: 2.00,
+        tieneAux: false // Gana > 2 SMLMV
+      },
+      {
+        id: 3,
+        doc: "1.030.403.003",
+        nombre: "Carlos Alberto Martínez López",
+        cargo: "Supervisor de Mantenimiento (1pm)",
+        basico: 3000000,
+        horasRn: 0,
+        extrasDesc: "5 HEDF (200%)",
+        extrasHoras: 5,
+        extrasFactor: 2.00,
+        tieneAux: true
+      },
+      {
+        id: 4,
+        doc: "1.040.504.004",
+        nombre: "Diana Marcela Gómez Castro",
+        cargo: "Analista de Sistemas Nocturno (8pm)",
+        basico: 2500000,
+        horasRn: 210, // 7h nocturnas diarias (9pm a 4am) * 30 días
+        extrasDesc: "-",
+        extrasHoras: 0,
+        extrasFactor: 0,
+        tieneAux: true
+      },
+      {
+        id: 5,
+        doc: "1.050.605.005",
+        nombre: "Andrés Felipe Morales Vargas",
+        cargo: "Operario Nocturno de Control (7pm)",
+        basico: SMLMV_2026,
+        horasRn: 180, // 6h nocturnas diarias (9pm a 3am) * 30 días
+        extrasDesc: "5 HEN (175%)",
+        extrasHoras: 5,
+        extrasFactor: 1.75,
+        tieneAux: true
+      },
+      {
+        id: 6,
+        doc: "1.060.706.006",
+        nombre: "Laura Camila Ortiz Ruiz",
+        cargo: "Operaria de Planta 1 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 7,
+        doc: "1.070.807.007",
+        nombre: "José David Herrera Peña",
+        cargo: "Operario de Planta 2 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 8,
+        doc: "1.080.908.008",
+        nombre: "Paula Andrea Sánchez Marín",
+        cargo: "Operaria de Planta 3 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 9,
+        doc: "1.090.010.009",
+        nombre: "Santiago Restrepo Cano",
+        cargo: "Operario de Planta 4 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 10,
+        doc: "1.100.121.010",
+        nombre: "Valentina Torres Mendoza",
+        cargo: "Operaria de Planta 5 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 11,
+        doc: "1.111.232.011",
+        nombre: "Mateo Gómez Jaramillo",
+        cargo: "Operario de Planta 6 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 12,
+        doc: "1.122.343.012",
+        nombre: "Daniela Ospina Pineda",
+        cargo: "Operaria de Planta 7 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 13,
+        doc: "1.133.454.013",
+        nombre: "Alejandro Castro Ríos",
+        cargo: "Operario de Planta 8 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 14,
+        doc: "1.144.565.014",
+        nombre: "Sofía Ramírez Henao",
+        cargo: "Operaria de Planta 9 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      },
+      {
+        id: 15,
+        doc: "1.155.676.015",
+        nombre: "Camilo Andrés Vargas Gil",
+        cargo: "Operario de Planta 10 (8am)",
+        basico: SMLMV_2026,
+        horasRn: 0,
+        extrasDesc: "2 HED (125%)",
+        extrasHoras: 2,
+        extrasFactor: 1.25,
+        tieneAux: true
+      }
+    ];
+
+    function fmtMoneda(val) {
+      return '$' + Math.round(val).toLocaleString('es-CO');
+    }
+
+    function renderizarNominaCompleta() {
+      const cuerpoNomina = document.getElementById('cuerpoTablaNomina');
+      const pieNomina = document.getElementById('pieTablaNomina');
+      const cuerpoPatronal = document.getElementById('cuerpoTablaPatronal');
+      const piePatronal = document.getElementById('pieTablaPatronal');
+      
+      if (!cuerpoNomina || !cuerpoPatronal) return;
+
+      cuerpoNomina.innerHTML = '';
+      cuerpoPatronal.innerHTML = '';
+
+      let totBasico = 0, totExtras = 0, totRecargos = 0, totAux = 0;
+      let totDevengado = 0, totIbc = 0, totSaludEmp = 0, totPensionEmp = 0, totDeducido = 0, totNeto = 0;
+
+      let totCesantias = 0, totIntCes = 0, totPrima = 0, totVacaciones = 0, totPrestaciones = 0;
+      let totCaja = 0, totSena = 0, totIcbf = 0, totParafiscales = 0;
+      let totSaludPat = 0, totPensionPat = 0, totArl = 0, totSegSocialPat = 0;
+      let totCostoEmpresa = 0;
+
+      const filtro = (document.getElementById('filtroNominaInput')?.value || '').toLowerCase();
+
+      nominaEmpleadosData.forEach(emp => {
+        const vHora = emp.basico / nominaConfig.divisor;
+        const valExtras = emp.extrasHoras * vHora * emp.extrasFactor;
+        const valRecargo = emp.horasRn * vHora * 0.35;
+        const auxTransp = emp.tieneAux ? AUX_TRANSPORTE_2026 : 0;
+
+        const subtotalSalario = emp.basico + valExtras + valRecargo;
+        const totDev = subtotalSalario + auxTransp;
+        const ibc = subtotalSalario;
+
+        // Deducciones Trabajador
+        const saludEmp = ibc * 0.04;
+        const pensionEmp = ibc * 0.04;
+        const deducido = saludEmp + pensionEmp;
+        const neto = totDev - deducido;
+
+        // Prestaciones Sociales
+        const cesantias = totDev * (8.33 / 100);
+        const intCes = cesantias * 0.01; // 1% mensual = 12% anual
+        const prima = totDev * (8.33 / 100);
+        const vacaciones = (emp.basico + valRecargo) * (4.17 / 100);
+        const totPrest = cesantias + intCes + prima + vacaciones;
+
+        // Parafiscales
+        const caja = ibc * 0.04;
+        const sena = nominaConfig.exonerado ? 0 : (ibc * 0.02);
+        const icbf = nominaConfig.exonerado ? 0 : (ibc * 0.03);
+        const totParaf = caja + sena + icbf;
+
+        // Seguridad Social Patronal
+        const saludPat = nominaConfig.exonerado ? 0 : (ibc * 0.085);
+        const pensionPat = ibc * 0.12;
+        const arl = ibc * nominaConfig.tarifaArl;
+        const totSegPat = saludPat + pensionPat + arl;
+
+        const costoIndividual = totDev + totPrest + totParaf + totSegPat;
+
+        // Sumatorias generales
+        totBasico += emp.basico;
+        totExtras += valExtras;
+        totRecargos += valRecargo;
+        totAux += auxTransp;
+        totDevengado += totDev;
+        totIbc += ibc;
+        totSaludEmp += saludEmp;
+        totPensionEmp += pensionEmp;
+        totDeducido += deducido;
+        totNeto += neto;
+
+        totCesantias += cesantias;
+        totIntCes += intCes;
+        totPrima += prima;
+        totVacaciones += vacaciones;
+        totPrestaciones += totPrest;
+
+        totCaja += caja;
+        totSena += sena;
+        totIcbf += icbf;
+        totParafiscales += totParaf;
+
+        totSaludPat += saludPat;
+        totPensionPat += pensionPat;
+        totArl += arl;
+        totSegSocialPat += totSegPat;
+
+        totCostoEmpresa += costoIndividual;
+
+        // Filtrado
+        const coincideFiltro = emp.nombre.toLowerCase().includes(filtro) || emp.doc.toLowerCase().includes(filtro);
+        if (filtro && !coincideFiltro) return;
+
+        // Fila Nómina
+        const trNomina = document.createElement('tr');
+        trNomina.innerHTML = `
+          <td><strong>${emp.id}</strong></td>
+          <td style="font-family: monospace; font-size: 0.85rem;">${emp.doc}</td>
+          <td><strong>${emp.nombre}</strong></td>
+          <td style="font-size: 0.85rem; color: #555;">${emp.cargo}</td>
+          <td class="num-col">${fmtMoneda(emp.basico)}</td>
+          <td class="num-col" style="color: #666; font-size: 0.85rem;">${fmtMoneda(vHora)}</td>
+          <td style="font-size: 0.82rem;"><span class="tag-badge" style="background:#eef2f6; color:#1e293b;">${emp.extrasDesc}</span></td>
+          <td class="num-col">${valExtras > 0 ? fmtMoneda(valExtras) : '$0'}</td>
+          <td style="font-size: 0.82rem;">${emp.horasRn > 0 ? `<span class="tag-badge" style="background:#fef3c7; color:#92400e;">${emp.horasRn}h RN (35%)</span>` : '-'}</td>
+          <td class="num-col">${valRecargo > 0 ? fmtMoneda(valRecargo) : '$0'}</td>
+          <td class="num-col">${auxTransp > 0 ? fmtMoneda(auxTransp) : '<span style="color:#aaa;">$0</span>'}</td>
+          <td class="num-col" style="font-weight: 800; color: #c1121f; background: #fff5f5;">${fmtMoneda(totDev)}</td>
+          <td class="num-col" style="font-size: 0.88rem;">${fmtMoneda(ibc)}</td>
+          <td class="num-col" style="font-size: 0.88rem;">${fmtMoneda(saludEmp)}</td>
+          <td class="num-col" style="font-size: 0.88rem;">${fmtMoneda(pensionEmp)}</td>
+          <td class="num-col" style="font-weight: 700; color: #b78a02;">${fmtMoneda(deducido)}</td>
+          <td class="num-col" style="font-weight: 900; color: #1b4332; background: #e8f7f5;">${fmtMoneda(neto)}</td>
+        `;
+        cuerpoNomina.appendChild(trNomina);
+
+        // Fila Patronal
+        const trPatronal = document.createElement('tr');
+        trPatronal.innerHTML = `
+          <td><strong>${emp.id}</strong></td>
+          <td><strong>${emp.nombre}</strong></td>
+          <td class="num-col">${fmtMoneda(cesantias)}</td>
+          <td class="num-col">${fmtMoneda(intCes)}</td>
+          <td class="num-col">${fmtMoneda(prima)}</td>
+          <td class="num-col">${fmtMoneda(vacaciones)}</td>
+          <td class="num-col" style="font-weight: 700; color: #264653; background: #f0f7f9;">${fmtMoneda(totPrest)}</td>
+          <td class="num-col">${fmtMoneda(caja)}</td>
+          <td class="num-col">${fmtMoneda(sena)}</td>
+          <td class="num-col">${fmtMoneda(icbf)}</td>
+          <td class="num-col" style="font-weight: 700; color: #e76f51; background: #fdf2ef;">${fmtMoneda(totParaf)}</td>
+          <td class="num-col">${fmtMoneda(saludPat)}</td>
+          <td class="num-col">${fmtMoneda(pensionPat)}</td>
+          <td class="num-col">${fmtMoneda(arl)}</td>
+          <td class="num-col" style="font-weight: 700; color: #2a9d8f; background: #e8f7f5;">${fmtMoneda(totSegPat)}</td>
+          <td class="num-col" style="font-weight: 900; color: #a4161a; background: #ffe5ec;">${fmtMoneda(costoIndividual)}</td>
+        `;
+        cuerpoPatronal.appendChild(trPatronal);
+      });
+
+      // Pie Nómina
+      pieNomina.innerHTML = `
+        <tr class="total-row">
+          <td colspan="4"><strong>TOTALES NÓMINA (15 EMPLEADOS)</strong></td>
+          <td class="num-col">${fmtMoneda(totBasico)}</td>
+          <td class="num-col">-</td>
+          <td>-</td>
+          <td class="num-col">${fmtMoneda(totExtras)}</td>
+          <td>-</td>
+          <td class="num-col">${fmtMoneda(totRecargos)}</td>
+          <td class="num-col">${fmtMoneda(totAux)}</td>
+          <td class="num-col" style="color: #a4161a; font-size: 1.1rem;">${fmtMoneda(totDevengado)}</td>
+          <td class="num-col">${fmtMoneda(totIbc)}</td>
+          <td class="num-col">${fmtMoneda(totSaludEmp)}</td>
+          <td class="num-col">${fmtMoneda(totPensionEmp)}</td>
+          <td class="num-col" style="color: #b78a02;">${fmtMoneda(totDeducido)}</td>
+          <td class="num-col" style="color: #1b4332; font-size: 1.15rem; background: #d8f3dc !important;">${fmtMoneda(totNeto)}</td>
+        </tr>
+      `;
+
+      // Pie Patronal
+      piePatronal.innerHTML = `
+        <tr class="total-row">
+          <td colspan="2"><strong>TOTALES APROPIACIONES PATRONALES</strong></td>
+          <td class="num-col">${fmtMoneda(totCesantias)}</td>
+          <td class="num-col">${fmtMoneda(totIntCes)}</td>
+          <td class="num-col">${fmtMoneda(totPrima)}</td>
+          <td class="num-col">${fmtMoneda(totVacaciones)}</td>
+          <td class="num-col" style="color: #264653; font-size: 1.05rem;">${fmtMoneda(totPrestaciones)}</td>
+          <td class="num-col">${fmtMoneda(totCaja)}</td>
+          <td class="num-col">${fmtMoneda(totSena)}</td>
+          <td class="num-col">${fmtMoneda(totIcbf)}</td>
+          <td class="num-col" style="color: #e76f51; font-size: 1.05rem;">${fmtMoneda(totParafiscales)}</td>
+          <td class="num-col">${fmtMoneda(totSaludPat)}</td>
+          <td class="num-col">${fmtMoneda(totPensionPat)}</td>
+          <td class="num-col">${fmtMoneda(totArl)}</td>
+          <td class="num-col" style="color: #2a9d8f; font-size: 1.05rem;">${fmtMoneda(totSegSocialPat)}</td>
+          <td class="num-col" style="color: #a4161a; font-size: 1.2rem; background: #ffd5dc !important;">${fmtMoneda(totCostoEmpresa)}</td>
+        </tr>
+      `;
+
+      // Actualizar KPIs de cabecera
+      document.getElementById('kpiTotDev').innerText = fmtMoneda(totDevengado);
+      document.getElementById('kpiTotDed').innerText = fmtMoneda(totDeducido);
+      document.getElementById('kpiNeto').innerText = fmtMoneda(totNeto);
+      document.getElementById('kpiPrestaciones').innerText = fmtMoneda(totPrestaciones);
+      document.getElementById('kpiSegParaf').innerText = fmtMoneda(totParafiscales + totSegSocialPat);
+      document.getElementById('kpiCostoEmp').innerText = fmtMoneda(totCostoEmpresa);
+
+      const colArlHead = document.getElementById('colArlHead');
+      if (colArlHead) {
+        colArlHead.innerText = `ARL (${(nominaConfig.tarifaArl * 100).toFixed(3)}%)`;
+      }
+    }
+
+    function cambiarDivisorNomina(divisor) {
+      nominaConfig.divisor = divisor;
+      const b210 = document.getElementById('btnDiv210');
+      const b240 = document.getElementById('btnDiv240');
+      if (divisor === 210) {
+        b210.style.background = '#2a9d8f';
+        b210.style.color = 'white';
+        b240.style.background = 'transparent';
+        b240.style.color = '#1b4332';
+      } else {
+        b240.style.background = '#2a9d8f';
+        b240.style.color = 'white';
+        b210.style.background = 'transparent';
+        b210.style.color = '#1b4332';
+      }
+      renderizarNominaCompleta();
+    }
+
+    function cambiarArlNomina(tarifa) {
+      nominaConfig.tarifaArl = tarifa;
+      const bStd = document.getElementById('btnArlStd');
+      const bHy = document.getElementById('btnArlHy');
+      if (tarifa === 0.00522) {
+        bStd.style.background = '#2a9d8f';
+        bStd.style.color = 'white';
+        bHy.style.background = 'transparent';
+        bHy.style.color = '#1b4332';
+      } else {
+        bHy.style.background = '#2a9d8f';
+        bHy.style.color = 'white';
+        bStd.style.background = 'transparent';
+        bStd.style.color = '#1b4332';
+      }
+      renderizarNominaCompleta();
+    }
+
+    function cambiarExoneracionNomina(exonerado) {
+      nominaConfig.exonerado = exonerado;
+      const bOff = document.getElementById('btnExonOff');
+      const bOn = document.getElementById('btnExonOn');
+      if (!exonerado) {
+        bOff.style.background = '#2a9d8f';
+        bOff.style.color = 'white';
+        bOn.style.background = 'transparent';
+        bOn.style.color = '#1b4332';
+      } else {
+        bOn.style.background = '#2a9d8f';
+        bOn.style.color = 'white';
+        bOff.style.background = 'transparent';
+        bOff.style.color = '#1b4332';
+      }
+      renderizarNominaCompleta();
+    }
+
+    function filtrarTablaNomina() {
+      renderizarNominaCompleta();
+    }
+
+    function descargarNominaCSV() {
+      let csv = "\uFEFFNo;Documento;Nombre;Cargo;Basico;Valor_Hora;Concepto_Extras;Val_Extras;Concepto_Recargos;Val_Recargos;Aux_Transporte;Total_Devengado;IBC;Salud_Emp_4pct;Pension_Emp_4pct;Total_Deducido;Neto_Pagar;Cesantias_8_33pct;Int_Cesantias_1pct;Prima_8_33pct;Vacaciones_4_17pct;Total_Prestaciones;Caja_4pct;SENA_2pct;ICBF_3pct;Total_Parafiscales;Salud_Pat_8_5pct;Pension_Pat_12pct;ARL;Total_Seg_Patronal;Costo_Total_Empresa\r\n";
+
+      nominaEmpleadosData.forEach(emp => {
+        const vHora = emp.basico / nominaConfig.divisor;
+        const valExtras = emp.extrasHoras * vHora * emp.extrasFactor;
+        const valRecargo = emp.horasRn * vHora * 0.35;
+        const auxTransp = emp.tieneAux ? AUX_TRANSPORTE_2026 : 0;
+        const subtotalSalario = emp.basico + valExtras + valRecargo;
+        const totDev = subtotalSalario + auxTransp;
+        const ibc = subtotalSalario;
+
+        const saludEmp = ibc * 0.04;
+        const pensionEmp = ibc * 0.04;
+        const deducido = saludEmp + pensionEmp;
+        const neto = totDev - deducido;
+
+        const cesantias = totDev * (8.33 / 100);
+        const intCes = cesantias * 0.01;
+        const prima = totDev * (8.33 / 100);
+        const vacaciones = (emp.basico + valRecargo) * (4.17 / 100);
+        const totPrest = cesantias + intCes + prima + vacaciones;
+
+        const caja = ibc * 0.04;
+        const sena = nominaConfig.exonerado ? 0 : (ibc * 0.02);
+        const icbf = nominaConfig.exonerado ? 0 : (ibc * 0.03);
+        const totParaf = caja + sena + icbf;
+
+        const saludPat = nominaConfig.exonerado ? 0 : (ibc * 0.085);
+        const pensionPat = ibc * 0.12;
+        const arl = ibc * nominaConfig.tarifaArl;
+        const totSegPat = saludPat + pensionPat + arl;
+        const costoInd = totDev + totPrest + totParaf + totSegPat;
+
+        const row = [
+          emp.id,
+          `"${emp.doc}"`,
+          `"${emp.nombre}"`,
+          `"${emp.cargo}"`,
+          emp.basico.toFixed(2).replace('.', ','),
+          vHora.toFixed(2).replace('.', ','),
+          `"${emp.extrasDesc}"`,
+          valExtras.toFixed(2).replace('.', ','),
+          emp.horasRn > 0 ? `"${emp.horasRn}h RN"` : '"-"',
+          valRecargo.toFixed(2).replace('.', ','),
+          auxTransp.toFixed(2).replace('.', ','),
+          totDev.toFixed(2).replace('.', ','),
+          ibc.toFixed(2).replace('.', ','),
+          saludEmp.toFixed(2).replace('.', ','),
+          pensionEmp.toFixed(2).replace('.', ','),
+          deducido.toFixed(2).replace('.', ','),
+          neto.toFixed(2).replace('.', ','),
+          cesantias.toFixed(2).replace('.', ','),
+          intCes.toFixed(2).replace('.', ','),
+          prima.toFixed(2).replace('.', ','),
+          vacaciones.toFixed(2).replace('.', ','),
+          totPrest.toFixed(2).replace('.', ','),
+          caja.toFixed(2).replace('.', ','),
+          sena.toFixed(2).replace('.', ','),
+          icbf.toFixed(2).replace('.', ','),
+          totParaf.toFixed(2).replace('.', ','),
+          saludPat.toFixed(2).replace('.', ','),
+          pensionPat.toFixed(2).replace('.', ','),
+          arl.toFixed(2).replace('.', ','),
+          totSegPat.toFixed(2).replace('.', ','),
+          costoInd.toFixed(2).replace('.', ',')
+        ];
+        csv += row.join(';') + "\r\n";
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Nomina_SweetDelight_Colombia_2026_${nominaConfig.divisor}h.csv`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    // Inicializar la tabla de nómina al cargar
+    document.addEventListener('DOMContentLoaded', () => {
+      renderizarNominaCompleta();
+    });
+    // Llamado directo preventivo
+    setTimeout(renderizarNominaCompleta, 300);
 
   </script>
 </body>
