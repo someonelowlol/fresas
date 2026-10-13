@@ -1,0 +1,28 @@
+{
+  "titulo": "Evaluación Integral del Tercer Periodo - Sweet Delight S.A.S.",
+  "subtitulo": "40 Preguntas Tipo ICFES por Competencias sobre Emprendimiento, Gestión Financiera, Marco Legal, Nómina y Tecnología Agroalimentaria",
+  "institucion": "Proyecto Productivo y Pedagógico Tercer Periodo",
+  "empresa": "Sweet Delight - Fresas Gourmet con Crema S.A.S.",
+  "competencias": [
+    {
+      "nombre": "Interpretación y Análisis de la Información",
+      "descripcion": "Capacidad para comprender, decodificar, interpretar y extraer conclusiones de estados financieros, matrices FODA/PESTEL, organigramas, normas técnicas y diagramas de procesos.",
+      "rango": "Preguntas 1 a 10"
+    },
+    {
+      "nombre": "Formulación y Ejecución",
+      "descripcion": "Capacidad para plantear soluciones operativas, cálculos cuantitativos, punto de equilibrio, liquidación de nómina con horas extras y recargos (Ley 2101), presupuestos y marketing mix.",
+      "rango": "Preguntas 11 a 20"
+    },
+    {
+      "nombre": "Argumentación y Evaluación Crítica",
+      "descripcion": "Capacidad para juzgar la validez de decisiones gerenciales, contrastar figuras societarias (S.A.S.), evaluar el cumplimiento normativo (laboral, tributario, sanitario) y sopesar riesgos.",
+      "rango": "Preguntas 21 a 30"
+    },
+    {
+      "nombre": "Pensamiento Sistémico y Prospectiva Estratégica",
+      "descripcion": "Capacidad para integrar holísticamente las dimensiones del Modelo Canvas, Cuadro de Mando Integral, adopción de tecnologías agroindustriales (IoT, MAP) y sostenibilidad a largo plazo.",
+      "rango": "Preguntas 31 a 40"
+    }
+  ]
+}

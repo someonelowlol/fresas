@@ -1,0 +1,642 @@
+[
+  {
+    "id": 1,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Modelo Canvas: Propuesta de Valor y Segmentos de Clientes",
+    "dificultad": "Básica",
+    "contexto": "En el Modelo de Negocios Canvas del proyecto 'Sweet Delight S.A.S.', la propuesta de valor se define a partir de tres pilares: fresas de primera calidad con trazabilidad de origen, crema chantilly artesanal con fórmula reducida en azúcar, y empaques 100% biodegradables a base de fécula de maíz. Por su parte, el segmento de clientes priorizado abarca jóvenes estudiantes universitarios, oficinistas y familias con interés en el consumo responsable y productos gourmet.",
+    "enunciado": "A partir de la relación entre los bloques del modelo Canvas, la interpretación más adecuada sobre cómo la propuesta de valor interactúa directamente con el segmento de clientes objetivo es que:",
+    "opciones": {
+      "A": "Los empaques biodegradables reducen los costos fijos de la empresa, lo que permite ofrecer el precio más bajo del mercado informal.",
+      "B": "Los atributos diferenciadores del producto responden a demandas específicas de conveniencia, indulgencia y sostenibilidad ambiental que el segmento valora y está dispuesto a retribuir.",
+      "C": "La fórmula reducida en azúcar tiene como único fin cumplir las exigencias tributarias sobre alimentos ultraprocesados sin generar impacto en la preferencia del consumidor.",
+      "D": "El segmento de clientes universitario determina exclusivamente las fuentes de ingreso por convenios institucionales, omitiendo la venta minorista directa."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta porque en la metodología Canvas de Alexander Osterwalder, la propuesta de valor soluciona problemas específicos o satisface necesidades concretas de un segmento de clientes determinado. La combinación de calidad gastronómica, menor carga calórica y empaque ecológico crea un encaje problema-solución (Product-Market Fit) con consumidores que buscan placer culinario sin descuidar el impacto ecológico. Los demás distractores confunden reducción de costos (los empaques eco suelen ser más costosos, distractor A), minimizan la intención de mercadeo a un mero cumplimiento fiscal (distractor C) o limitan erróneamente los canales de venta (distractor D)."
+  },
+  {
+    "id": 2,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Estado de Resultados: Margen de Utilidad Bruta",
+    "dificultad": "Media",
+    "contexto": "El Estado de Resultados Proyectado Mensual Base de Sweet Delight S.A.S. (para un volumen base de 2.000 vasos vendidos a un precio unitario de $10.000 COP) reporta Ingresos Operacionales por $20.000.000 COP y un Costo de Ventas total de $7.200.000 COP (calculado a un costo variable unitario de $3.600 COP). La Utilidad Bruta resultante es de $12.800.000 COP, lo que representa un margen bruto del 64.0%.",
+    "enunciado": "Al analizar financieramente el significado de un margen de utilidad bruta del 64.0%, se puede interpretar correctamente que:",
+    "opciones": {
+      "A": "Por cada $100 COP vendidos, la empresa genera $64 COP de ganancia líquida que se transfiere de inmediato como dividendos a los socios.",
+      "B": "Por cada peso facturado, a la empresa le quedan 64 centavos tras cubrir los costos directos de materia prima y empaques, con los cuales debe absorber los gastos operacionales fijos, impuestos y generar la utilidad neta.",
+      "C": "El 36.0% restante del ingreso corresponde íntegramente a los impuestos de renta y gravámenes bancarios que recauda la DIAN.",
+      "D": "Los gastos de administración y arriendo absorben exactamente el 64.0% de los ingresos totales de la operación mensual."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El margen bruto (Utilidad Bruta / Ventas) indica la porción de los ingresos que permanece disponible después de descontar el costo directo de ventas (materia prima e insumos directos). Con esos 64 centavos por cada peso (el 64%), la empresa debe atender sus gastos fijos de administración, nóminas, publicidad, gastos financieros e impuestos. El distractor A comete el error habitual de confundir utilidad bruta con utilidad neta libre para socios; el distractor C confunde el costo de ventas (36%) con impuestos; y el distractor D invierte el concepto asignando el 64% a gastos administrativos."
+  },
+  {
+    "id": 3,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Matriz FODA: Diagnóstico de Factores Internos y Externos",
+    "dificultad": "Básica",
+    "contexto": "Durante la sesión de planeación estratégica de Sweet Delight S.A.S., el equipo directivo documentó las siguientes dos situaciones en su diagnóstico organizacional:\nSituación 1: 'Alza acelerada en las cotizaciones nacionales de la leche y crema de leche debido a contingencias climáticas en el sector ganadero'.\nSituación 2: 'Receta propia y estandarizada de crema chantilly gourmet con consistencia artesanal y alta calificación en pruebas a ciegas'.",
+    "enunciado": "Al categorizar rigurosamente estas situaciones dentro de los cuatro cuadrantes de la Matriz FODA (Fortalezas, Oportunidades, Debilidades y Amenazas), corresponden respectivamente a:",
+    "opciones": {
+      "A": "Situación 1: Debilidad interna | Situación 2: Oportunidad de mercado.",
+      "B": "Situación 1: Amenaza externa | Situación 2: Fortaleza interna.",
+      "C": "Situación 1: Amenaza externa | Situación 2: Oportunidad de mercado.",
+      "D": "Situación 1: Debilidad interna | Situación 2: Fortaleza interna."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En la metodología FODA, los factores externos provienen del macro y microentorno que la empresa no controla directamente: el alza de precios por clima ganadero es una contingencia exógena negativa, por ende una Amenaza. Por el contrario, los factores internos corresponden a capacidades, recursos o vulnerabilidades propias: la receta exclusiva y su estandarización es una ventaja competitiva dominada por la empresa, es decir, una Fortaleza. Los distractores A y D confunden factores externos con debilidades internas, y el distractor C clasifica una capacidad propia como una oportunidad externa."
+  },
+  {
+    "id": 4,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Análisis PESTEL: Macroentorno Ecológico y Legal",
+    "dificultad": "Media",
+    "contexto": "En Colombia, la entrada en vigencia de normativas ambientales como la Ley 2232 de 2022 prohíbe de forma gradual la comercialización y uso de plásticos de un solo uso en empaques de alimentos no reutilizables, obligando a los establecimientos a migrar a recipientes biodegradables, compostables o reutilizables, so pena de sanciones pecuniarias y cierres temporales.",
+    "enunciado": "En la matriz PESTEL formulada para Sweet Delight S.A.S., esta disposición regulatoria debe ubicarse primordialmente en la intersección de las dimensiones:",
+    "opciones": {
+      "A": "Económica y Tecnológica.",
+      "B": "Social y Política.",
+      "C": "Ecológica (Ambiental) y Legal (Normativa).",
+      "D": "Económica y Demográfica."
+    },
+    "clave": "C",
+    "justificacion": "La opción C es la correcta. El análisis PESTEL examina las fuerzas Político, Económico, Social, Tecnológico, Ecológico y Legal. La prohibición de plásticos responde al cuidado del medio ambiente, la gestión de residuos y la sostenibilidad de ecosistemas (dimensión Ecológica/Ambiental), mientras que el carácter de mandato obligatorio a través de leyes, decretos y sanciones de obligatorio cumplimiento atañe de forma explícita al marco jurídico (dimensión Legal). Las otras opciones ignoran la naturaleza ecológica y sancionatoria legal que caracterizan a este fenómeno."
+  },
+  {
+    "id": 5,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Organigrama y Estructura Organizacional",
+    "dificultad": "Básica",
+    "contexto": "El organigrama empresarial de Sweet Delight S.A.S. adopta una estructura funcional jerárquica: en la cúspide se encuentra la Asamblea General de Accionistas, seguida por la Gerencia General; de ella dependen tres áreas funcionales: Dirección de Operaciones y Calidad, Dirección Administrativa y Financiera, y Dirección de Mercadeo y Ventas. Bajo la Dirección de Operaciones se ubican los Operarios de Preparación y el Auxiliar de Cadena de Frío.",
+    "enunciado": "Si durante la recepción matutina de materia prima un auxiliar de cocina detecta que el camión de los cultivadores de fresa no mantuvo la temperatura de refrigeración recomendada (llegó a 14°C en vez de 4°C), la línea de mando formal estipula que debe reportar el hallazgo de inmediato a:",
+    "opciones": {
+      "A": "La Asamblea General de Accionistas para convocar una reunión extraordinaria de reforma estatutaria.",
+      "B": "El Director de Mercadeo y Ventas para que lance una promoción de remate urgente por redes sociales.",
+      "C": "El Director de Operaciones y Calidad para activar el protocolo de inspección, rechazo de lote y no conformidad sanitaria.",
+      "D": "El Director Administrativo y Financiero para que retenga el pago de la nómina de todos los colaboradores."
+    },
+    "clave": "C",
+    "justificacion": "La opción C es la correcta. En una estructura funcional, la cadena de mando canaliza las novedades técnicas y operativas hacia el superior inmediato responsable del área correspondiente. El control de calidad, la inocuidad alimentaria y la recepción de materias primas son competencia directa de la Dirección de Operaciones y Calidad. La asamblea general no se ocupa de contingencias operativas menores (distractor A), comercializar fruta en riesgo microbiológico viola las BPM (distractor B), y retener salarios es ilegal y ajeno a la función administrativa en este contexto (distractor D)."
+  },
+  {
+    "id": 6,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Proyección Anual de Ventas y Flujo Financiero: Estacionalidad",
+    "dificultad": "Media",
+    "contexto": "El plan de proyección de ventas mes a mes para el Año 1 de Sweet Delight S.A.S. muestra la siguiente curva de demanda:\n- Mes 1 a 4: Crecimiento gradual de 1.500 a 2.000 vasos/mes (fase de posicionamiento).\n- Mes 5 (Mayo): Pico de 2.700 vasos/mes.\n- Mes 6 a 8: Estabilidad relativa entre 2.000 y 2.200 vasos/mes.\n- Mes 9 (Septiembre): Pico de 2.850 vasos/mes.\n- Mes 12 (Diciembre): Pico máximo de 3.200 vasos/mes.",
+    "enunciado": "Al analizar la relación entre estos datos numéricos y el entorno comercial en Colombia, la conclusión gerencial más fundamentada es que:",
+    "opciones": {
+      "A": "La empresa debe cerrar sus puertas en enero y febrero por tener ventas inferiores a los meses pico.",
+      "B": "El negocio experimenta una estacionalidad marcada por festividades de alto consumo afectivo y gastronómico (Día de la Madre, Amor y Amistad, Festividades Navideñas), lo que exige programar con antelación turnos de apoyo y compras mayores de fruta.",
+      "C": "La demanda de postres es completamente inelástica y uniforme a lo largo del año, por lo que la variación obedece a un error de cálculo en las fórmulas estadísticas.",
+      "D": "En diciembre se debería duplicar el precio unitario a $20.000 COP para disminuir la cantidad demandada y evitar tener que contratar personal."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. Los meses de mayo, septiembre y diciembre en Colombia coinciden respectivamente con el Día de la Madre, el mes del Amor y la Amistad, y la temporada navideña de novenas y reuniones familiares. Este patrón estacional exige previsión operativa en compras, negociación anticipada con cultivadores de fresa y flexibilidad en la programación de personal. Los otros distractores plantean medidas absurdas como cerrar operaciones (distractor A), negar la evidencia de los datos (distractor C) o desincentivar deliberadamente las ventas mediante alzas abusivas (distractor D)."
+  },
+  {
+    "id": 7,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Cuadro de Mando Integral (Balanced Scorecard): Perspectivas",
+    "dificultad": "Media",
+    "contexto": "En el Cuadro de Mando Integral (Balanced Scorecard) de Sweet Delight S.A.S. se encuentran consignados los siguientes cuatro indicadores clave de desempeño (KPI):\n1. Margen de Utilidad Neta mensual superior al 25%.\n2. Tasa de retención de clientes y Net Promoter Score (NPS) mayor a 75 puntos.\n3. Porcentaje de merma de fresa inferior al 3% y tiempo promedio de despacho de pedidos bajo 4 minutos.\n4. Promedio de 20 horas semestrales de capacitación por colaborador en Buenas Prácticas de Manufactura (BPM) e higiene alimentaria.",
+    "enunciado": "Al correlacionar estos indicadores con las cuatro perspectivas tradicionales de Robert Kaplan y David Norton, el indicador número 3 se clasifica en la perspectiva de:",
+    "opciones": {
+      "A": "Perspectiva Financiera.",
+      "B": "Perspectiva del Cliente.",
+      "C": "Perspectiva de Procesos Internos.",
+      "D": "Perspectiva de Aprendizaje y Crecimiento (Innovación)."
+    },
+    "clave": "C",
+    "justificacion": "La opción C es la correcta. La perspectiva de Procesos Internos evalúa la excelencia, eficiencia operativa, estandarización y calidad en la cadena de valor interna que impacta la propuesta de valor. La merma de fruta y el tiempo de despacho miden directamente la eficiencia de la cocina y el área operativa. Por su parte, el indicador 1 es Financiero, el indicador 2 es del Cliente y el indicador 4 es de Aprendizaje y Crecimiento."
+  },
+  {
+    "id": 8,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Buenas Prácticas de Manufactura (BPM) y Cadena de Frío",
+    "dificultad": "Básica",
+    "contexto": "La Resolución 2674 de 2013 del Ministerio de Salud y Protección Social de Colombia reglamenta las condiciones sanitarias para la fabricación, procesamiento, envase, almacenamiento y comercialización de alimentos. En el manual de calidad de Sweet Delight S.A.S. se establece una bitácora obligatoria donde se monitorea que la vitrina expositora mantenga la crema batida y los postres preparados entre 2°C y 4°C.",
+    "enunciado": "La interpretación bromatológica y técnica que justifica mantener los postres en ese intervalo específico de temperatura es que:",
+    "opciones": {
+      "A": "A esas temperaturas la crema láctea se congela por completo, eliminando para siempre cualquier microorganismo patógeno previo.",
+      "B": "Se inhibe el crecimiento y proliferación de bacterias mesófilas y patógenas (como Salmonella y Listeria) y se preserva la emulsión láctea sin cristalizar ni congelar la estructura celular de la fresa.",
+      "C": "Permite apagar los motores refrigeradores durante la noche para ahorrar un 50% de energía sin alterar el alimento.",
+      "D": "Sirve exclusivamente para alterar el sabor del postre haciendo que los clientes perciban una mayor concentración de azúcar."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El rango de 2°C a 4°C es la temperatura estándar de refrigeración para alimentos perecederos. A esta temperatura se desacelera drásticamente el metabolismo microbiano impidiendo la multiplicación de bacterias perjudiciales y conservando las propiedades organolépticas (textura, frescura, sabor) tanto de la fruta como de la grasa láctea de la chantilly. Si bajara de 0°C, la fruta se congelaría rompiendo sus paredes celulares por cristales de hielo (distractor A); apagar las neveras rompe la cadena de frío y causa descomposición (distractor C); y el frío no tiene como función enmascarar sabores (distractor D)."
+  },
+  {
+    "id": 9,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Nómina Colombiana: Deducciones Legales de Seguridad Social",
+    "dificultad": "Básica",
+    "contexto": "En el taller de liquidación de nómina de Sweet Delight S.A.S. para el año 2026, un operario devenga un salario básico mensual equivalente a un SMMLV ($1.750.905 COP). Al examinar su colilla de pago, se observa que bajo los conceptos de 'Deducción Aporte Salud Empleado' y 'Deducción Aporte Pensión Empleado' se le retiene exactamente la suma de $70.036,20 COP en cada rubro.",
+    "enunciado": "Al cotejar estas deducciones con el régimen de seguridad social integral en Colombia, se deduce que el porcentaje que se le descuenta legalmente al trabajador sobre su Ingreso Base de Cotización (IBC) para cada uno de estos dos conceptos es de:",
+    "opciones": {
+      "A": "8.5% en salud y 12.0% en pensión.",
+      "B": "4.0% en salud y 4.0% en pensión.",
+      "C": "2.0% en salud y 3.0% en pensión.",
+      "D": "12.0% en salud y 16.0% en pensión."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En Colombia (Ley 100 de 1993 y normas concordantes), el aporte total a salud es del 12.5% (4% a cargo del trabajador y 8.5% a cargo del empleador) y el aporte a pensión es del 16% (4% a cargo del trabajador y 12% a cargo del empleador). El cálculo matemático lo confirma: $1.750.905 × 4% = $70.036,20 COP. Los porcentajes de la opción A corresponden a la parte patronal ordinaria; los de la opción C a parafiscales (SENA e ICBF); y la opción D confunde los aportes totales sumados con las deducciones del colaborador."
+  },
+  {
+    "id": 10,
+    "competencia": "Interpretación y Análisis de la Información",
+    "tema": "Tecnología Agroalimentaria: Trazabilidad Digital y Sensores IoT",
+    "dificultad": "Media",
+    "contexto": "El informe de abastecimiento tecnológico de Sweet Delight documenta que cada canastilla de fresas recibida de la finca proveedora en Cundinamarca cuenta con un tag RFID/código QR dinámico. Al ser escaneado con la tableta del establecimiento, el sistema despliega: lote de cultivo, fecha y hora de cosecha, aplicaciones de bioinsumos y el historial continuo de temperatura registrado por un 'data logger' IoT durante el transporte en carretera.",
+    "enunciado": "La interpretación técnica de esta solución en la gestión moderna de la producción y calidad agroalimentaria es que:",
+    "opciones": {
+      "A": "Constituye un sistema de trazabilidad de extremo a extremo que permite verificar la autenticidad, la cadena de custodia y garantizar la inocuidad alimentaria desde el campo hasta la mesa.",
+      "B": "Es un mecanismo diseñado únicamente para que la DIAN cobre impuestos aduaneros adicionales por transporte terrestre.",
+      "C": "Reemplaza de forma automática el proceso físico de lavado y desinfección de la fresa en la cocina del negocio.",
+      "D": "Garantiza que la fresa nunca madure ni pierda firmeza, incluso si permanece expuesta a temperatura ambiente por varias semanas."
+    },
+    "clave": "A",
+    "justificacion": "La opción A es la correcta. La trazabilidad digital basada en IoT (Internet de las Cosas) e identificación digital proporciona visibilidad integral de la cadena de suministro alimentario (concepto 'del campo a la mesa' o farm-to-fork). Permite aislar con precisión cualquier lote defectuoso, certificar el cumplimiento de la cadena de frío y brindar confianza y transparencia al consumidor. Escanear un código no sustituye las operaciones físicas de limpieza e inocuidad (distractor C), no es un gravamen tributario de la DIAN (distractor B) ni detiene biológicamente la descomposición natural del fruto (distractor D)."
+  },
+  {
+    "id": 11,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Cálculo del Margen de Contribución Unitario y Porcentual",
+    "dificultad": "Básica",
+    "contexto": "La ficha técnica de costos de Sweet Delight S.A.S. establece los siguientes rubros directos para la elaboración de un vaso estándar de fresas con crema gourmet de 12 oz:\n- Fresa fresca seleccionada (150 g): $1.800 COP\n- Crema chantilly artesanal (100 ml): $1.100 COP\n- Vaso biodegradable con tapa domo y cuchara de bambú: $450 COP\n- Toppings surtidos (leche condensada, galleta o chocolate): $250 COP\nEl precio de venta al público (PVP) se fijó en $10.000 COP.",
+    "enunciado": "¿Cuál es el Costo Variable Unitario (CVU), el Margen de Contribución Unitario (MCU) y el Margen de Contribución Porcentual respectivo?",
+    "opciones": {
+      "A": "CVU: $4.000 COP | MCU: $6.000 COP | Margen: 60.0%",
+      "B": "CVU: $3.600 COP | MCU: $6.400 COP | Margen: 64.0%",
+      "C": "CVU: $3.200 COP | MCU: $6.800 COP | Margen: 68.0%",
+      "D": "CVU: $2.800 COP | MCU: $7.200 COP | Margen: 72.0%"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La formulación matemática es:\n1. Costo Variable Unitario (CVU) = Suma de insumos directos = $1.800 + $1.100 + $450 + $250 = $3.600 COP.\n2. Margen de Contribución Unitario (MCU) = Precio de Venta (PV) - CVU = $10.000 - $3.600 = $6.400 COP.\n3. Margen de Contribución Porcentual = MCU / PV = $6.400 / $10.000 = 0.64 = 64.0%.\nLas demás opciones contienen errores aritméticos en la suma de los costos variables directos."
+  },
+  {
+    "id": 12,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Cálculo del Punto de Equilibrio Operativo en Unidades y en Dinero",
+    "dificultad": "Media",
+    "contexto": "Para el primer mes de operaciones de Sweet Delight, la estructura de costos fijos mensuales (arriendo del local, servicios públicos básicos, software contable POS y salarios administrativos fijos) se presupuestó en $4.300.000 COP. Cada vaso de fresas se vende a $10.000 COP y deja un margen de contribución unitario de $6.400 COP (costo variable unitario de $3.600 COP).",
+    "enunciado": "Para formular el Punto de Equilibrio Operativo (PE) donde la empresa cubre la totalidad de sus costos fijos sin generar pérdidas ni ganancias, la cantidad exacta aproximada de vasos a vender y el ingreso mínimo en dinero requeridos son:",
+    "opciones": {
+      "A": "430 vasos | Ingresos: $4.300.000 COP",
+      "B": "672 vasos | Ingresos: $6.720.000 COP",
+      "C": "1.195 vasos | Ingresos: $11.950.000 COP",
+      "D": "850 vasos | Ingresos: $8.500.000 COP"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La fórmula del punto de equilibrio en unidades es:\nPE (unidades) = Costos Fijos Totales / Margen de Contribución Unitario\nPE = $4.300.000 / $6.400 = 671,875 unidades.\nDado que no se pueden vender fracciones de vasos, se aproxima hacia arriba a 672 unidades.\nEl punto de equilibrio en dinero es: 672 vasos × $10.000 COP/vaso = $6.720.000 COP (o $4.300.000 / 0.64 = $6.718.750 COP).\nEl distractor A divide erróneamente los costos fijos entre el precio de venta ($4.300.000 / $10.000 = 430), ignorando que cada vaso cuesta $3.600 fabricarlo; el distractor C divide costos fijos entre el costo variable ($4.300.000 / $3.600 ≈ 1.194); y el distractor D es una cifra sin sustento técnico."
+  },
+  {
+    "id": 13,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Simulación Financiera de Utilidad Operacional",
+    "dificultad": "Media",
+    "contexto": "El plan de negocios evalúa un escenario optimista para el mes de septiembre (temporada de Amor y Amistad), en el cual se proyecta vender 2.500 vasos de fresas gourmet. Los datos de la estructura de precios son:\n- Precio de venta unitario: $10.000 COP\n- Costo variable unitario: $3.600 COP\n- Costos y gastos fijos operacionales totales (administración + publicidad): $4.900.000 COP.",
+    "enunciado": "Al ejecutar el estado de resultados para este volumen de ventas, la Utilidad Operacional proyectada para el mes de septiembre será de:",
+    "opciones": {
+      "A": "$16.000.000 COP",
+      "B": "$11.100.000 COP",
+      "C": "$9.000.000 COP",
+      "D": "$12.500.000 COP"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El cálculo financiero paso a paso es:\n1. Ingresos Operacionales = 2.500 vasos × $10.000 = $25.000.000 COP.\n2. Costo de Ventas = 2.500 vasos × $3.600 = $9.000.000 COP.\n3. Utilidad Bruta = Ingresos - Costo de Ventas = $25.000.000 - $9.000.000 = $16.000.000 COP.\n4. Utilidad Operacional = Utilidad Bruta - Gastos Fijos Operacionales = $16.000.000 - $4.900.000 = $11.100.000 COP.\nEl distractor A corresponde a la Utilidad Bruta antes de deducir gastos fijos; el distractor C corresponde al Costo de Ventas; y el distractor D calcula erróneamente aplicando un margen neto arbitrario del 50%."
+  },
+  {
+    "id": 14,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Nómina: Valor de la Hora Ordinaria con Reducción de Jornada (Ley 2101)",
+    "dificultad": "Media",
+    "contexto": "En aplicación de la Ley 2101 de 2021 sobre reducción gradual de la jornada máxima legal en Colombia, la jornada laboral semanal pasa a 42 horas en el año 2026. Con el fin de no desmejorar los ingresos de los colaboradores, el divisor mensual legal para liquidar el valor de la hora ordinaria pasa de 240 horas a 210 horas (resultado de: 42 horas semanales / 6 días laborales × 30 días mensuales = 210 horas).",
+    "enunciado": "Si una supervisora de calidad y producción de Sweet Delight devenga un salario básico mensual convenido de $2.100.000 COP, ¿cuál es el valor exacto de su hora ordinaria de trabajo bajo el divisor legal de 210 horas?",
+    "opciones": {
+      "A": "$8.750,00 COP",
+      "B": "$10.000,00 COP",
+      "C": "$12.500,00 COP",
+      "D": "$9.200,00 COP"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La fórmula de cálculo del valor de la hora ordinaria es:\nValor Hora Ordinaria = Salario Básico Mensual / Divisor Horas Mes\nValor Hora Ordinaria = $2.100.000 COP / 210 horas = $10.000,00 COP.\nNótese que bajo el divisor histórico anterior de 48 horas semanales (divisor 240), la hora valía $2.100.000 / 240 = $8.750 COP (distractor A). La reducción de jornada a 42 horas incrementa automáticamente el valor de la hora ordinaria a $10.000 COP protegiendo al trabajador."
+  },
+  {
+    "id": 15,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Nómina: Liquidación de Horas Extras Diurnas (HED)",
+    "dificultad": "Media",
+    "contexto": "El Código Sustantivo del Trabajo (CST) en Colombia establece en su artículo 168 que la Hora Extra Diurna (HED) se remunera con un recargo del veinticinco por ciento (25%) sobre el valor de la hora ordinaria diurna (factor 1.25).\nUn operario de producción de Sweet Delight devenga un salario de $1.750.905 COP. Con el divisor de 210 horas, el valor de su hora ordinaria es de $8.337,64 COP. Durante el mes de alta temporada, el operario laboró 8 horas extras diurnas autorizadas.",
+    "enunciado": "¿Cuál es el valor total a pagar en la nómina del mes por concepto de estas 8 horas extras diurnas?",
+    "opciones": {
+      "A": "$66.701,12 COP",
+      "B": "$83.376,40 COP",
+      "C": "$116.726,96 COP",
+      "D": "$104.220,50 COP"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El cálculo paso a paso es:\n1. Valor de 1 Hora Extra Diurna = Valor hora ordinaria × 1.25\n   = $8.337,64 × 1.25 = $10.422,05 COP.\n2. Valor total de 8 HED = $10.422,05 × 8 = $83.376,40 COP.\nEl distractor A multiplica directamente la hora ordinaria por 8 ($8.337,64 × 8 = $66.701,12), omitiendo el recargo del 25%; el distractor C aplica erróneamente un factor de hora extra nocturna (1.75: $8.337,64 × 1.75 × 8 = $116.726,96); y el distractor D corresponde al valor de 10 horas o comete un error en el producto."
+  },
+  {
+    "id": 16,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Nómina: Liquidación de Recargo Nocturno Ordinario (Art. 160 y 168 CST)",
+    "dificultad": "Media",
+    "contexto": "De conformidad con el artículo 160 y 168 del CST, la jornada nocturna se comprende entre las 9:00 p.m. y las 6:00 a.m. El trabajo nocturno ordinario por el solo hecho de ser nocturno se remunera con un recargo del treinta y cinco por ciento (35%) sobre el valor de la hora diurna ordinaria (factor recargo 0.35).\nUna auxiliar de ventas tiene un turno ordinario de 2:00 p.m. a 10:00 p.m., completando 1 hora nocturna diaria (de 9:00 p.m. a 10:00 p.m.). Su hora ordinaria equivale a $10.000 COP y en el mes laboró 26 días en dicho horario.",
+    "enunciado": "¿Cuál es el valor total que debe liquidársele por concepto de Recargo Nocturno en el mes?",
+    "opciones": {
+      "A": "$260.000,00 COP",
+      "B": "$91.000,00 COP",
+      "C": "$195.000,00 COP",
+      "D": "$35.000,00 COP"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El procedimiento es:\n1. Horas nocturnas laboradas en el mes = 1 hora/día × 26 días = 26 horas nocturnas ordinarias.\n2. Valor del recargo por hora = Valor hora ordinaria × 35% = $10.000 × 0.35 = $3.500 COP.\n3. Valor total del recargo nocturno = 26 horas × $3.500 COP = $91.000,00 COP.\nEl distractor A paga las horas completas ordinarias sin considerar el recargo ($10.000 × 26); el distractor C aplica un factor de hora extra nocturna del 75%; y el distractor D calcula el recargo de solo 10 horas."
+  },
+  {
+    "id": 17,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Presupuesto de Inversión Inicial y Aportes de Capital",
+    "dificultad": "Básica",
+    "contexto": "El presupuesto de inversión inicial para la puesta en marcha de Sweet Delight S.A.S. totaliza $5.000.000 COP, distribuidos en:\n- Maquinaria y equipos de frío: $2.600.000 COP\n- Insumos e ingredientes de apertura: $800.000 COP\n- Empaques y publicidad inicial: $400.000 COP\n- Capital de trabajo y fondo de reserva de liquidez: $1.200.000 COP\nLos 3 socios fundadores acuerdan constituir la sociedad por acciones simplificada aportando el capital en partes exactamente iguales.",
+    "enunciado": "¿Cuál es el valor del aporte de capital suscrito y pagado que debe integrar cada uno de los tres socios al momento de la constitución?",
+    "opciones": {
+      "A": "$1.250.000,00 COP",
+      "B": "$1.666.666,67 COP",
+      "C": "$2.500.000,00 COP",
+      "D": "$1.500.000,00 COP"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. Si el capital total requerido es de $5.000.000 COP y se divide de forma equitativa entre 3 socios:\nAporte individual = $5.000.000 COP / 3 = $1.666.666,67 COP (o 33.33% de participación accionaria por cada socio).\nEl distractor A divide entre 4 socios; el distractor C divide entre 2 socios; y el distractor D no cubre el valor total requerido dejando un déficit de $500.000 COP en el presupuesto de inversión."
+  },
+  {
+    "id": 18,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Marketing Digital: Presupuesto Publicitario y Retorno en Punto de Equilibrio",
+    "dificultad": "Media",
+    "contexto": "El área de mercadeo de Sweet Delight dispone de un presupuesto mensual de $600.000 COP para pauta segmentada en Instagram y TikTok. Gracias a las métricas de conversión digital, se estima un Costo de Adquisición de Clientes (CAC) de $3.000 COP por cada cliente nuevo que efectivamente compra en el local. Cada vaso vendido genera un margen de contribución unitario de $6.400 COP.",
+    "enunciado": "¿Cuántos clientes nuevos atraerá la campaña al mes y cuántos vasos con crema deben venderse como mínimo para que el margen de contribución cubra con exactitud la inversión publicitaria de $600.000 COP?",
+    "opciones": {
+      "A": "300 clientes nuevos y 150 vasos.",
+      "B": "200 clientes nuevos y 94 vasos.",
+      "C": "150 clientes nuevos y 60 vasos.",
+      "D": "200 clientes nuevos y 200 vasos."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El cálculo cuantitativo es:\n1. Nuevos clientes adquiridos = Presupuesto total de pauta / CAC = $600.000 / $3.000 = 200 clientes.\n2. Vasos necesarios para pagar la campaña publicitaria = Inversión en pauta / Margen de contribución unitario\n   = $600.000 / $6.400 = 93,75 vasos ≈ 94 vasos.\nLos otros distractores contienen errores de cálculo en la división o asumen erróneamente que cada cliente debe comprar obligatoriamente solo 1 vaso para pagar la pauta sin aplicar la fórmula del margen de contribución."
+  },
+  {
+    "id": 19,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Prestaciones Sociales: Provisiones Laborales Mensuales en Colombia",
+    "dificultad": "Media",
+    "contexto": "En la contabilidad financiera colombiana, las empresas deben provisionar mensualmente los pasivos laborales contingentes correspondientes a las prestaciones sociales obligatorias (Prima de Servicios, Auxilio de Cesantías, Intereses sobre Cesantías y Vacaciones). La Prima de Servicios y las Cesantías equivalen legalmente a 1 mes de salario devengado por cada año de trabajo (360 días contables).",
+    "enunciado": "Para formular adecuadamente la provisión mensual contable de la Prima de Servicios y del Auxilio de Cesantías, el porcentaje exacto que debe aplicarse sobre la base salarial mensual devengada por cada uno de estos dos conceptos es:",
+    "opciones": {
+      "A": "4.16% mensual.",
+      "B": "8.33% mensual.",
+      "C": "12.00% mensual.",
+      "D": "1.00% mensual."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. Dado que un año tiene 12 meses, la provisión mensual equivalente a un mes de salario completo al año corresponde a:\nPorcentaje mensual = 1 / 12 = 0.08333... = 8.33%.\nPor tanto, la empresa provisiona mensualmente el 8.33% para Prima de Servicios y el 8.33% para Cesantías. El distractor A (4.16%) corresponde a la provisión de Vacaciones (15 días hábiles al año = medio mes = 0.5 / 12 = 4.166%); el distractor C (12%) corresponde a la tasa anual de intereses a las cesantías; y el distractor D (1%) corresponde a la provisión mensual de los intereses a las cesantías (12% / 12 = 1%)."
+  },
+  {
+    "id": 20,
+    "competencia": "Formulación y Ejecución",
+    "tema": "Plan de Producción: Rendimiento y Merma Operativa de Fresas",
+    "dificultad": "Media",
+    "contexto": "Para un fin de semana de feria gastronómica, Sweet Delight planea producir exactamente 1.000 vasos de postre. La receta estándar requiere 150 gramos netos de pulpa de fresa limpia, desinfectada y picada por vaso (un total de 150 kg de fresa neta). En el proceso de selección, lavado, descoronado (retiro del sépalo verde) y descarte por maduración se registra una merma técnica promedio del 10.0%.",
+    "enunciado": "Para asegurar la materia prima necesaria sin que falte fruta para ningún vaso, la cantidad bruta de fresa en campo que el área de compras debe solicitar al cultivador es de:",
+    "opciones": {
+      "A": "150,00 kg",
+      "B": "166,67 kg",
+      "C": "165,00 kg",
+      "D": "180,00 kg"
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La fórmula de rendimiento con merma es:\nCantidad Bruta = Cantidad Neta / (1 - % de merma)\nCantidad Bruta = 150 kg / (1 - 0.10) = 150 kg / 0.90 = 166,666... ≈ 166,67 kg.\nComprobación: Si se compran 166,67 kg y se pierde el 10% (16,67 kg), quedan disponibles exactamente 150 kg de fruta limpia.\nEl distractor C comete el error clásico de sumar el 10% sobre la base neta (150 + 15 = 165 kg), pero si a 165 kg se le saca el 10% de merma (16,5 kg) quedarían solo 148,5 kg, faltando fruta para los vasos planificados. El distractor A no considera la merma, y el distractor D sobredimensiona el pedido aumentando el costo innecesariamente."
+  },
+  {
+    "id": 21,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Tipo Societario: Ventajas Jurídicas de la S.A.S. (Ley 1258 de 2008)",
+    "dificultad": "Media",
+    "contexto": "Durante la etapa de estructuración legal del emprendimiento 'Sweet Delight', un asesor tradicional sugirió conformar una Sociedad de Responsabilidad Limitada (Ltda.) o una Sociedad Colectiva. No obstante, los emprendedores decidieron crear una Sociedad por Acciones Simplificada (S.A.S.).",
+    "enunciado": "Al evaluar críticamente las ventajas comparativas del régimen societario colombiano, el argumento jurídico y operativo más contundente que respalda la elección de la S.A.S. es que:",
+    "opciones": {
+      "A": "Exonera a la empresa de llevar libros de contabilidad oficiales y de declarar renta ante la Dirección de Impuestos y Aduanas Nacionales (DIAN).",
+      "B": "Permite su constitución mediante documento privado ante Cámara de Comercio sin gastos notariales de escritura pública, ofrece absoluta flexibilidad estatutaria y limita la responsabilidad de los accionistas estrictamente al monto de sus aportes.",
+      "C": "Obliga a que todos los accionistas respondan de forma ilimitada y solidaria con sus patrimonios personales ante cualquier contingencia comercial de la empresa.",
+      "D": "Garantiza que el Estado colombiano asuma y subsidie el pago de la nómina y los servicios públicos durante los primeros cinco años de operación."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La Ley 1258 de 2008 revolucionó el derecho societario en Colombia al permitir que la S.A.S. se cree por documento privado (sin escritura pública, reduciendo costos y tiempos salvo si se aportan bienes sujetos a registro como inmuebles), con amplia libertad contractual en sus estatutos, posibilidad de accionista único o múltiple y blindaje patrimonial para los socios (responsabilidad limitada al capital aportado). La S.A.S. sí debe llevar contabilidad y pagar impuestos (distractor A), la responsabilidad no es ilimitada (distractor C, que corresponde a sociedades colectivas) y el Estado no asume pérdidas privadas (distractor D)."
+  },
+  {
+    "id": 22,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Legislación Laboral: Marco Regulatorio del Auxilio de Transporte",
+    "dificultad": "Media",
+    "contexto": "En el organigrama de Sweet Delight S.A.S., el Director de Operaciones tiene asignado un salario básico de $3.800.000 COP mensuales. Al liquidar el mes, él exige que se le incluya el Auxilio de Transporte de $249.095 COP, argumentando que vive a una distancia considerable del establecimiento comercial y utiliza transporte público a diario.",
+    "enunciado": "Desde una perspectiva jurídica y argumentativa con base en la Ley 15 de 1959 y los decretos laborales anuales vigentes en Colombia, la decisión de la gerencia debe ser:",
+    "opciones": {
+      "A": "Conceder el auxilio de transporte obligatoriamente, ya que la ley exige pagarlo a cualquier empleado que demuestre vivir a más de 10 kilómetros del lugar de trabajo, sin importar su nivel de salario.",
+      "B": "Negar el auxilio legal de transporte, debido a que la norma estipula con claridad que este beneficio obligatorio solo cobija a trabajadores que devenguen hasta dos (2) Salarios Mínimos Mensuales Legales Vigentes (SMMLV), tope que su salario supera ($3.800.000 > $3.501.810 COP).",
+      "C": "Pagar el auxilio pero descontarlo íntegramente de su aporte de pensión para equilibrar el presupuesto de la empresa.",
+      "D": "Despedir al director de inmediato por considerar que solicitar prestaciones es una falta gravísima al Código Sustantivo del Trabajo."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En Colombia, el auxilio de transporte obligatorio por ley está condicionado a un tope salarial estricto: solo tienen derecho aquellos trabajadores que devenguen hasta dos (2) SMMLV. Para el año 2026, con un SMMLV de $1.750.905 COP, dos salarios mínimos equivalen a $3.501.810 COP. Al devengar $3.800.000 COP, el director supera el tope legal, por lo que la empresa no está obligada por ley a pagárselo (salvo acuerdo extralegal voluntario). Los demás distractores inventan condiciones geográficas inexistentes en la ley (distractor A), sugieren maniobras ilegales de descuento pensional (distractor C) o violan el derecho laboral (distractor D)."
+  },
+  {
+    "id": 23,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Tributaria y Parafiscales: Exoneración de Aportes Patronales (Art. 114-1 E.T.)",
+    "dificultad": "Alta",
+    "contexto": "En una reunión de socios de Sweet Delight S.A.S., un integrante propone presupuestar pagos mensuales a favor del SENA (2.0%), ICBF (3.0%) y Salud Patronal (8.5%) para los operarios de planta que devengan un salario mínimo ($1.750.905 COP). Sin embargo, la contadora del proyecto afirma que la empresa está formalmente exonerada de realizar esos aportes por dichos trabajadores.",
+    "enunciado": "¿Cuál es el argumento legal y tributario que valida de forma incontestable la postura de la contadora?",
+    "opciones": {
+      "A": "El Estatuto Tributario en su Artículo 114-1 exonera a las sociedades comerciales del pago de aportes parafiscales a SENA, ICBF y cotizaciones a Salud a cargo del empleador, por aquellos trabajadores que devenguen individualmente menos de diez (10) SMMLV.",
+      "B": "Las empresas creadas como S.A.S. nunca tienen la obligación de afiliar a sus empleados a ninguna entidad del sistema de seguridad social en Colombia.",
+      "C": "El SENA y el ICBF fueron disueltos por el Congreso de la República y ya no reciben fondos de ninguna persona jurídica en el país.",
+      "D": "La exoneración aplica únicamente si la empresa presenta pérdidas contables continuas durante sus primeros tres trimestres de operación comercial."
+    },
+    "clave": "A",
+    "justificacion": "La opción A es la correcta. El artículo 114-1 del Estatuto Tributario colombiano (introducido por la Ley 1819 de 2016 y reglamentado) establece que las sociedades y personas jurídicas contribuyentes declarantes del impuesto sobre la renta están exoneradas del pago de aportes patronales al SENA, al ICBF y de la cotización patronal a Salud (8.5%), respecto de los trabajadores que devenguen, individualmente considerados, menos de 10 SMMLV. No están exoneradas de la Caja de Compensación Familiar (4%), ni de pensión patronal (12%), ni de ARL. Las otras opciones son jurídicamente falsas: la seguridad social sigue siendo obligatoria (distractor B), las entidades están plenamente vigentes (distractor C) y la exoneración no depende de tener pérdidas sino del nivel salarial (distractor D)."
+  },
+  {
+    "id": 24,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Estrategia de Mercadeo: Validación de Precios de Descreme y Diferenciación",
+    "dificultad": "Media",
+    "contexto": "En el sector geográfico donde operará Sweet Delight, existen varios vendedores ambulantes y puestos tradicionales que comercializan vasos de fresas con crema a $5.000 COP. Sweet Delight decidió fijar su precio de lanzamiento en $10.000 COP por vaso. Un asesor externo alerta que fijar un precio 100% superior al de la competencia informal conducirá al colapso comercial del proyecto.",
+    "enunciado": "Al evaluar críticamente la estrategia de mercadeo mix (4P), el argumento de valor que refuta la advertencia del asesor y sostiene la viabilidad del precio de $10.000 COP es que:",
+    "opciones": {
+      "A": "El consumidor informal no tiene capacidad de elección y comprará obligatoriamente en Sweet Delight porque no existen más establecimientos en la ciudad.",
+      "B": "Sweet Delight no compite por liderazgo en costos ni por precio bajo, sino por diferenciación gourmet: ofrece inocuidad certificada con BPM, trazabilidad de la fresa, crema artesanal baja en azúcar, toppings importados, empaques ecológicos y un local con experiencia sensorial de consumo.",
+      "C": "Fijar un precio de $10.000 COP tiene como fin pagar sobornos a la competencia informal para que abandonen las aceras del sector.",
+      "D": "El Estado colombiano fijó por decreto un precio mínimo obligatorio de $10.000 COP para todos los postres a base de frutas frescas."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En la teoría de ventajas competitivas de Michael Porter, existen dos caminos fundamentales: liderazgo en costos (precio bajo) o diferenciación. Sweet Delight se posiciona en el segmento premium/gourmet. El cliente target no compara un vaso callejero en bolsa de plástico con un producto con empaque biodegradable certificado, trazabilidad de finca, higiene rigurosa y crema chantilly artesanal en un local acogedor. Los consumidores pagan una prima de precio (price premium) por higiene, salud y estatus experiencial. Los otros distractores asumen un monopolio irreal (distractor A), prácticas ilícitas (distractor C) o una intervención estatal de precios inexistente en este mercado (distractor D)."
+  },
+  {
+    "id": 25,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Canales de Distribución: Evaluación de Comisiones y Flujo de Caja en Delivery",
+    "dificultad": "Media",
+    "contexto": "El plan de comercialización proyecta que el 40% de las ventas mensuales se canalizará a través de plataformas agregadoras de entrega a domicilio (Rappi, Didi Food). Estas plataformas cobran una comisión promedio del 22.0% más IVA sobre el precio de venta bruto del producto y liquidan los saldos a favor del comercio con una periodicidad quincenal.",
+    "enunciado": "Al realizar una evaluación crítica del impacto de este canal indirecto sobre el flujo de caja y la estructura de costos de Sweet Delight, la advertencia gerencial más relevante es que:",
+    "opciones": {
+      "A": "La comisión de la plataforma incrementa la ganancia líquida del negocio, pues las plataformas transfieren subsidios directos a los restaurantes aliados.",
+      "B": "El margen de contribución de los pedidos por delivery se reduce significativamente (en más de $2.200 COP por vaso) y el rezago de 15 días en la dispersión de fondos exige mayor liquidez en capital de trabajo para comprar la fruta fresca a diario de contado.",
+      "C": "El canal de delivery elimina por completo la necesidad de tener cocineros y materia prima en el establecimiento físico.",
+      "D": "La comisión del 22% está prohibida por la Constitución y por tanto la empresa no debe registrar esas transacciones en su contabilidad."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En el análisis de canales indirectos, las plataformas digitales otorgan visibilidad y volumen pero conllevan dos fricciones operativas y financieras cruciales: 1) Costo del canal: una comisión del 22% sobre un vaso de $10.000 COP equivale a $2.200 COP que van a la plataforma, reduciendo drásticamente el margen de contribución del postre; y 2) Descalce de liquidez: mientras los cultivadores de fresa exigen pago de contado o a plazos muy cortos para despachar fruta fresca diaria, la plataforma retiene los fondos por 15 días, presionando el capital de trabajo de Sweet Delight. Las otras opciones son incoherentes con la realidad financiera y operativa de un restaurante."
+  },
+  {
+    "id": 26,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Inocuidad Alimentaria: Evaluación del Riesgo de Contaminación Cruzada",
+    "dificultad": "Básica",
+    "contexto": "Durante una inspección técnica preventiva en el área de preparación de Sweet Delight, el auditor de calidad observa que un operario utiliza la misma tabla de picar y el mismo cuchillo para trocear fresas frescas recién desinfectadas y posteriormente abrir empaques sucios de cartón provenientes de la bodega externa, sin lavar ni desinfectar sus manos ni los utensilios entre una labor y otra.",
+    "enunciado": "El dictamen crítico y la justificación técnica que sustentan una sanción correctiva inmediata en este caso es que:",
+    "opciones": {
+      "A": "El procedimiento no presenta inconvenientes porque la fresa contiene ácidos naturales que esterilizan de inmediato cualquier bacteria en la superficie.",
+      "B": "Se produce una grave contaminación cruzada directa e indirecta que puede inocular esporas fúngicas, bacterias y alérgenos en la fruta lista para consumo, infringiendo las BPM (Resolución 2674 de 2013).",
+      "C": "La falta es irrelevante porque la crema chantilly se sirve fría y el frío mata el 100% de los patógenos existentes.",
+      "D": "La única falta cometida es el desgaste prematuro del filo del cuchillo de acero inoxidable, lo que genera un sobrecosto menor de reposición."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La contaminación cruzada ocurre cuando microorganismos patógenos o suciedad provenientes de superficies no higienizadas (como cajas de cartón de transporte externo) se transfieren a alimentos listos para el consumo (como fresas desinfectadas). Dado que las fresas se consumen crudas sin cocción posterior, este descuido representa un peligro crítico de intoxicación alimentaria para el cliente y un incumplimiento flagrante de la normativa sanitaria nacional (Res. 2674 de 2013). Los ácidos de la fruta no desinfectan (distractor A), la refrigeración no esteriliza (distractor C) y el riesgo central es de salud pública, no el filo del cuchillo (distractor D)."
+  },
+  {
+    "id": 27,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Estatutos y Gobierno Corporativo: Derecho de Preferencia en Cesión de Acciones",
+    "dificultad": "Media",
+    "contexto": "En el estatuto social de constitución de Sweet Delight S.A.S. se consagró expresamente la cláusula de 'Derecho de Preferencia en la Negociación de Acciones'. Pasados seis meses, uno de los socios fundadores decide retirarse del negocio y acuerda vender privadamente su 33.3% de acciones a un competidor comercial directo de la zona, sin avisar previamente a los otros dos socios fundadores.",
+    "enunciado": "Al evaluar la validez jurídica de esta operación a la luz de los estatutos y la Ley 1258 de 2008, la posición argumentativa que asiste a los otros dos socios es:",
+    "opciones": {
+      "A": "La venta es completamente válida e inmodificable, pues en Colombia ningún contrato societario puede restringir la voluntad individual de un accionista.",
+      "B": "La negociación es ineficaz y violatoria de los estatutos, dado que el derecho de preferencia exige que el socio oferente proponga primero la cesión de sus acciones a los demás socios en idénticas condiciones, antes de ofrecerlas a terceros ajenos a la sociedad.",
+      "C": "Los socios fundadores restantes pierden automáticamente su condición de propietarios y deben entregar el establecimiento al nuevo comprador sin protestar.",
+      "D": "El caso debe ser remitido a la justicia penal con orden de captura inmediata contra el socio por considerarse traición a la patria."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El derecho de preferencia estatutario es una cláusula legítima y ampliamente utilizada en las sociedades de capital (y especialmente en las S.A.S., según la Ley 1258 de 2008) para preservar el control del negocio en manos de los fundadores y evitar el ingreso de terceros no deseados o competidores desleales. Obliga a que cualquier transferencia de acciones sea ofrecida prioritariamente a los demás accionistas a prorrata de su participación. Si se transfiere a un tercero sin agotar el trámite preferencial, el negocio jurídico carece de validez y es inoponible a la sociedad. Las otras opciones carecen de rigor legal."
+  },
+  {
+    "id": 28,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Impacto Financiero de la Reducción de la Jornada Laboral (Ley 2101 de 2021)",
+    "dificultad": "Alta",
+    "contexto": "Al implementarse la reducción de la jornada laboral máxima legal de 48 a 42 horas semanales manteniendo inalterado el salario nominal mensual de los trabajadores, la junta directiva de Sweet Delight nota que el costo de cada hora extra y recargo nocturno se ha encarecido, pasando el divisor mensual de 240 a 210 horas.",
+    "enunciado": "¿Cuál es la valoración crítica que la dirección financiera debe presentar ante los socios para argumentar el impacto de esta medida en la estructura de costos de la empresa?",
+    "opciones": {
+      "A": "La medida reduce los costos de nómina en un 50%, ya que al trabajar menos horas el personal consume menos insumos de cocina.",
+      "B": "El valor de la hora ordinaria y de todos sus recargos asociados se incrementa automáticamente en un 14.28% ($240/210 - 1 = 14.28%), lo que demanda optimizar la programación de turnos en horas valle para evitar sobrecostos por horas extras y elevar la productividad por hora hombre.",
+      "C": "La ley es inconstitucional para el sector de repostería y la empresa puede ignorarla unilateralmente sin riesgo de sanciones por el Ministerio del Trabajo.",
+      "D": "La única alternativa viable para la empresa es rebajar el salario básico de los empleados en la misma proporción en que disminuyen sus horas de trabajo."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El análisis económico es riguroso: al dividir el mismo salario mensual entre 210 horas en lugar de 240 horas, el valor de la hora ordinaria se incrementa exactamente en: (240 - 210) / 210 = 30 / 210 = 14.28%. Por consiguiente, cada hora extra diurna, nocturna, dominical o recargo nocturno que se liquide resultará un 14.28% más costosa para el empleador. Esto obliga a la administración a ser altamente eficiente en la planificación de turnos y evitar el trabajo suplementario innecesario. La Ley 2101 prohíbe expresamente disminuir el salario de los trabajadores (lo que invalida el distractor D), no reduce costos a la mitad (distractor A) y es de obligatorio cumplimiento legal (distractor C)."
+  },
+  {
+    "id": 29,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Evaluación de Sostenibilidad: Empaques Biodegradables vs Plástico Convencional",
+    "dificultad": "Media",
+    "contexto": "En una sesión de optimización de costos, el encargado de compras presenta una propuesta: sustituir los vasos biodegradables de fécula de maíz (costo: $450 COP c/u) por vasos de plástico transparente de poliestireno tradicional (costo: $120 COP c/u). Argumenta que esto ahorraría $330 COP por vaso, lo que para 2.000 vasos representa un ahorro mensual de $660.000 COP.",
+    "enunciado": "Al evaluar críticamente esta propuesta frente al plan estratégico y la propuesta de valor integral de Sweet Delight S.A.S., la objeción gerencial de mayor peso para rechazar la propuesta es que:",
+    "opciones": {
+      "A": "El poliestireno tradicional es un material explosivo que detona al entrar en contacto con la crema chantilly fresca.",
+      "B": "El ahorro económico sacrifica el pilar central de sostenibilidad de la propuesta de valor, destruye la coherencia de la marca ante un segmento consciente y expone a la empresa a multas ambientales crecientes por incumplimiento de la Ley 2232 de 2022 sobre plásticos de un solo uso.",
+      "C": "Los clientes no notarán la diferencia de empaque, pero los bancos cancelarán las cuentas corrientes de la empresa de forma fulminante.",
+      "D": "El plástico tradicional congela los postres en cuestión de segundos, impidiendo que el cliente pueda consumirlos inmediatamente."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. Una decisión empresarial no puede evaluarse únicamente por el ahorro marginal en costos de insumos. En el caso de Sweet Delight, el uso de empaques biodegradables es un atributo fundamental de su propuesta de valor y su posicionamiento en el mercado gourmet consciente. Además, en Colombia la Ley 2232 de 2022 impone una hoja de ruta estricta de prohibición de plásticos de un solo uso en establecimientos de alimentos, por lo que retroceder a plástico tradicional acarrearía sanciones, pérdida de reputación y pérdida de clientes fieles. Los demás distractores recurren a afirmaciones absurdas sobre propiedades físicas inexistentes o consecuencias bancarias sin fundamento."
+  },
+  {
+    "id": 30,
+    "competencia": "Argumentación y Evaluación Crítica",
+    "tema": "Presentación Ejecutiva (Pitch Deck): Evaluación de Métricas de Tracción ante Inversionistas",
+    "dificultad": "Media",
+    "contexto": "En una rueda de inversión para captar capital semilla, el equipo fundador de Sweet Delight expone su presentación (Pitch Deck). Durante 10 minutos se enfocan en exaltar el diseño del logotipo, la belleza de las fotos en Instagram y el sabor artesanal de la receta de crema, omitiendo mencionar datos sobre Costo de Adquisición de Clientes (CAC), Margen de Contribución, Punto de Equilibrio o Flujo de Caja Proyectado.",
+    "enunciado": "La retroalimentación crítica más certera que un inversionista ángel estructurado formulará al proyecto es que:",
+    "opciones": {
+      "A": "La presentación es impecable, pues los inversionistas de capital de riesgo solo invierten motivados por el diseño estético de los logotipos comerciales.",
+      "B": "El pitch carece de rigor económico y validación financiera; aunque el producto sea atractivo, un inversionista necesita conocer los 'unit economics', el tiempo de recuperación de la inversión (Payback), el retorno sobre la inversión (ROI) y la viabilidad del modelo de negocio para medir el riesgo de su capital.",
+      "C": "Deberían haber llevado fresas para regalar a todos los asistentes y así evitar tener que presentar estados financieros o proyecciones.",
+      "D": "En Colombia está estrictamente prohibido presentar datos numéricos o financieros en presentaciones de emprendimiento ante inversionistas privados."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. Un Pitch Deck profesional debe equilibrar el problema y la solución con la tracción del mercado y los fundamentos financieros ('unit economics'). Elementos como el costo de adquisición de clientes (CAC), el valor de vida del cliente (LTV), el margen de contribución, el punto de equilibrio y el flujo de caja proyectado son los indicadores que demuestran si un producto delicioso se traduce efectivamente en un negocio rentable y escalable. Sin estas métricas, los inversionistas perciben un alto riesgo y falta de madurez directiva. Las otras opciones subestiman el rigor financiero de las rondas de inversión."
+  },
+  {
+    "id": 31,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Modelo Canvas Sistémico: Interdependencia entre Bloques Estratégicos",
+    "dificultad": "Media",
+    "contexto": "Sweet Delight S.A.S. analiza una transformación estratégica en su modelo de negocio: incorporar una línea de postres 100% orgánicos certificados, reemplazando la fresa convencional por fresas de agricultura regenerativa sin pesticidas y sustituyendo el azúcar por alulosa natural de bajo índice glucémico.",
+    "enunciado": "Desde un enfoque de pensamiento sistémico en el Modelo Canvas, esta modificación en la Propuesta de Valor desencadenará transformaciones interconectadas obligatorias en:",
+    "opciones": {
+      "A": "Únicamente en el logotipo de la empresa, sin alterar proveedores, costos ni procesos de la cocina.",
+      "B": "Los Socios Claves (alianzas con fincas orgánicas certificadas), las Actividades Claves (trazabilidad y prevención de contaminación cruzada), la Estructura de Costos (insumos de mayor valor) y los Segmentos de Clientes (consumidores diabéticos, fitness o de alta conciencia ecológica).",
+      "C": "La clase societaria de la empresa, obligándola a disolver la S.A.S. para convertirse en una empresa industrial y comercial del Estado.",
+      "D": "El organigrama empresarial, eliminando por completo la Gerencia General y los operarios de preparación."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El pensamiento sistémico en el modelo Canvas concibe a la empresa como un conjunto de subsistemas interdependientes: alterar la propuesta de valor hacia un estándar orgánico certificado exige reconfigurar los socios clave (productores orgánicos avalados), adaptar las actividades clave (auditorías y controles de pureza en cocina), asumir una estructura de costos más elevada (los insumos ecológicos suelen ser más costosos) y conectar con un nuevo nicho de clientes dispuesto a pagar por dicho valor. Las otras opciones ignoran la interdependencia sistémica o proponen consecuencias absurdas en la naturaleza societaria u organigrama."
+  },
+  {
+    "id": 32,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Alineación Estratégica: Visión Corporativa y Balanced Scorecard",
+    "dificultad": "Alta",
+    "contexto": "La Visión estratégica de Sweet Delight S.A.S. consigna: 'Para el año 2029, seremos la empresa líder regional en repostería gourmet sostenible, reconocida por la excelencia operativa, el bienestar de nuestros colaboradores y una huella de carbono neutral en todos nuestros procesos de distribución'.",
+    "enunciado": "Para lograr una articulación sistémica de causa-efecto entre esta visión y el Cuadro de Mando Integral (Balanced Scorecard), la iniciativa estratégica que debe nutrir la base de la perspectiva de 'Aprendizaje y Crecimiento' es:",
+    "opciones": {
+      "A": "Reducir los salarios del personal para subsidiar la compra de empaques en el corto plazo.",
+      "B": "Implementar un programa continuo de capacitación y desarrollo en tecnologías limpias, manipulación circular de residuos y cultura de excelencia en el servicio al cliente para todos los colaboradores.",
+      "C": "Automatizar la contabilidad para despedir a todos los reposteros y contratar influenciadores digitales exclusivamente.",
+      "D": "Eliminar las evaluaciones de desempeño y permitir que cada trabajador opere sin manuales de procedimientos."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En el Balanced Scorecard, la perspectiva de Aprendizaje y Crecimiento es el cimiento de toda la cadena de valor: si se capacita y motiva al capital humano en sostenibilidad y excelencia operativa, mejorarán los Procesos Internos (menor merma, mejor calidad, procesos limpios), lo cual aumentará la satisfacción de los Clientes, redundando finalmente en los Resultados Financieros esperados y la materialización de la Visión 2029. Los otros distractores deterioran el clima organizacional y atentan contra los principios básicos de la gestión estratégica."
+  },
+  {
+    "id": 33,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Industria 4.0: Impacto Holístico de la Cadena de Frío Inteligente (IoT)",
+    "dificultad": "Media",
+    "contexto": "En el marco de la modernización tecnológica de la producción agroalimentaria (siglos XX - XXI), Sweet Delight implementa una red de sensores IoT (Internet de las Cosas) en sus cámaras frigoríficas. Los sensores transmiten registros térmicos a la nube cada 60 segundos y activan alertas automáticas a los teléfonos inteligentes del equipo ante variaciones superiores a ±1.0°C respecto al rango óptimo (2°C - 4°C).",
+    "enunciado": "El impacto sistémico holístico que esta tecnología genera sobre la operación integral del negocio consiste en que:",
+    "opciones": {
+      "A": "Aumenta el consumo de electricidad en un 500% pero permite prescindir del personal de limpieza.",
+      "B": "Protege simultáneamente la inocuidad alimentaria del consumidor final, evita mermas y pérdidas financieras por descomposición de fruta o corte de crema, reduce el consumo energético al alertar fugas en motores y genera registros trazables para auditorías sanitarias del INVIMA.",
+      "C": "Convierte el postre automáticamente en un producto no perecedero con vencimiento indefinido de hasta diez años.",
+      "D": "Permite que la empresa opere sin refrigeradores reales gracias a simulaciones en realidad virtual."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La incorporación de sensores IoT ilustra el pensamiento sistémico en operaciones: no es solo un artefacto tecnológico aislado, sino una solución que conecta la calidad sanitaria (protección de la salud pública del cliente), las finanzas (prevención de mermas y optimización del gasto de energía), el cumplimiento legal (evidencias para inspecciones sanitarias oficiales) y la reputación de marca. Los distractores A, C y D contienen errores absurdos sobre refrigeración y tecnología."
+  },
+  {
+    "id": 34,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Tecnología de Empaque: Envasado en Atmósfera Modificada (MAP) y Escalabilidad",
+    "dificultad": "Media",
+    "contexto": "El análisis tecnológico de producción alimentaria destaca el envasado en Atmósfera Modificada (MAP por sus siglas en inglés), tecnología que sustituye el aire ambiental dentro del empaque hermético por una mezcla controlada de nitrógeno (N2) y dióxido de carbono (CO2), frenando la respiración celular de la fruta y duplicando su vida útil sin necesidad de aditivos químicos.",
+    "enunciado": "En un horizonte de prospectiva y escalabilidad estratégica a cinco años, la adopción de empaques MAP le brindará a Sweet Delight la capacidad sistémica de:",
+    "opciones": {
+      "A": "Eliminar para siempre el requerimiento de mantener los postres en refrigeración, permitiendo almacenarlos a pleno sol en bodegas calientes.",
+      "B": "Ampliar su radio de distribución comercial hacia nuevos canales indirectos (como cadenas de supermercados gourmet y catering corporativo foráneo) sin comprometer la frescura ni recurrir a conservantes artificiales que degraden la propuesta de valor.",
+      "C": "Reducir el tamaño de las fresas para comercializar porciones microscópicas al doble del precio.",
+      "D": "Impedir que los clientes puedan abrir los vasos, garantizando que el postre se conserve como adorno decorativo permanente."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La tecnología MAP combinada con la refrigeración es un catalizador clave para la escalabilidad agroalimentaria: al extender la vida útil comercial de la fresa fresca de 2 a 6-8 días sin perder propiedades organolépticas ni añadir conservantes químicos, la empresa puede acceder a canales que exigen mayor vida útil en anaquel (supermercados, tiendas de conveniencia de alta gama, eventos a nivel regional). El MAP no suprime la refrigeración (distractor A) y los distractores C y D carecen de cualquier lógica comercial."
+  },
+  {
+    "id": 35,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Matriz FODA Cruzada: Formulación de Estrategias FA (Fortaleza - Amenaza)",
+    "dificultad": "Media",
+    "contexto": "Al realizar el cruce estratégico de la Matriz FODA de Sweet Delight S.A.S., el equipo directivo analiza la interacción entre:\n- Fortaleza 1 (F1): 'Receta artesanal exclusiva de crema chantilly gourmet con alta preferencia sensorial y marca registrada'.\n- Amenaza 2 (A2): 'Aparición constante de puestos informales y carretillas callejeras que comercializan fresas con crema a mitad de precio en la misma zona comercial'.",
+    "enunciado": "La formulación de una Estrategia FA (Maxi-Mini: usar fortalezas para mitigar amenazas) coherente y orientada a la sostenibilidad competitiva es:",
+    "opciones": {
+      "A": "Rebajar la calidad de los ingredientes y el tamaño de la porción para igualar el precio de $5.000 COP de los vendedores informales.",
+      "B": "Desarrollar una campaña de posicionamiento y marketing experiencial que resalte el sello de receta gourmet exclusiva, la inocuidad certificada y el uso de empaques eco-amigables, reforzando en la mente del consumidor que la calidad y la salud justifican la diferencia de precio.",
+      "C": "Presentar denuncias anónimas falsas contra los clientes que decidan comprar en la competencia.",
+      "D": "Suspender la venta de fresas con crema y comenzar a comercializar repuestos automotrices usados."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. Una estrategia FA utiliza las fortalezas internas de la organización para neutralizar o mitigar las amenazas del entorno. Ante la amenaza del precio bajo de la competencia informal, una empresa diferenciada no debe caer en una guerra de precios ruinosa que destruya su margen y deteriore su calidad (distractor A), sino apalancar su receta exclusiva, inocuidad y experiencia de marca para blindar a su segmento de clientes y consolidar su ventaja competitiva. Los distractores C y D plantean conductas ilegales o desvirtúan el giro del negocio."
+  },
+  {
+    "id": 36,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Sostenibilidad y Economía Circular en la Cadena de Valor Agroindustrial",
+    "dificultad": "Media",
+    "contexto": "En el procesamiento diario de 100 kg de fresa fresca en la planta de Sweet Delight, se originan dos subproductos habituales: 1) Aproximadamente 5 kg de fresa con maduración avanzada o deformaciones estéticas pero en perfecto estado microbiológico y sensorial; y 2) 5 kg de residuos vegetales compuestos por los sépalos y hojas verdes del descorone.",
+    "enunciado": "Bajo los principios sistémicos de la Economía Circular y el desarrollo sostenible, el plan de aprovechamiento integral más virtuoso para estos subproductos es:",
+    "opciones": {
+      "A": "Mezclarlos con la basura ordinaria no reciclable para que sean transportados al relleno sanitario municipal de la ciudad.",
+      "B": "Procesar la fruta madura en una línea secundaria de coulis, almíbares o mermeladas artesanales como nuevo topping de la casa, y destinar los residuos vegetales de descorone a un proceso de compostaje orgánico para huertas escolares o aliadas.",
+      "C": "Verter los residuos por las tuberías del desagüe del lavaplatos para evitar costos de recolección de basuras.",
+      "D": "Vender la fruta madura vencida en estado de descomposición a niños de colegios cercanos a mitad de precio."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La economía circular busca transformar los residuos en nuevos recursos o cerrar ciclos biológicos y técnicos: 1) Upcycling alimentario: la fresa madura que no tiene la estética para el vaso gourmet conserva intactas sus cualidades organolépticas para ser cocinada en compota, mermelada o reducción para salsa, generando valor agregado y reduciendo costos de toppings comprados; y 2) Cierre biológico: los restos de follaje verde se transforman en abono mediante compostaje, nutriendo nuevos cultivos. Los distractores A, C y D representan prácticas contaminantes, destructivas de valor o que atentan contra la salud pública."
+  },
+  {
+    "id": 37,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Ecosistema Omnicanal y Valor del Cliente en el Tiempo (Customer Lifetime Value - LTV)",
+    "dificultad": "Alta",
+    "contexto": "El plan de marketing 360° de Sweet Delight concibe el viaje del cliente (Customer Journey) como un circuito integrado: el usuario descubre la marca por videos virales en TikTok; realiza su primera compra en el local físico donde recibe una experiencia sensorial con aroma y música; al escanear su ticket ingresa a un club de lealtad digital que le envía promociones personalizadas para fechas especiales; y en su tercera compra realiza un pedido a domicilio desde la app web propia de la empresa.",
+    "enunciado": "La visión sistémica de este ecosistema omnicanal busca como objetivo estratégico de largo plazo:",
+    "opciones": {
+      "A": "Asegurar que el cliente compre una sola vez en su vida y nunca regrese al establecimiento comercial.",
+      "B": "Maximizar el Valor de Vida del Cliente (LTV), reduciendo a mediano plazo el costo de adquisición promedio y transformando a consumidores ocasionales en embajadores y promotores recurrentes de la marca.",
+      "C": "Saturar al cliente con mensajes invasivos continuos hasta que decida bloquear todas las redes de la empresa.",
+      "D": "Eliminar el local comercial para que los socios se dediquen a monetizar vistas en plataformas de streaming."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En el pensamiento estratégico moderno de mercadeo, adquirir un cliente nuevo es mucho más costoso que retener a uno existente. Una estrategia omnicanal que conecta descubrimiento, punto físico experiencial y fidelización digital apunta a elevar el Customer Lifetime Value (LTV: margen neto total que un consumidor genera a lo largo de su relación con la empresa). Al incrementar la recompra y la recomendación boca a boca ('advocacy'), el costo de adquisición de clientes (CAC) ponderado disminuye y la rentabilidad sistémica del negocio aumenta sólidamente. Las otras opciones son contrarias al marketing relacional."
+  },
+  {
+    "id": 38,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Gestión de Riesgos y Continuidad del Negocio ante Fallas de Infraestructura",
+    "dificultad": "Media",
+    "contexto": "El plan de continuidad operativa de Sweet Delight S.A.S. identifica como una contingencia de alto impacto el riesgo de un apagón prolongado del fluido eléctrico en el sector (superior a 6 horas), combinado con la caída temporal de las redes de telefonía celular e internet que inhabilitaría los sistemas de datáfono, códigos QR y el software POS en la nube.",
+    "enunciado": "El diseño sistémico de un protocolo de resiliencia y mitigación preventiva que debe implementar la gerencia comprende:",
+    "opciones": {
+      "A": "Desechar inmediatamente todos los inventarios a la calle y suspender las actividades comerciales por el resto del mes.",
+      "B": "Contar con un sistema de respaldo energético (planta eléctrica o baterías de ciclo profundo) exclusivo para los compresores de frío prioritarios, y un procedimiento manual de facturación por talonario de contingencia con cobro en efectivo y conciliación diferida.",
+      "C": "Exigir a los clientes que lleven hielo en bolsas desde sus casas si desean que se les prepare su postre.",
+      "D": "Ignorar la falta de electricidad y mantener las cámaras abiertas para que entre aire caliente del ambiente."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. La gestión integral del riesgo y la continuidad del negocio demandan anticipar fallas en los suministros críticos. En un negocio de alimentos refrigerados, la energía eléctrica es vital para no perder el inventario perecedero; por ello, un respaldo energético de emergencia para las áreas críticas de frío es indispensable. De igual modo, ante la caída de telecomunicaciones, la empresa debe contar con mecanismos contingentes de facturación (talonarios físicos autorizados) y recaudo para no frenar la atención. Los distractores A, C y D muestran negligencia operativa total."
+  },
+  {
+    "id": 39,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Gobernanza Corporativa: Resolución de Conflictos y Destinación de Utilidades en S.A.S.",
+    "dificultad": "Alta",
+    "contexto": "Al finalizar el primer año de ejercicio, Sweet Delight S.A.S. genera una utilidad neta libre para socios de $60.000.000 COP. Dos accionistas que suman el 66.7% de las acciones proponen en la Asamblea General reinvertir el 100% de las utilidades en la adquisición de una máquina dosificadora industrial y la apertura de una segunda sucursal en un centro comercial. El tercer accionista (titular del 33.3% restante) exige que se le entregue de inmediato en efectivo su cuota de dividendos para fines personales.",
+    "enunciado": "A la luz del marco societario de la Ley 1258 de 2008 y las normas del Código de Comercio colombiano, la vía legítima para resolver sistémicamente este dilema es que:",
+    "opciones": {
+      "A": "El accionista minoritario tiene derecho de veto absoluto y puede ordenar unilateralmente la disolución y remate de la empresa si no se le pagan sus dividendos.",
+      "B": "La decisión sobre la distribución o reinversión de utilidades corresponde al máximo órgano social (la Asamblea de Accionistas) mediante las mayorías estatutarias o legales estipuladas, prevaleciendo la decisión democrática mayoritaria en favor de la capitalización y crecimiento de la sociedad, siempre que se apruebe en asamblea formal con estados financieros debidamente dictaminados.",
+      "C": "El representante legal debe retener el dinero en una caja fuerte secreta sin informar a ninguno de los accionistas para evitar discusiones.",
+      "D": "La ley colombiana prohíbe terminantemente la reinversión de utilidades en empresas del sector privado."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. En el régimen de sociedades por acciones (y especialmente en las S.A.S.), la soberanía corporativa reside en la Asamblea General de Accionistas. Las decisiones relativas a la aprobación de balances, destinación de utilidades, constitución de reservas ocasionales o reinversión en el objeto social se adoptan válidamente por la mayoría decisoria prevista en los estatutos o en la ley. Si la mayoría (el 66.7%) vota favorablemente reinvertir las utilidades para expandir la capacidad productiva del negocio, dicha decisión es vinculante para todos los accionistas, protegiendo la visión de largo plazo de la persona jurídica. Las otras opciones contradicen el derecho corporativo."
+  },
+  {
+    "id": 40,
+    "competencia": "Pensamiento Sistémico y Prospectiva Estratégica",
+    "tema": "Prospectiva Estratégica: Estandarización y Escalabilidad del Modelo por Franquicias",
+    "dificultad": "Alta",
+    "contexto": "En su plan prospectivo para el año 2030, Sweet Delight proyecta expandirse a nivel nacional mediante un modelo de franquicias comerciales. Para que terceros inversionistas adquieran la franquicia y operen puntos de venta en otras ciudades del país replicando con exactitud la calidad y el éxito de la marca.",
+    "enunciado": "El factor sistémico crítico de éxito (condición sine qua non) que el equipo fundador debe consolidar de manera previa y rigurosa es:",
+    "opciones": {
+      "A": "Permitir que cada franquiciado cambie la receta de la crema, los ingredientes y los logotipos de acuerdo con su gusto personal.",
+      "B": "La total estandarización, documentación y transferibilidad del 'Know-How' (manuales de procesos de BPM, recetario maestro inviolable, software POS centralizado y homologación estricta de proveedores de fresa y empaques) para asegurar que la experiencia del cliente sea uniforme en cualquier sucursal.",
+      "C": "Garantizar que ningún franquiciado tenga que pagar jamás cánones de entrada ni regalías por el uso de la marca.",
+      "D": "Vender la empresa completa a un monopolio extranjero y desentenderse de la supervisión de los nuevos establecimientos."
+    },
+    "clave": "B",
+    "justificacion": "La opción B es la correcta. El modelo de franquicia se fundamenta en la réplica exacta de una fórmula comercial exitosa y comprobada. Para que una franquicia funcione como un sistema escalable y sostenible, es imprescindible blindar la transferibilidad del 'know-how' mediante manuales operativos estandarizados de producción (BPM, recetas, gramajes), identidad visual, servicio y una cadena de suministro homologada. Si no existe estandarización, la calidad varía, la reputación de la marca se destruye y el modelo colapsa (lo que descarta el distractor A). Los distractores C y D desnaturalizan la esencia económica y contractual de las franquicias."
+  }
+]
