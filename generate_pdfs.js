@@ -32,7 +32,7 @@ function generarCuadernilloEstudiante() {
 
   doc.moveDown(3);
   doc.font('Helvetica-Bold').fontSize(14).fillColor(PRIMARY).text('PROYECTO INTEGRAL PRODUCTIVO - TERCER PERIODO', { align: 'center', tracking: 1 });
-  doc.font('Helvetica-Bold').fontSize(22).fillColor('#111827').text('SWEET DELIGHT S.A.S.', { align: 'center' });
+  doc.font('Helvetica-Bold').fontSize(22).fillColor('#111827').text('FLORECITA ROCKERA S.A.S.', { align: 'center' });
   doc.font('Helvetica-Oblique').fontSize(11).fillColor(MUTED).text('Fresas Gourmet con Crema • Gestión Empresarial, Financiera y Tecnológica', { align: 'center' });
   
   doc.moveDown(2);
@@ -134,7 +134,7 @@ function generarCuadernilloEstudiante() {
 
   doc.y = 45;
   doc.font('Helvetica-Bold').fontSize(16).fillColor(PRIMARY).text('HOJA DE RESPUESTAS OFICIAL', { align: 'center' });
-  doc.font('Helvetica-Bold').fontSize(11).fillColor(DARK).text('EVALUACIÓN ICFES TERCER PERIODO • SWEET DELIGHT S.A.S.', { align: 'center' });
+  doc.font('Helvetica-Bold').fontSize(11).fillColor(DARK).text('EVALUACIÓN ICFES TERCER PERIODO • FLORECITA ROCKERA S.A.S.', { align: 'center' });
   doc.moveDown(0.5);
 
   doc.font('Helvetica').fontSize(8.5).fillColor(MUTED).text(
@@ -201,7 +201,7 @@ function generarCuadernilloEstudiante() {
     if (i > 0) { // En páginas interiores
       doc.font('Helvetica').fontSize(7.5).fillColor(MUTED);
       doc.text(
-        'Sweet Delight S.A.S. • Evaluación Tipo ICFES Tercer Periodo',
+        'Florecita Rockera S.A.S. • Evaluación Tipo ICFES Tercer Periodo',
         45,
         20,
         { width: doc.page.width - 90, align: 'left' }
@@ -245,7 +245,7 @@ function generarSolucionarioRespuestas() {
 
   doc.moveDown(3);
   doc.font('Helvetica-Bold').fontSize(14).fillColor('#065f46').text('PROYECTO INTEGRAL PRODUCTIVO - TERCER PERIODO', { align: 'center', tracking: 1 });
-  doc.font('Helvetica-Bold').fontSize(22).fillColor('#111827').text('SWEET DELIGHT S.A.S.', { align: 'center' });
+  doc.font('Helvetica-Bold').fontSize(22).fillColor('#111827').text('FLORECITA ROCKERA S.A.S.', { align: 'center' });
   doc.font('Helvetica-Oblique').fontSize(11).fillColor(MUTED).text('Plan de Negocios, Sector Financiero, Nómina y Sistemas Tecnológicos', { align: 'center' });
   
   doc.moveDown(2);
@@ -347,7 +347,7 @@ function generarSolucionarioRespuestas() {
     if (i > 0) {
       doc.font('Helvetica').fontSize(7.5).fillColor(MUTED);
       doc.text(
-        'Sweet Delight S.A.S. • Solucionario y Matriz Pedagógica ICFES Tercer Periodo',
+        'Florecita Rockera S.A.S. • Solucionario y Matriz Pedagógica ICFES Tercer Periodo',
         45,
         20,
         { width: doc.page.width - 90, align: 'left' }
